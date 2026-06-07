@@ -41,6 +41,7 @@
   const root = document.getElementById('root');
 
   renderShell();
+  syncSiteVersion();
   loadPriceData()
     .then((data) => {
       state.data = data;
@@ -64,6 +65,7 @@
             <h1 data-role="studio-name">黑曜手機維修</h1>
             <p data-role="notice">快速查詢手機、平板、電腦、Dyson 與 Nintendo 維修項目的參考價格。</p>
           </div>
+          <div class="version-badge" data-role="site-version">ver v?</div>
           <div class="header-chip">
             <span aria-hidden="true">NT$</span>
             <span>公開透明報價</span>
@@ -385,6 +387,18 @@
     ['query', 'brand', 'model', 'category'].forEach((role) => {
       getElement(role).disabled = disabled;
     });
+  }
+
+  function syncSiteVersion() {
+    const target = document.querySelector('[data-role="site-version"]');
+    if (!target) {
+      return;
+    }
+
+    const rawVersion = window.REPAIR_SITE_VERSION;
+    const version = String(rawVersion || '').trim();
+    const normalized = version ? (version.toLowerCase().startsWith('v') ? version : `v${version}`) : 'v?';
+    target.textContent = `ver ${normalized}`;
   }
 
   function renderQuoteCard(quote) {
