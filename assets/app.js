@@ -59,10 +59,9 @@
     root.innerHTML = `
       <main class="app-shell">
         <header class="site-header">
-          <div class="brand-mark" aria-hidden="true">黑</div>
           <div class="header-copy">
-            <p class="eyebrow">手機・平板（iPad／Android）・Apple Mac（桌機／筆電）・Windows 系統（桌機／筆電）・Dyson・Nintendo 維修</p>
             <h1 data-role="studio-name">黑曜手機維修</h1>
+            <p class="service-scope">手機・平板（iPad／Android）・Apple Mac（桌機／筆電）・Windows 系統（桌機／筆電）・Dyson・Nintendo 維修</p>
             <p data-role="notice">快速查詢手機、平板、電腦、Dyson 與 Nintendo 維修項目的參考價格。</p>
           </div>
           <div class="version-badge" data-role="site-version">ver v?</div>
@@ -99,9 +98,50 @@
               <p class="contact-label">第二聯絡電話</p>
               <a data-role="phone-secondary" href="tel:0976900166">0976-900-166</a>
             </article>
-            <article class="contact-item contact-item-wide">
+            <article class="contact-item contact-item-wide line-contact-item">
               <p class="contact-label">LINE 官方帳號</p>
+              <div class="line-contact-content">
+                <a
+                  class="social-image-link"
+                  data-role="line-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  hidden
+                >
+                  <img
+                    class="line-add-friend-button"
+                    src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
+                    alt="加入好友"
+                    height="36"
+                    border="0"
+                  />
+                </a>
+                <a
+                  class="line-poster-link"
+                  data-role="line-poster-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="掃描 QR Code 或點擊加入黑曜手機維修 LINE 官方帳號"
+                  hidden
+                >
+                  <img
+                    class="line-friends-poster"
+                    src="./assets/line-friends-banner.jpg"
+                    alt="LINE Official Account 好友募集中，帳號 @200ysnhq"
+                  />
+                </a>
+              </div>
               <p data-role="line-placeholder">建置中，稍後補上</p>
+            </article>
+            <article class="contact-item contact-item-wide">
+              <p class="contact-label">Facebook 官方帳號</p>
+              <a
+                data-role="facebook-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                hidden
+              ></a>
+              <p data-role="facebook-placeholder">建置中，稍後補上</p>
             </article>
           </div>
         </section>
@@ -260,14 +300,13 @@
     const secondary = phones[1] || '0976900166';
     setPhoneLink('phone-primary', primary);
     setPhoneLink('phone-secondary', secondary);
-
-    const linePlaceholder = document.querySelector('[data-role="line-placeholder"]');
-    if (!linePlaceholder) {
-      return;
-    }
-
-    const lineText = metadata.lineContact || '建置中，稍後補上';
-    linePlaceholder.textContent = lineText;
+    setSocialLink('line', metadata.lineUrl, metadata.lineContact, 'LINE 官方帳號');
+    setSocialLink(
+      'facebook',
+      metadata.facebookUrl,
+      metadata.facebookContact,
+      'Facebook 官方帳號',
+    );
   }
 
   function setPhoneLink(role, phone) {
@@ -283,6 +322,42 @@
 
     target.href = `tel:${digits}`;
     target.textContent = formatPhoneText(digits);
+  }
+
+  function setSocialLink(platform, url, contact, fallbackLabel) {
+    const link = document.querySelector(`[data-role="${platform}-link"]`);
+    const placeholder = document.querySelector(`[data-role="${platform}-placeholder"]`);
+    const posterLink = document.querySelector(`[data-role="${platform}-poster-link"]`);
+    if (!link || !placeholder) {
+      return;
+    }
+
+    const normalizedUrl = String(url || '').trim();
+    const normalizedContact = String(contact || '').trim();
+    if (!normalizedUrl) {
+      link.hidden = true;
+      if (posterLink) {
+        posterLink.hidden = true;
+      }
+      placeholder.hidden = false;
+      placeholder.textContent = normalizedContact || '建置中，稍後補上';
+      return;
+    }
+
+    link.href = normalizedUrl;
+    const linkLabel = normalizedContact || fallbackLabel;
+    if (link.querySelector('img')) {
+      link.setAttribute('aria-label', linkLabel);
+      link.title = linkLabel;
+    } else {
+      link.textContent = linkLabel;
+    }
+    if (posterLink) {
+      posterLink.href = normalizedUrl;
+      posterLink.hidden = false;
+    }
+    link.hidden = false;
+    placeholder.hidden = true;
   }
 
   function syncAddressMapLink(metadata) {

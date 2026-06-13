@@ -4,6 +4,10 @@ window.REPAIR_PRICE_DATA = {
     "updatedAt": "2026-05-18",
     "currency": "TWD",
     "address": "新北市中和區信義街41巷3號一樓",
+    "facebookContact": "黑曜手機維修 Facebook",
+    "facebookUrl": "https://facebook.com/OTRepair",
+    "lineContact": "加入黑曜手機維修 LINE 官方帳號",
+    "lineUrl": "https://lin.ee/SMFc6si",
     "warrantyDays": 90,
     "serviceScope": [
       "Apple iPhone / iPad / Mac 桌機與筆電",
