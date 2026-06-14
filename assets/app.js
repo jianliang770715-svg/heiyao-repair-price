@@ -76,7 +76,11 @@
               <div class="header-copy">
                 <h1 data-role="studio-name">黑曜手機維修</h1>
                 <p class="service-scope">手機・平板（iPad／Android）・Apple Mac（桌機／筆電）・Windows 系統（桌機／筆電）・Dyson・Nintendo 維修</p>
-                <p data-role="notice">快速查詢手機、平板、電腦、Dyson 與 Nintendo 維修項目的參考價格。</p>
+                <p data-role="notice">
+                  <span data-role="notice-main">快速查詢手機、平板、電腦、Dyson 與 Nintendo 維修項目的參考價格。</span>
+                  <span class="notice-desktop-break" aria-hidden="true"></span>
+                  <span class="notice-warning">⚠️本網頁報價為參考，實際價格均以現場報價為主⚠️</span>
+                </p>
               </div>
               <div class="version-badge" data-role="site-version">ver v?</div>
               <div class="header-chip">
@@ -310,7 +314,7 @@
     const metadata = state.data.metadata || {};
     document.querySelector('[data-role="studio-name"]').textContent =
       metadata.studioName || '手機維修報價查詢';
-    document.querySelector('[data-role="notice"]').textContent =
+    document.querySelector('[data-role="notice-main"]').textContent =
       metadata.notice || '快速查詢品牌、型號與維修項目的參考價格。';
     document.querySelector('[data-role="address"]').textContent =
       metadata.address || '新北市中和區信義街41巷3號一樓';
