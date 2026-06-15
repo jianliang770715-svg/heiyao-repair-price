@@ -3,24 +3,21 @@
 - Source: https://cerphone.com/quotation/
 - Fetched at: 2026-06-14T23:34:11+08:00
 - 比對基準: 站內 `data/prices.json`
-- Apple iPhone 依你的規則拆分：`APPLE / 原廠螢幕` 另外列，`螢幕破裂`、`玻璃破裂`、`液晶破裂` 視為副廠螢幕；本次 Apple 頁面目前只看到 `玻璃破裂` 與 `螢幕破裂` 這兩個副廠螢幕標示。
+- 已依 `imports/cerphone-import-rules.md` 先完成欄位轉譯與排除，再與站內資料比對。
+- Apple 原廠螢幕、原廠電池、原廠鏡頭、非標準款 iPad 的玻璃破裂、Apple Watch、AirPods、HTC，以及 Dyson 清潔服務均不列入維修報價盤點。
 - 說明: 先做簡單差異展示，供你人工確認後再決定是否更新正式站內價格
 
 ## 摘要
-- 總筆數: 581
+- 總筆數: 443
 - 上修: 0
-- 下調: 5
-- 持平: 417
+- 下調: 0
+- 持平: 292
 - 需人工確認: 86
-- 新增/未對上: 73
-- 異動金額範圍: -1,300 ~ 0 TWD
+- 新增/未對上: 65
+- 異動金額範圍: 0 TWD
 
 ## 價格異動
-- Samsung / Note 20 ultra N9860 / 螢幕破裂: Cerphone 5,500 | 站內 6,800 | 下調 1,300
-- Samsung / S23（S9110） / 螢幕破裂: Cerphone 4,200 | 站內 5,200 | 下調 1,000
-- Samsung / S23+（S9160） / 螢幕破裂: Cerphone 4,000 | 站內 4,600 | 下調 600
-- Samsung / S24（S9210） / 螢幕破裂: Cerphone 4,000 | 站內 4,500 | 下調 500
-- Samsung / S23U（S9180） / 螢幕破裂: Cerphone 7,500 | 站內 7,800 | 下調 300
+- 本次轉譯後沒有尚未套用的價格異動。
 
 ## 需人工確認
 - Apple / iPhone 11 / 前鏡頭／後鏡頭: Cerphone 1500／1200 | 站內 1500／1200
@@ -170,14 +167,6 @@
 - 小米 / 紅米 Note 14 Pro 5G / 螢幕破裂: Cerphone 2,200 | 站內未找到對應
 - 小米 / 紅米 Note14 5G / 螢幕破裂: Cerphone 3,200 | 站內未找到對應
 - 小米 / 紅米 Note14 4G / 螢幕破裂: Cerphone 3,200 | 站內未找到對應
-- Dyson / V15 / SV47 / 主機維修: Cerphone 1,500 | 站內未找到對應
-- Dyson / Digital Slim / SV18 / 主機維修: Cerphone 1,500 | 站內未找到對應
-- Dyson / V12 / V12 Slim / SV20 / SV30 / SV34 / SV35 / SV44 / SV46 / SV49 / 主機維修: Cerphone 1,500 | 站內未找到對應
-- Dyson / V11 / V11Fluffy / V11Absolute / SV14 / SV15 / 主機維修: Cerphone 1,500 | 站內未找到對應
-- Dyson / V10 / SV12 / 主機維修: Cerphone 1,500 | 站內未找到對應
-- Dyson / V7 / V8 / SV10 / SV11 / 主機維修: Cerphone 1,500 | 站內未找到對應
-- Dyson / V6 / SV03 / SV04 / SV07 / SV08 / SV09 / 主機維修: Cerphone 1,500 | 站內未找到對應
-- Dyson / HD01 - HD12 / 主機維修: Cerphone 1,500 | 站內未找到對應
 - Nintendo / Switch OLED版 / 主機／配件維修: Cerphone 主機報價 | 站內未找到對應
 - Nintendo / Switch / 主機／配件維修: Cerphone 主機報價 | 站內未找到對應
 - Nintendo / Switch Lite（青春版） / 主機／配件維修: Cerphone 主機報價 | 站內未找到對應
@@ -187,5 +176,6 @@
 
 ## 備註
 - `cerphone-latest.json` 已同步更新為目前快照時間。
-- Apple iPhone 的原廠螢幕與副廠螢幕已分開處理；若未來 Cerphone 再出現 `液晶破裂`，會依同一規則視為副廠螢幕。
+- Cerphone 原始欄位不直接作為站內分類；所有快照必須先執行 `npm run normalize:cerphone`。
+- 標準款 iPad 的玻璃破裂與螢幕破裂維持獨立項目；其他 Apple、Sony、ASUS 與指定 Android 品牌的螢幕主欄位統一轉成 `螢幕維修`。
 - 這份差異檔只列出異動、需人工確認與未對上項目，方便快速過目。

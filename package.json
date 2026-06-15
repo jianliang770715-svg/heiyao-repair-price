@@ -1,8 +1,9 @@
 {
   "name": "heiyao-repair-price",
-  "version": "1.1.1-debug",
+  "version": "1.1.2-debug",
   "private": true,
   "scripts": {
-    "build": "node scripts/build.mjs"
+    "build": "node scripts/build.mjs",
+    "normalize:cerphone": "node scripts/normalize-cerphone-import.mjs"
   }
 }

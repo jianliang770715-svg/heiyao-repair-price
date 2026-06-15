@@ -142,13 +142,14 @@ p {
 }
 
 .site-header p[data-role="notice"] {
-  color: var(--danger);
+  color: var(--ink-muted);
   font-weight: 700;
 }
 
 .site-header p[data-role="notice"] .notice-warning {
   display: block;
   margin-top: 4px;
+  color: var(--danger);
 }
 
 .site-header p[data-role="notice"] .notice-desktop-break {
@@ -544,6 +545,27 @@ select:focus,
   display: block;
   overflow-wrap: anywhere;
   font-size: 0.95rem;
+}
+
+.repair-notice {
+  display: grid;
+  gap: 3px;
+  padding: 11px 13px;
+  color: #66410f;
+  background: var(--warning-soft);
+  border-left: 4px solid var(--warning);
+  border-radius: var(--radius);
+  line-height: 1.55;
+}
+
+.repair-notice strong {
+  font-size: 0.86rem;
+}
+
+.repair-notice p {
+  margin-bottom: 0;
+  color: #715226;
+  font-size: 0.8rem;
 }
 
 .quote-grid {

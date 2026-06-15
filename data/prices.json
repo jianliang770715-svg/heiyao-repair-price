@@ -1,7 +1,7 @@
 {
   "metadata": {
     "studioName": "黑曜手機維修",
-    "updatedAt": "2026-06-14",
+    "updatedAt": "2026-06-16",
     "currency": "TWD",
     "address": "新北市中和區信義街41巷3號一樓",
     "facebookContact": "黑曜手機維修 Facebook",
@@ -16,7 +16,7 @@
       "Nintendo",
       "Desktop & Laptop 桌上型電腦與筆記型電腦"
     ],
-    "notice": "全站維修保固 90 天；實際報價會依零件等級、機況與現場檢測結果調整。"
+    "notice": "選擇品牌、型號與維修項目，快速查詢參考報價。"
   },
   "repairCategories": [
     {
@@ -101,7 +101,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1800
@@ -216,7 +216,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2500
@@ -331,7 +331,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3000
@@ -446,7 +446,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2500
@@ -561,7 +561,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2500
@@ -676,7 +676,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3000
@@ -791,7 +791,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3000
@@ -906,7 +906,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3000
@@ -1021,7 +1021,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7300
@@ -1136,7 +1136,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7300
@@ -1251,7 +1251,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7300
@@ -1353,7 +1353,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7300
@@ -1455,7 +1455,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2500
@@ -1570,7 +1570,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7300
@@ -1672,7 +1672,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -1774,7 +1774,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -1889,7 +1889,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -2004,7 +2004,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1800
@@ -2119,7 +2119,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -2234,7 +2234,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1800
@@ -2349,7 +2349,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1800
@@ -2464,7 +2464,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1600
@@ -2579,7 +2579,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2200
@@ -2694,7 +2694,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2200
@@ -2809,7 +2809,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2200
@@ -2924,7 +2924,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2500
@@ -3039,7 +3039,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2500
@@ -3154,7 +3154,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -3256,7 +3256,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -3371,7 +3371,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -3494,19 +3494,6 @@
                 "amount": 6100
               },
               "rawPrice": "6100",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 17500
-              },
-              "rawPrice": "17500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -3825,19 +3812,6 @@
                 "amount": 9000
               },
               "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 17500
-              },
-              "rawPrice": "17500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -4201,19 +4175,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 12500
-              },
-              "rawPrice": "12500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -4362,19 +4323,6 @@
                 "amount": 5500
               },
               "rawPrice": "5500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 11000
-              },
-              "rawPrice": "11000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -4534,19 +4482,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 13500
-              },
-              "rawPrice": "13500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -4697,19 +4632,6 @@
                 "amount": 7300
               },
               "rawPrice": "7300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 17500
-              },
-              "rawPrice": "17500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -4883,19 +4805,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 22000
-              },
-              "rawPrice": "22000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -5064,19 +4973,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 17500
-              },
-              "rawPrice": "17500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -5232,19 +5128,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 13500
-              },
-              "rawPrice": "13500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -5392,19 +5275,6 @@
                 "amount": 7300
               },
               "rawPrice": "7300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 18000
-              },
-              "rawPrice": "18000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -5564,19 +5434,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 22500
-              },
-              "rawPrice": "22500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電源板-3",
               "categoryId": "board",
               "item": "電源板",
@@ -5682,19 +5539,6 @@
                 "amount": 11000
               },
               "rawPrice": "11000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 21500
-              },
-              "rawPrice": "21500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -5869,19 +5713,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 18500
-              },
-              "rawPrice": "18500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -6045,19 +5876,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 13500
-              },
-              "rawPrice": "13500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -6206,19 +6024,6 @@
                 "amount": 7900
               },
               "rawPrice": "7900",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 18000
-              },
-              "rawPrice": "18000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -6378,19 +6183,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 19500
-              },
-              "rawPrice": "19500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "系統重灌-6",
               "categoryId": "system",
               "item": "系統重灌",
@@ -6475,19 +6267,6 @@
                 "amount": 13500
               },
               "rawPrice": "13500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 19500
-              },
-              "rawPrice": "19500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -6590,19 +6369,6 @@
                 "amount": 15500
               },
               "rawPrice": "15500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 23500
-              },
-              "rawPrice": "23500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -6762,19 +6528,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 25500
-              },
-              "rawPrice": "25500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -6920,19 +6673,6 @@
                 "amount": 7900
               },
               "rawPrice": "7900",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 16500
-              },
-              "rawPrice": "16500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -7085,19 +6825,6 @@
                 "amount": 15500
               },
               "rawPrice": "15500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 23500
-              },
-              "rawPrice": "23500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -7257,19 +6984,6 @@
               "availability": "inquiry"
             },
             {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 18000
-              },
-              "rawPrice": "18000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "電池-3",
               "categoryId": "battery",
               "item": "電池",
@@ -7415,19 +7129,6 @@
                 "amount": 14500
               },
               "rawPrice": "14500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "原廠螢幕價格-2",
-              "categoryId": "screen",
-              "item": "原廠螢幕價格",
-              "price": {
-                "type": "fixed",
-                "amount": 25500
-              },
-              "rawPrice": "25500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -8589,22 +8290,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3600
-              },
-              "rawPrice": "3600",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3600
@@ -8702,22 +8390,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4500
-              },
-              "rawPrice": "4500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4500
@@ -8802,22 +8477,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 5500
-              },
-              "rawPrice": "5500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5500
@@ -8915,22 +8577,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 5500
-              },
-              "rawPrice": "5500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5500
@@ -9028,22 +8677,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7000
-              },
-              "rawPrice": "7000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7000
@@ -9141,22 +8777,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 8000
-              },
-              "rawPrice": "8000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 8000
@@ -9254,22 +8877,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7000
-              },
-              "rawPrice": "7000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7000
@@ -9367,22 +8977,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 8000
-              },
-              "rawPrice": "8000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 8000
@@ -9467,22 +9064,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 5000
-              },
-              "rawPrice": "5000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5000
@@ -9567,22 +9151,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7000
-              },
-              "rawPrice": "7000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7000
@@ -9667,22 +9238,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7300
-              },
-              "rawPrice": "7300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7300
@@ -9780,22 +9338,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7000
-              },
-              "rawPrice": "7000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7000
@@ -9893,22 +9438,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7300
-              },
-              "rawPrice": "7300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7300
@@ -10006,22 +9538,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 5500
-              },
-              "rawPrice": "5500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5500
@@ -10119,22 +9638,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 5900
-              },
-              "rawPrice": "5900",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5900
@@ -10219,22 +9725,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 8500
-              },
-              "rawPrice": "8500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 9700
@@ -10332,22 +9825,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7800
-              },
-              "rawPrice": "7800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 8800
@@ -10445,22 +9925,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7800
-              },
-              "rawPrice": "7800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 8800
@@ -10558,22 +10025,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 5900
-              },
-              "rawPrice": "5900",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5900
@@ -10671,22 +10125,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3800
-              },
-              "rawPrice": "3800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3800
@@ -10771,22 +10212,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4000
-              },
-              "rawPrice": "4000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4000
@@ -10884,22 +10312,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4200
-              },
-              "rawPrice": "4200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4200
@@ -11010,22 +10425,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 6900
-              },
-              "rawPrice": "6900",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 6900
@@ -11123,22 +10525,9 @@
           "aliases": [],
           "repairs": [
             {
-              "id": "玻璃破裂-1",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 7500
-              },
-              "rawPrice": "7500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-2",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7500
@@ -11225,32 +10614,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 6600
-              },
-              "rawPrice": "6600",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -11264,22 +10627,9 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2000
-              },
-              "rawPrice": "2000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2000
@@ -11392,32 +10742,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -11431,22 +10755,9 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2700
@@ -11559,32 +10870,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -11598,22 +10883,9 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3200
-              },
-              "rawPrice": "3200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3500
@@ -11726,32 +10998,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -11765,40 +11011,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2700
               },
               "rawPrice": "2700",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5200
-              },
-              "rawPrice": "5200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -11906,32 +11126,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 7200
-              },
-              "rawPrice": "7200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -11945,40 +11139,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2700
-              },
-              "rawPrice": "2700",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3000
               },
               "rawPrice": "3000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5200
-              },
-              "rawPrice": "5200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -12086,32 +11254,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -12125,40 +11267,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2700
               },
               "rawPrice": "2700",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5600
-              },
-              "rawPrice": "5600",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -12266,32 +11382,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -12305,40 +11395,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3700
-              },
-              "rawPrice": "3700",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4900
               },
               "rawPrice": "4900",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5600
-              },
-              "rawPrice": "5600",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -12446,32 +11510,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -12485,40 +11523,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2900
               },
               "rawPrice": "2900",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5200
-              },
-              "rawPrice": "5200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -12626,32 +11638,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 7200
-              },
-              "rawPrice": "7200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -12665,40 +11651,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4500
               },
               "rawPrice": "4500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5200
-              },
-              "rawPrice": "5200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -12806,32 +11766,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -12845,40 +11779,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3000
-              },
-              "rawPrice": "3000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4000
               },
               "rawPrice": "4000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5100
-              },
-              "rawPrice": "5100",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -12986,32 +11894,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -13025,40 +11907,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3200
-              },
-              "rawPrice": "3200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4400
               },
               "rawPrice": "4400",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5600
-              },
-              "rawPrice": "5600",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13166,32 +12022,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2800
-              },
-              "rawPrice": "2800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -13205,40 +12035,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3100
-              },
-              "rawPrice": "3100",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3200
               },
               "rawPrice": "3200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5200
-              },
-              "rawPrice": "5200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13346,32 +12150,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2800
-              },
-              "rawPrice": "2800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -13385,40 +12163,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3800
-              },
-              "rawPrice": "3800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4700
               },
               "rawPrice": "4700",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5200
-              },
-              "rawPrice": "5200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13526,32 +12278,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2800
-              },
-              "rawPrice": "2800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -13565,40 +12291,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3000
-              },
-              "rawPrice": "3000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5000
               },
               "rawPrice": "5000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 6500
-              },
-              "rawPrice": "6500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13706,32 +12406,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 12300
-              },
-              "rawPrice": "12300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2800
-              },
-              "rawPrice": "2800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -13745,40 +12419,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5800
               },
               "rawPrice": "5800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 6500
-              },
-              "rawPrice": "6500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13886,32 +12534,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2800
-              },
-              "rawPrice": "2800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -13925,35 +12547,9 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3600
-              },
-              "rawPrice": "3600",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 5100
-              },
-              "rawPrice": "5100",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5100
@@ -14066,32 +12662,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2800
-              },
-              "rawPrice": "2800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -14105,40 +12675,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3200
-              },
-              "rawPrice": "3200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4700
               },
               "rawPrice": "4700",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5100
-              },
-              "rawPrice": "5100",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14246,32 +12790,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2800
-              },
-              "rawPrice": "2800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -14285,40 +12803,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4000
-              },
-              "rawPrice": "4000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7000
               },
               "rawPrice": "7000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 6700
-              },
-              "rawPrice": "6700",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14426,32 +12918,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 12300
-              },
-              "rawPrice": "12300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2800
-              },
-              "rawPrice": "2800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -14465,40 +12931,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4200
-              },
-              "rawPrice": "4200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7200
               },
               "rawPrice": "7200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 7800
-              },
-              "rawPrice": "7800",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14606,32 +13046,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3200
-              },
-              "rawPrice": "3200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -14645,40 +13059,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3000
-              },
-              "rawPrice": "3000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4500
               },
               "rawPrice": "4500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5500
-              },
-              "rawPrice": "5500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14786,32 +13174,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3200
-              },
-              "rawPrice": "3200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -14825,40 +13187,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5000
               },
               "rawPrice": "5000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5500
-              },
-              "rawPrice": "5500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14966,32 +13302,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -15005,40 +13315,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3600
-              },
-              "rawPrice": "3600",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 6600
               },
               "rawPrice": "6600",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 8000
-              },
-              "rawPrice": "8000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -15146,32 +13430,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 12300
-              },
-              "rawPrice": "12300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -15185,40 +13443,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4000
-              },
-              "rawPrice": "4000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 8400
               },
               "rawPrice": "8400",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 8000
-              },
-              "rawPrice": "8000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -15326,32 +13558,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 7900
-              },
-              "rawPrice": "7900",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3200
-              },
-              "rawPrice": "3200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -15365,40 +13571,14 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3700
               },
               "rawPrice": "3700",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 4500
-              },
-              "rawPrice": "4500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -15506,66 +13686,14 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3200
-              },
-              "rawPrice": "3200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4000
-              },
-              "rawPrice": "4000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 8000
               },
               "rawPrice": "8000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5200
-              },
-              "rawPrice": "5200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -15673,66 +13801,14 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4200
-              },
-              "rawPrice": "4200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 8700
               },
               "rawPrice": "8700",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 8000
-              },
-              "rawPrice": "8000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -15840,66 +13916,14 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 12300
-              },
-              "rawPrice": "12300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 4500
-              },
-              "rawPrice": "4500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 9500
               },
               "rawPrice": "9500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 8000
-              },
-              "rawPrice": "8000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -16007,19 +14031,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1490
-              },
-              "rawPrice": "1490",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -16035,7 +14046,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1200
@@ -16148,19 +14159,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1490
-              },
-              "rawPrice": "1490",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -16176,7 +14174,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1200
@@ -16289,19 +14287,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1490
-              },
-              "rawPrice": "1490",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -16317,7 +14302,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1200
@@ -16430,19 +14415,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1490
-              },
-              "rawPrice": "1490",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -16458,7 +14430,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -16571,19 +14543,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1800
-              },
-              "rawPrice": "1800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -16599,7 +14558,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -16712,19 +14671,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1800
-              },
-              "rawPrice": "1800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -16740,7 +14686,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -16853,19 +14799,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1800
-              },
-              "rawPrice": "1800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -16881,7 +14814,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -16994,19 +14927,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1800
-              },
-              "rawPrice": "1800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -17022,7 +14942,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1500
@@ -17135,66 +15055,14 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 5000
-              },
-              "rawPrice": "5000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 9500
               },
               "rawPrice": "9500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠鏡頭-6",
-              "categoryId": "camera",
-              "item": "APPLE / 原廠鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 5200
-              },
-              "rawPrice": "5200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -17302,19 +15170,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠電池-1",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2000
-              },
-              "rawPrice": "2000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-2",
               "categoryId": "battery",
               "item": "認證電池",
@@ -17330,7 +15185,7 @@
             {
               "id": "螢幕破裂-3",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1800
@@ -17443,32 +15298,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -17482,22 +15311,9 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2000
-              },
-              "rawPrice": "2000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2000
@@ -17610,32 +15426,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 6600
-              },
-              "rawPrice": "6600",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -17649,22 +15439,9 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2000
-              },
-              "rawPrice": "2000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2000
@@ -17777,32 +15554,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 9000
-              },
-              "rawPrice": "9000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -17816,22 +15567,9 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2400
-              },
-              "rawPrice": "2400",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2400
@@ -17944,32 +15682,6 @@
           ],
           "repairs": [
             {
-              "id": "apple-原廠螢幕-1",
-              "categoryId": "screen",
-              "item": "APPLE / 原廠螢幕",
-              "price": {
-                "type": "fixed",
-                "amount": 10800
-              },
-              "rawPrice": "10800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "apple-原廠電池-2",
-              "categoryId": "battery",
-              "item": "APPLE / 原廠電池",
-              "price": {
-                "type": "fixed",
-                "amount": 2300
-              },
-              "rawPrice": "2300",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "認證電池-3",
               "categoryId": "battery",
               "item": "認證電池",
@@ -17983,22 +15695,9 @@
               "availability": "inquiry"
             },
             {
-              "id": "玻璃破裂-4",
-              "categoryId": "screen",
-              "item": "玻璃破裂",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
               "id": "螢幕破裂-5",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2800
@@ -38200,7 +35899,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1800
@@ -38315,7 +36014,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3200
@@ -38430,7 +36129,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3200
@@ -38545,7 +36244,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3800
@@ -38660,7 +36359,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3500
@@ -38775,7 +36474,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 3500
@@ -38890,7 +36589,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1300
@@ -39005,7 +36704,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 7500
@@ -39120,7 +36819,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4200
@@ -39235,7 +36934,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 6500
@@ -39350,7 +37049,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 10000
@@ -39465,7 +37164,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 9000
@@ -39580,7 +37279,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2300
@@ -39695,7 +37394,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5300
@@ -39810,7 +37509,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5300
@@ -39925,7 +37624,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 6500
@@ -40040,7 +37739,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 4000
@@ -40155,7 +37854,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2800
@@ -40270,7 +37969,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2000
@@ -40385,7 +38084,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1600
@@ -40500,7 +38199,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 2500
@@ -40615,7 +38314,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1600
@@ -40730,7 +38429,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 5000
@@ -40845,7 +38544,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1800
@@ -40960,7 +38659,7 @@
             {
               "id": "螢幕破裂-1",
               "categoryId": "screen",
-              "item": "螢幕破裂",
+              "item": "螢幕維修",
               "price": {
                 "type": "fixed",
                 "amount": 1600
@@ -49428,197 +47127,6 @@
           "modelGroup": "realme"
         },
         {
-          "id": "d20-pro",
-          "name": "D20 PRO",
-          "deviceType": "手機/平板",
-          "aliases": [
-            "HTC"
-          ],
-          "repairs": [
-            {
-              "id": "電池-2",
-              "categoryId": "battery",
-              "item": "電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "充電-耳機孔-震動-3",
-              "categoryId": "charging",
-              "item": "充電 / 耳機孔 / 震動",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "聽筒-麥克風-響鈴-4",
-              "categoryId": "audio",
-              "item": "聽筒 / 麥克風 / 響鈴",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "後鏡頭-前鏡頭-5",
-              "categoryId": "camera",
-              "item": "後鏡頭 / 前鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "開機鍵-音量鍵-6",
-              "categoryId": "buttons",
-              "item": "開機鍵 / 音量鍵",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "機板試修-cpu另報-7",
-              "categoryId": "board",
-              "item": "機板試修 / CPU另報",
-              "price": {
-                "type": "fixed",
-                "amount": 2000
-              },
-              "rawPrice": "2000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            }
-          ],
-          "modelGroup": "HTC"
-        },
-        {
-          "id": "d20",
-          "name": "D20+",
-          "deviceType": "手機/平板",
-          "aliases": [
-            "HTC"
-          ],
-          "repairs": [
-            {
-              "id": "螢幕更換-1",
-              "categoryId": "screen",
-              "item": "螢幕更換",
-              "price": {
-                "type": "fixed",
-                "amount": 2200
-              },
-              "rawPrice": "2200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "電池-2",
-              "categoryId": "battery",
-              "item": "電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "充電-耳機孔-震動-3",
-              "categoryId": "charging",
-              "item": "充電 / 耳機孔 / 震動",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "聽筒-麥克風-響鈴-4",
-              "categoryId": "audio",
-              "item": "聽筒 / 麥克風 / 響鈴",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "後鏡頭-前鏡頭-5",
-              "categoryId": "camera",
-              "item": "後鏡頭 / 前鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "開機鍵-音量鍵-6",
-              "categoryId": "buttons",
-              "item": "開機鍵 / 音量鍵",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "機板試修-cpu另報-7",
-              "categoryId": "board",
-              "item": "機板試修 / CPU另報",
-              "price": {
-                "type": "fixed",
-                "amount": 2000
-              },
-              "rawPrice": "2000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            }
-          ],
-          "modelGroup": "HTC"
-        },
-        {
           "id": "gt-neo2",
           "name": "GT NEO2",
           "deviceType": "手機/平板",
@@ -52239,490 +49747,6 @@
             }
           ],
           "modelGroup": "SUGAR"
-        },
-        {
-          "id": "u12-life",
-          "name": "U12 LIFE",
-          "deviceType": "手機/平板",
-          "aliases": [
-            "HTC"
-          ],
-          "repairs": [
-            {
-              "id": "螢幕更換-1",
-              "categoryId": "screen",
-              "item": "螢幕更換",
-              "price": {
-                "type": "fixed",
-                "amount": 1600
-              },
-              "rawPrice": "1600",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "電池-2",
-              "categoryId": "battery",
-              "item": "電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "充電-耳機孔-震動-3",
-              "categoryId": "charging",
-              "item": "充電 / 耳機孔 / 震動",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "聽筒-麥克風-響鈴-4",
-              "categoryId": "audio",
-              "item": "聽筒 / 麥克風 / 響鈴",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "後鏡頭-前鏡頭-5",
-              "categoryId": "camera",
-              "item": "後鏡頭 / 前鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "開機鍵-音量鍵-6",
-              "categoryId": "buttons",
-              "item": "開機鍵 / 音量鍵",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "機板試修-cpu另報-7",
-              "categoryId": "board",
-              "item": "機板試修 / CPU另報",
-              "price": {
-                "type": "fixed",
-                "amount": 1800
-              },
-              "rawPrice": "1800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            }
-          ],
-          "modelGroup": "HTC"
-        },
-        {
-          "id": "u12",
-          "name": "U12+",
-          "deviceType": "手機/平板",
-          "aliases": [
-            "HTC"
-          ],
-          "repairs": [
-            {
-              "id": "螢幕更換-1",
-              "categoryId": "screen",
-              "item": "螢幕更換",
-              "price": {
-                "type": "fixed",
-                "amount": 3500
-              },
-              "rawPrice": "3500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "電池-2",
-              "categoryId": "battery",
-              "item": "電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "充電-耳機孔-震動-3",
-              "categoryId": "charging",
-              "item": "充電 / 耳機孔 / 震動",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "聽筒-麥克風-響鈴-4",
-              "categoryId": "audio",
-              "item": "聽筒 / 麥克風 / 響鈴",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "後鏡頭-前鏡頭-5",
-              "categoryId": "camera",
-              "item": "後鏡頭 / 前鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "開機鍵-音量鍵-6",
-              "categoryId": "buttons",
-              "item": "開機鍵 / 音量鍵",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "機板試修-cpu另報-7",
-              "categoryId": "board",
-              "item": "機板試修 / CPU另報",
-              "price": {
-                "type": "fixed",
-                "amount": 2000
-              },
-              "rawPrice": "2000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            }
-          ],
-          "modelGroup": "HTC"
-        },
-        {
-          "id": "u19e",
-          "name": "U19E",
-          "deviceType": "手機/平板",
-          "aliases": [
-            "HTC"
-          ],
-          "repairs": [
-            {
-              "id": "螢幕更換-1",
-              "categoryId": "screen",
-              "item": "螢幕更換",
-              "price": {
-                "type": "fixed",
-                "amount": 1800
-              },
-              "rawPrice": "1800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "電池-2",
-              "categoryId": "battery",
-              "item": "電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "充電-耳機孔-震動-3",
-              "categoryId": "charging",
-              "item": "充電 / 耳機孔 / 震動",
-              "price": {
-                "type": "fixed",
-                "amount": 1200
-              },
-              "rawPrice": "1200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "聽筒-麥克風-響鈴-4",
-              "categoryId": "audio",
-              "item": "聽筒 / 麥克風 / 響鈴",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "後鏡頭-前鏡頭-5",
-              "categoryId": "camera",
-              "item": "後鏡頭 / 前鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "開機鍵-音量鍵-6",
-              "categoryId": "buttons",
-              "item": "開機鍵 / 音量鍵",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "機板試修-cpu另報-7",
-              "categoryId": "board",
-              "item": "機板試修 / CPU另報",
-              "price": {
-                "type": "fixed",
-                "amount": 2000
-              },
-              "rawPrice": "2000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            }
-          ],
-          "modelGroup": "HTC"
-        },
-        {
-          "id": "u20-5g",
-          "name": "U20（5G）",
-          "deviceType": "手機/平板",
-          "aliases": [
-            "HTC"
-          ],
-          "repairs": [
-            {
-              "id": "螢幕更換-1",
-              "categoryId": "screen",
-              "item": "螢幕更換",
-              "price": {
-                "type": "fixed",
-                "amount": 1800
-              },
-              "rawPrice": "1800",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "電池-2",
-              "categoryId": "battery",
-              "item": "電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "充電-耳機孔-震動-3",
-              "categoryId": "charging",
-              "item": "充電 / 耳機孔 / 震動",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "聽筒-麥克風-響鈴-4",
-              "categoryId": "audio",
-              "item": "聽筒 / 麥克風 / 響鈴",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "後鏡頭-前鏡頭-5",
-              "categoryId": "camera",
-              "item": "後鏡頭 / 前鏡頭",
-              "price": {
-                "type": "fixed",
-                "amount": 1200
-              },
-              "rawPrice": "1200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "開機鍵-音量鍵-6",
-              "categoryId": "buttons",
-              "item": "開機鍵 / 音量鍵",
-              "price": {
-                "type": "fixed",
-                "amount": 1000
-              },
-              "rawPrice": "1000",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "機板試修-cpu另報-7",
-              "categoryId": "board",
-              "item": "機板試修 / CPU另報",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            }
-          ],
-          "modelGroup": "HTC"
-        },
-        {
-          "id": "u23-pro",
-          "name": "U23 Pro",
-          "deviceType": "手機/平板",
-          "aliases": [
-            "HTC"
-          ],
-          "repairs": [
-            {
-              "id": "電池-2",
-              "categoryId": "battery",
-              "item": "電池",
-              "price": {
-                "type": "fixed",
-                "amount": 1200
-              },
-              "rawPrice": "1200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "充電-耳機孔-震動-3",
-              "categoryId": "charging",
-              "item": "充電 / 耳機孔 / 震動",
-              "price": {
-                "type": "fixed",
-                "amount": 1200
-              },
-              "rawPrice": "1200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "聽筒-麥克風-響鈴-4",
-              "categoryId": "audio",
-              "item": "聽筒 / 麥克風 / 響鈴",
-              "price": {
-                "type": "fixed",
-                "amount": 1200
-              },
-              "rawPrice": "1200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "開機鍵-音量鍵-6",
-              "categoryId": "buttons",
-              "item": "開機鍵 / 音量鍵",
-              "price": {
-                "type": "fixed",
-                "amount": 1200
-              },
-              "rawPrice": "1200",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            },
-            {
-              "id": "機板試修-cpu另報-7",
-              "categoryId": "board",
-              "item": "機板試修 / CPU另報",
-              "price": {
-                "type": "fixed",
-                "amount": 2500
-              },
-              "rawPrice": "2500",
-              "duration": "請洽詢",
-              "warrantyDays": 90,
-              "availability": "inquiry"
-            }
-          ],
-          "modelGroup": "HTC"
         },
         {
           "id": "v15-pro-s1-pro",

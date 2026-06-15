@@ -7,25 +7,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 11",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 6600,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -35,17 +16,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 11",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -120,25 +91,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 11 Pro",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11 Pro",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11 Pro",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -148,17 +100,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 11 Pro",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11 Pro",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2700,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -233,25 +175,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 11 Pro Max",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11 Pro Max",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11 Pro Max",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -261,17 +184,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 11 Pro Max",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 11 Pro Max",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 3500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -346,25 +259,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 12",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -374,31 +268,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 12",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2700,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -468,25 +343,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 12 Mini",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 7200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Mini",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Mini",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -496,31 +352,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 12 Mini",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2700,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Mini",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 3000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Mini",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -590,25 +427,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 12 Pro",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Pro",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Pro",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -618,31 +436,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 12 Pro",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Pro",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2700,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Pro",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5600,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -712,25 +511,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 12 Pro Max",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Pro Max",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Pro Max",
       "repairItem": "認證電池",
       "latestPrice": 1300,
       "supplyStatus": "未標示",
@@ -740,31 +520,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 12 Pro Max",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3700,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Pro Max",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 4900,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 12 Pro Max",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5600,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -834,25 +595,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 13",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -862,17 +604,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 13",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2900,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -882,15 +614,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 13",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13",
       "repairItem": "前鏡頭／後鏡頭",
       "latestPrice": 2000,
       "supplyStatus": "未標示",
@@ -956,25 +679,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 13 Mini",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 7200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Mini",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Mini",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -984,17 +688,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 13 Mini",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Mini",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 4500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -1004,15 +698,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 13 Mini",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Mini",
       "repairItem": "前鏡頭／後鏡頭",
       "latestPrice": 2000,
       "supplyStatus": "未標示",
@@ -1078,25 +763,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 13 Pro",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Pro",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Pro",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -1106,31 +772,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 13 Pro",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Pro",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 4000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Pro",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5100,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -1200,25 +847,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 13 Pro Max",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Pro Max",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Pro Max",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -1228,17 +856,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 13 Pro Max",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Pro Max",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 4400,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -1248,15 +866,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 13 Pro Max",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5600,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 13 Pro Max",
       "repairItem": "前鏡頭／後鏡頭",
       "latestPrice": 2000,
       "supplyStatus": "未標示",
@@ -1322,25 +931,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 14",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -1350,31 +940,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 14",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3100,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 3200,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -1444,25 +1015,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 14 Plus",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Plus",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Plus",
       "repairItem": "認證電池",
       "latestPrice": 1300,
       "supplyStatus": "未標示",
@@ -1472,31 +1024,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 14 Plus",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Plus",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 4700,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Plus",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -1566,25 +1099,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 14 Pro",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Pro",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Pro",
       "repairItem": "認證電池",
       "latestPrice": 1300,
       "supplyStatus": "未標示",
@@ -1594,31 +1108,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 14 Pro",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Pro",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 5000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Pro",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 6500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -1688,25 +1183,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 14 Pro Max",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 12300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Pro Max",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Pro Max",
       "repairItem": "認證電池",
       "latestPrice": 1300,
       "supplyStatus": "未標示",
@@ -1716,31 +1192,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 14 Pro Max",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Pro Max",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 5800,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 14 Pro Max",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 6500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -1810,25 +1267,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 15",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -1838,31 +1276,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 15",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3600,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 5100,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5100,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -1932,25 +1351,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 15 Plus",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Plus",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Plus",
       "repairItem": "認證電池",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
@@ -1960,31 +1360,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 15 Plus",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Plus",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 4700,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Plus",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5100,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -2054,25 +1435,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 15 Pro",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Pro",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Pro",
       "repairItem": "認證電池",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
@@ -2082,31 +1444,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 15 Pro",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 4000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Pro",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 7000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Pro",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 6700,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -2176,25 +1519,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 15 Pro Max",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 12300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Pro Max",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Pro Max",
       "repairItem": "認證電池",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
@@ -2204,31 +1528,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 15 Pro Max",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 4200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Pro Max",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 7200,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 15 Pro Max",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 7800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -2298,25 +1603,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 16",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16",
       "repairItem": "認證電池",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
@@ -2326,31 +1612,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 16",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 4500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -2420,25 +1687,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 16 Plus",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Plus",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Plus",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -2448,31 +1696,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 16 Plus",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Plus",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 5000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Plus",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -2542,25 +1771,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 16 Pro",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Pro",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Pro",
       "repairItem": "認證電池",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
@@ -2570,17 +1780,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 16 Pro",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3600,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Pro",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 6600,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -2590,15 +1790,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 16 Pro",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 8000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Pro",
       "repairItem": "前鏡頭／後鏡頭",
       "latestPrice": 3500,
       "supplyStatus": "未標示",
@@ -2664,25 +1855,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 16 Pro Max",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 12300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Pro Max",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Pro Max",
       "repairItem": "認證電池",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
@@ -2692,17 +1864,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 16 Pro Max",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 4000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Pro Max",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 8400,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -2712,15 +1874,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 16 Pro Max",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 8000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16 Pro Max",
       "repairItem": "前鏡頭／後鏡頭",
       "latestPrice": 3500,
       "supplyStatus": "未標示",
@@ -2786,25 +1939,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 16e",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 7900,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16e",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16e",
       "repairItem": "認證電池",
       "latestPrice": 1600,
       "supplyStatus": "未標示",
@@ -2814,31 +1948,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 16e",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16e",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 3700,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 16e",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 4500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -2908,50 +2023,12 @@
     {
       "brand": "Apple",
       "model": "iPhone 17",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 4000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 8000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -3021,36 +2098,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 17 Pro",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17 Pro",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17 Pro",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 4200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17 Pro",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 8700,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3060,15 +2108,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 17 Pro",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 8000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17 Pro",
       "repairItem": "前鏡頭／後鏡頭",
       "latestPrice": 3500,
       "supplyStatus": "未標示",
@@ -3134,36 +2173,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 17 Pro Max",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 12300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17 Pro Max",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17 Pro Max",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 4500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17 Pro Max",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 9500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3173,15 +2183,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 17 Pro Max",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 8000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 17 Pro Max",
       "repairItem": "前鏡頭／後鏡頭",
       "latestPrice": 3500,
       "supplyStatus": "未標示",
@@ -3247,15 +2248,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 6",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 1490,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 6",
       "repairItem": "認證電池",
       "latestPrice": 800,
       "supplyStatus": "未標示",
@@ -3265,7 +2257,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 6",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3340,15 +2332,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 6 P",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 1490,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 6 P",
       "repairItem": "認證電池",
       "latestPrice": 800,
       "supplyStatus": "未標示",
@@ -3358,7 +2341,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 6 P",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3433,15 +2416,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 6 S",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 1490,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 6 S",
       "repairItem": "認證電池",
       "latestPrice": 800,
       "supplyStatus": "未標示",
@@ -3451,7 +2425,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 6 S",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3526,15 +2500,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 6 SP",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 1490,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 6 SP",
       "repairItem": "認證電池",
       "latestPrice": 800,
       "supplyStatus": "未標示",
@@ -3544,7 +2509,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 6 SP",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3619,15 +2584,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 7",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 1800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 7",
       "repairItem": "認證電池",
       "latestPrice": 800,
       "supplyStatus": "未標示",
@@ -3637,7 +2593,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 7",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3712,15 +2668,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 7 Plus",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 1800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 7 Plus",
       "repairItem": "認證電池",
       "latestPrice": 800,
       "supplyStatus": "未標示",
@@ -3730,7 +2677,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 7 Plus",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3806,15 +2753,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 8",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 1800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 8",
       "repairItem": "認證電池",
       "latestPrice": 800,
       "supplyStatus": "未標示",
@@ -3824,7 +2762,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 8",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3900,15 +2838,6 @@
     {
       "brand": "Apple",
       "model": "iPhone 8 Plus",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 1800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone 8 Plus",
       "repairItem": "認證電池",
       "latestPrice": 800,
       "supplyStatus": "未標示",
@@ -3918,7 +2847,7 @@
     {
       "brand": "Apple",
       "model": "iPhone 8 Plus",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -3994,50 +2923,12 @@
     {
       "brand": "Apple",
       "model": "iPhone Air",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone Air",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 3500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone Air",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 5000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone Air",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 9500,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_apple/",
       "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone Air",
-      "repairItem": "APPLE / 原廠鏡頭",
-      "latestPrice": 5200,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
     },
     {
       "brand": "Apple",
@@ -4107,15 +2998,6 @@
     {
       "brand": "Apple",
       "model": "iPhone SE2 SE3",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone SE2 SE3",
       "repairItem": "認證電池",
       "latestPrice": 1000,
       "supplyStatus": "未標示",
@@ -4125,7 +3007,7 @@
     {
       "brand": "Apple",
       "model": "iPhone SE2 SE3",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 1800,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -4201,25 +3083,6 @@
     {
       "brand": "Apple",
       "model": "iPhone X",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone X",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone X",
       "repairItem": "認證電池",
       "latestPrice": 1000,
       "supplyStatus": "未標示",
@@ -4229,17 +3092,7 @@
     {
       "brand": "Apple",
       "model": "iPhone X",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone X",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -4314,25 +3167,6 @@
     {
       "brand": "Apple",
       "model": "iPhone XR",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 6600,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XR",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XR",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -4342,17 +3176,7 @@
     {
       "brand": "Apple",
       "model": "iPhone XR",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XR",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2000,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -4427,25 +3251,6 @@
     {
       "brand": "Apple",
       "model": "iPhone XS",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 9000,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XS",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XS",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -4455,17 +3260,7 @@
     {
       "brand": "Apple",
       "model": "iPhone XS",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2400,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XS",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2400,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -4540,25 +3335,6 @@
     {
       "brand": "Apple",
       "model": "iPhone XS Max",
-      "repairItem": "APPLE / 原廠螢幕",
-      "latestPrice": 10800,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "原廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XS Max",
-      "repairItem": "APPLE / 原廠電池",
-      "latestPrice": 2300,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XS Max",
       "repairItem": "認證電池",
       "latestPrice": 1200,
       "supplyStatus": "未標示",
@@ -4568,17 +3344,7 @@
     {
       "brand": "Apple",
       "model": "iPhone XS Max",
-      "repairItem": "玻璃破裂",
-      "latestPrice": 2500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_apple/",
-      "screenVariant": "副廠螢幕"
-    },
-    {
-      "brand": "Apple",
-      "model": "iPhone XS Max",
-      "repairItem": "螢幕破裂",
+      "repairItem": "螢幕維修",
       "latestPrice": 2800,
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
@@ -5339,78 +4105,6 @@
       "supplyStatus": "未標示",
       "fetchedAt": "2026-06-14T23:34:11+08:00",
       "sourceUrl": "https://cerphone.com/quotation_mi/"
-    },
-    {
-      "brand": "Dyson",
-      "model": "V15 / SV47",
-      "repairItem": "主機維修",
-      "latestPrice": 1500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_dyson/"
-    },
-    {
-      "brand": "Dyson",
-      "model": "Digital Slim / SV18",
-      "repairItem": "主機維修",
-      "latestPrice": 1500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_dyson/"
-    },
-    {
-      "brand": "Dyson",
-      "model": "V12 / V12 Slim / SV20 / SV30 / SV34 / SV35 / SV44 / SV46 / SV49",
-      "repairItem": "主機維修",
-      "latestPrice": 1500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_dyson/"
-    },
-    {
-      "brand": "Dyson",
-      "model": "V11 / V11Fluffy / V11Absolute / SV14 / SV15",
-      "repairItem": "主機維修",
-      "latestPrice": 1500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_dyson/"
-    },
-    {
-      "brand": "Dyson",
-      "model": "V10 / SV12",
-      "repairItem": "主機維修",
-      "latestPrice": 1500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_dyson/"
-    },
-    {
-      "brand": "Dyson",
-      "model": "V7 / V8 / SV10 / SV11",
-      "repairItem": "主機維修",
-      "latestPrice": 1500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_dyson/"
-    },
-    {
-      "brand": "Dyson",
-      "model": "V6 / SV03 / SV04 / SV07 / SV08 / SV09",
-      "repairItem": "主機維修",
-      "latestPrice": 1500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_dyson/"
-    },
-    {
-      "brand": "Dyson",
-      "model": "HD01 - HD12",
-      "repairItem": "主機維修",
-      "latestPrice": 1500,
-      "supplyStatus": "未標示",
-      "fetchedAt": "2026-06-14T23:34:11+08:00",
-      "sourceUrl": "https://cerphone.com/quotation_dyson/"
     },
     {
       "brand": "Nintendo",
