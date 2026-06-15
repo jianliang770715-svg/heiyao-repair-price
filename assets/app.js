@@ -319,6 +319,7 @@
     getElement('search-form').addEventListener('submit', preventSearchFormSubmit);
     getElement('top').addEventListener('click', showPageHeader);
     window.addEventListener('scroll', handleWindowScroll, { passive: true });
+    window.addEventListener('wheel', handleMobileWheel, { passive: true });
     window.addEventListener('touchstart', handleMobileTouchStart, { passive: true });
     window.addEventListener('touchend', handleMobileTouchEnd, { passive: true });
     window.addEventListener('touchcancel', handleMobileTouchCancel, { passive: true });
@@ -761,6 +762,19 @@
     state.mobileTouchActive = true;
     state.mobileTouchStartY = event.touches[0].clientY;
     resetMobileScrollGestureTracking();
+  }
+
+  function handleMobileWheel(event) {
+    if (
+      !isMobileToolbarViewport() ||
+      !hasActiveQuoteFilters() ||
+      event.deltaY < 24
+    ) {
+      return;
+    }
+
+    setMobileFiltersCompact(true);
+    resetMobileUpGestureCount();
   }
 
   function handleMobileTouchEnd(event) {

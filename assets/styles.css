@@ -940,6 +940,14 @@ select:focus,
   }
 }
 
+@media (max-width: 420px) {
+  .version-badge {
+    position: static;
+    grid-column: 1;
+    justify-self: end;
+  }
+}
+
 @media (min-width: 940px) {
   .site-header {
     grid-template-columns: auto auto auto minmax(0, 1fr) auto;
