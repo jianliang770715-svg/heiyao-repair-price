@@ -969,7 +969,7 @@
             : ''
         }
 
-        <div class="price-line">${escapeHtml(formatPrice(quote.price, quote.currency))}</div>
+        <div class="price-line">${renderQuotePrice(quote)}</div>
 
         <div class="detail-list" aria-label="維修細節">
           <span>${escapeHtml(quote.categoryName)}</span>
@@ -997,6 +997,15 @@
     }
 
     return { kind: 'aftermarket', label: '副廠螢幕' };
+  }
+
+  function renderQuotePrice(quote) {
+    const formattedPrice = escapeHtml(formatPrice(quote.price, quote.currency));
+    if (quote.price?.type !== 'fixed') {
+      return formattedPrice;
+    }
+
+    return `<span class="price-prefix">參考報價</span><span>${formattedPrice}</span>`;
   }
 
   function renderSkeletons() {

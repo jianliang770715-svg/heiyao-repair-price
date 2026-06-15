@@ -655,10 +655,20 @@ select:focus,
 }
 
 .price-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px 8px;
   color: var(--accent-strong);
   font-size: 1.65rem;
   font-weight: 900;
   line-height: 1.1;
+}
+
+.price-prefix {
+  color: var(--ink-muted);
+  font-size: 0.76rem;
+  font-weight: 800;
 }
 
 .quote-card h2,
