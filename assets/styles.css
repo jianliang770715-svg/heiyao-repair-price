@@ -80,6 +80,32 @@ select:disabled {
   pointer-events: none;
 }
 
+.contact-collapse {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 420ms ease;
+}
+
+.contact-collapse-content {
+  min-height: 0;
+  overflow: hidden;
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 240ms ease,
+    transform 420ms ease;
+}
+
+.is-quote-focus .contact-collapse {
+  grid-template-rows: 0fr;
+}
+
+.is-quote-focus .contact-collapse-content {
+  opacity: 0;
+  transform: translateY(-18px);
+  pointer-events: none;
+}
+
 .is-quote-focus.app-shell {
   padding-top: 8px;
 }
@@ -781,6 +807,8 @@ select:focus,
   .app-shell,
   .intro-panel,
   .intro-content,
+  .contact-collapse,
+  .contact-collapse-content,
   .search-toolbar,
   .filter-row {
     transition: none;

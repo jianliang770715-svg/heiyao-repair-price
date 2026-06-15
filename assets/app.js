@@ -108,77 +108,6 @@
               </div>
             </header>
 
-            <section class="contact-panel" aria-label="聯絡方式">
-              <h2>聯絡方式</h2>
-              <div class="contact-grid">
-                <article class="contact-item">
-                  <p class="contact-label">維修聯絡電話</p>
-                  <a data-role="phone-primary" href="tel:0966691696">0966-691-696</a>
-                </article>
-                <article class="contact-item">
-                  <p class="contact-label">第二聯絡電話</p>
-                  <a data-role="phone-secondary" href="tel:0976900166">0976-900-166</a>
-                </article>
-                <article class="contact-item contact-item-wide line-contact-item">
-                  <p class="contact-label">LINE 官方帳號</p>
-                  <div class="line-contact-content">
-                    <a
-                      class="social-image-link"
-                      data-role="line-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      hidden
-                    >
-                      <img
-                        class="line-add-friend-button"
-                        src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
-                        alt="加入好友"
-                        height="36"
-                        border="0"
-                      />
-                    </a>
-                    <a
-                      class="line-poster-link"
-                      data-role="line-poster-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="掃描 QR Code 或點擊加入黑曜手機維修 LINE 官方帳號"
-                      hidden
-                    >
-                      <img
-                        class="line-friends-poster"
-                        src="./assets/line-friends-banner.jpg"
-                        alt="LINE Official Account 好友募集中，帳號 @200ysnhq"
-                      />
-                    </a>
-                    <a
-                      class="review-poster-link"
-                      href="https://maps.app.goo.gl/Sd1sp2foGwqFfy5x8"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="掃描 QR Code 或點擊前往 Google Maps 為黑曜手機維修留下五星好評"
-                    >
-                      <img
-                        class="review-poster"
-                        src="./assets/google-review-banner.png"
-                        alt="黑曜手機維修 Google Maps 好評募集中，掃描 QR Code 留下五星好評"
-                      />
-                    </a>
-                  </div>
-                  <p data-role="line-placeholder">建置中，稍後補上</p>
-                </article>
-                <article class="contact-item contact-item-wide">
-                  <p class="contact-label">Facebook 官方帳號</p>
-                  <a
-                    data-role="facebook-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    hidden
-                  ></a>
-                  <p data-role="facebook-placeholder">建置中，稍後補上</p>
-                </article>
-              </div>
-            </section>
           </div>
         </div>
 
@@ -246,6 +175,82 @@
               </button>
             </div>
           </form>
+
+          <div class="contact-collapse" data-role="contact-collapse">
+            <div class="contact-collapse-content">
+              <section class="contact-panel" aria-label="聯絡方式">
+                <h2>聯絡方式</h2>
+                <div class="contact-grid">
+                  <article class="contact-item">
+                    <p class="contact-label">維修聯絡電話</p>
+                    <a data-role="phone-primary" href="tel:0966691696">0966-691-696</a>
+                  </article>
+                  <article class="contact-item">
+                    <p class="contact-label">第二聯絡電話</p>
+                    <a data-role="phone-secondary" href="tel:0976900166">0976-900-166</a>
+                  </article>
+                  <article class="contact-item contact-item-wide line-contact-item">
+                    <p class="contact-label">LINE 官方帳號</p>
+                    <div class="line-contact-content">
+                      <a
+                        class="social-image-link"
+                        data-role="line-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden
+                      >
+                        <img
+                          class="line-add-friend-button"
+                          src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
+                          alt="加入好友"
+                          height="36"
+                          border="0"
+                        />
+                      </a>
+                      <a
+                        class="line-poster-link"
+                        data-role="line-poster-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="掃描 QR Code 或點擊加入黑曜手機維修 LINE 官方帳號"
+                        hidden
+                      >
+                        <img
+                          class="line-friends-poster"
+                          src="./assets/line-friends-banner.jpg"
+                          alt="LINE Official Account 好友募集中，帳號 @200ysnhq"
+                        />
+                      </a>
+                      <a
+                        class="review-poster-link"
+                        href="https://maps.app.goo.gl/Sd1sp2foGwqFfy5x8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="掃描 QR Code 或點擊前往 Google Maps 為黑曜手機維修留下五星好評"
+                      >
+                        <img
+                          class="review-poster"
+                          src="./assets/google-review-banner.png"
+                          alt="黑曜手機維修 Google Maps 好評募集中，掃描 QR Code 留下五星好評"
+                        />
+                      </a>
+                    </div>
+                    <p data-role="line-placeholder">建置中，稍後補上</p>
+                  </article>
+                  <article class="contact-item contact-item-wide">
+                    <p class="contact-label">Facebook 官方帳號</p>
+                    <a
+                      data-role="facebook-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      hidden
+                    ></a>
+                    <p data-role="facebook-placeholder">建置中，稍後補上</p>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </div>
 
           <section class="summary-bar" aria-live="polite">
             <div>
@@ -619,6 +624,9 @@
     const introPanel = getElement('intro-panel');
     introPanel.setAttribute('aria-hidden', 'true');
     introPanel.inert = true;
+    const contactCollapse = getElement('contact-collapse');
+    contactCollapse.setAttribute('aria-hidden', 'true');
+    contactCollapse.inert = true;
     document.querySelector('.app-shell').classList.add('is-quote-focus');
     syncTopButtonVisibility();
 
@@ -646,6 +654,9 @@
     const introPanel = getElement('intro-panel');
     introPanel.removeAttribute('aria-hidden');
     introPanel.inert = false;
+    const contactCollapse = getElement('contact-collapse');
+    contactCollapse.removeAttribute('aria-hidden');
+    contactCollapse.inert = false;
     document.querySelector('.app-shell').classList.remove('is-quote-focus');
     syncTopButtonVisibility();
     beginMobileProgrammaticScroll();
