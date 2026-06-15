@@ -286,26 +286,29 @@ p {
 }
 
 .line-contact-content {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(0, 1.35fr);
   align-items: center;
-  flex-wrap: wrap;
   gap: 14px;
 }
 
-.line-poster-link {
+.line-poster-link,
+.review-poster-link {
   display: block;
-  width: min(380px, 100%);
+  width: 100%;
   overflow: hidden;
   line-height: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
-.line-poster-link:hover {
+.line-poster-link:hover,
+.review-poster-link:hover {
   border-color: var(--accent);
 }
 
-.line-friends-poster {
+.line-friends-poster,
+.review-poster {
   display: block;
   width: 100%;
   height: auto;
@@ -342,18 +345,23 @@ p {
   right: max(14px, env(safe-area-inset-right));
   bottom: max(14px, env(safe-area-inset-bottom));
   z-index: 10;
-  display: grid;
-  width: 52px;
-  height: 52px;
-  place-items: center;
-  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  gap: 6px;
+  padding: 0 14px;
   color: #ffffff;
   background: var(--accent-strong);
   border: 1px solid var(--accent-strong);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  font-size: 1.45rem;
+  font-size: 0.92rem;
   font-weight: 900;
+  line-height: 1;
+}
+
+.top-button-icon {
+  font-size: 1.25rem;
   line-height: 1;
 }
 
@@ -403,9 +411,14 @@ select {
 }
 
 input {
+  flex: 1 1 auto;
   min-width: 0;
   padding: 0;
   border: 0;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  display: none;
 }
 
 select {
@@ -461,6 +474,48 @@ select:focus,
   color: var(--accent-strong);
   font-size: 1.15rem;
   font-weight: 900;
+}
+
+.query-clear-button {
+  display: grid;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  padding: 0;
+  color: #47615b;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.query-clear-button:hover,
+.query-clear-button:focus-visible {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+
+.filter-expand-button {
+  display: none;
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 0 9px;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border: 1px solid #c7e9df;
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.filter-expand-button:hover,
+.filter-expand-button:focus-visible {
+  background: #cdece3;
+  border-color: var(--accent);
 }
 
 .summary-bar {
@@ -548,6 +603,33 @@ select:focus,
   margin-bottom: 0;
   color: var(--ink-muted);
   font-weight: 700;
+}
+
+.repair-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: -2px;
+}
+
+.repair-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 9px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.repair-badge-original {
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+}
+
+.repair-badge-aftermarket {
+  color: #475569;
+  background: #eef2f7;
 }
 
 .price-line {
@@ -685,6 +767,15 @@ select:focus,
     transform: translateY(-12px);
     pointer-events: none;
   }
+
+  .is-mobile-toolbar-compact .filter-expand-button {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .filter-expand-button[hidden] {
+    display: none;
+  }
 }
 
 @media (min-width: 680px) {
@@ -752,9 +843,29 @@ select:focus,
   .header-chip {
     width: 100%;
   }
+
+  .line-contact-content {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .line-add-friend-button {
+    width: auto;
+  }
 }
 
 @media (min-width: 940px) {
+  .site-header {
+    grid-template-columns: auto auto auto minmax(0, 1fr) auto;
+  }
+
+  .header-copy {
+    grid-column: 1 / 5;
+  }
+
+  .version-badge {
+    grid-column: 5;
+  }
+
   .search-toolbar {
     grid-template-columns: minmax(260px, 1fr) auto;
     align-items: end;
@@ -772,8 +883,6 @@ select:focus,
   .top-button {
     right: max(16px, calc((100vw - 1120px) / 2 + 16px));
     bottom: 18px;
-    width: 48px;
-    height: 48px;
   }
 }
 

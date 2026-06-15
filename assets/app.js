@@ -10,11 +10,14 @@
     quoteFocusScrollTimer: null,
     mobileFiltersCompact: false,
     lastScrollY: window.scrollY,
-    downwardScrollDistance: 0,
     mobileScrollGestureStartY: window.scrollY,
     mobileScrollGestureTimer: null,
+    mobileCompactScrollReleaseTimer: null,
+    mobileProgrammaticScrollTimer: null,
+    mobileAwaitingScrollIdleAfterCompact: false,
     mobileLargeUpGestureCount: 0,
     mobileTouchStartY: null,
+    mobileTouchActive: false,
     ignoreMobileScrollGestureUntil: 0,
     ignoreMobileDownScrollUntil: 0,
     ignoreMobileUpScrollUntil: 0,
@@ -56,8 +59,8 @@
   syncSiteVersion();
   loadPriceData()
     .then((data) => {
-      state.data = data;
-      state.quotes = flattenQuotes(data);
+      state.data = normalizePriceData(data);
+      state.quotes = flattenQuotes(state.data);
       state.loading = false;
       renderLoadedState();
     })
@@ -148,6 +151,19 @@
                         alt="LINE Official Account 好友募集中，帳號 @200ysnhq"
                       />
                     </a>
+                    <a
+                      class="review-poster-link"
+                      href="https://maps.app.goo.gl/Sd1sp2foGwqFfy5x8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="掃描 QR Code 或點擊前往 Google Maps 為黑曜手機維修留下五星好評"
+                    >
+                      <img
+                        class="review-poster"
+                        src="./assets/google-review-banner.png"
+                        alt="黑曜手機維修 Google Maps 好評募集中，掃描 QR Code 留下五星好評"
+                      />
+                    </a>
                   </div>
                   <p data-role="line-placeholder">建置中，稍後補上</p>
                 </article>
@@ -167,7 +183,7 @@
         </div>
 
         <section class="workspace" aria-label="報價查詢">
-          <form class="search-toolbar" role="search">
+          <form class="search-toolbar" role="search" data-role="search-form">
             <label class="search-field">
               <span class="field-label">搜尋</span>
               <span class="input-shell">
@@ -179,10 +195,31 @@
                   autocomplete="off"
                   disabled
                 />
+                <button
+                  class="query-clear-button"
+                  type="button"
+                  data-role="query-clear"
+                  aria-label="清除搜尋並展開篩選選單"
+                  title="清除搜尋並展開篩選選單"
+                >
+                  <span aria-hidden="true">×</span>
+                </button>
+                <button
+                  class="filter-expand-button"
+                  type="button"
+                  data-role="filter-expand"
+                  aria-controls="filter-row"
+                  aria-expanded="true"
+                  aria-label="展開篩選選單"
+                  title="展開篩選選單"
+                  hidden
+                >
+                  篩選
+                </button>
               </span>
             </label>
 
-            <div class="filter-row">
+            <div class="filter-row" id="filter-row">
               <label>
                 <span class="field-label">品牌</span>
                 <select data-role="brand" disabled>
@@ -234,11 +271,12 @@
           class="top-button"
           type="button"
           data-role="top"
-          aria-label="回到頁首"
-          title="回到頁首"
+          aria-label="回頂部"
+          title="回頂部"
           hidden
         >
-          <span aria-hidden="true">↑</span>
+          <span class="top-button-icon" aria-hidden="true">↑</span>
+          <span>回頂部</span>
         </button>
       </main>
     `;
@@ -266,10 +304,14 @@
     });
 
     getElement('reset').addEventListener('click', resetFilters);
+    getElement('query-clear').addEventListener('click', clearQueryAndExpandFilters);
+    getElement('filter-expand').addEventListener('click', expandMobileFilters);
+    getElement('search-form').addEventListener('submit', preventSearchFormSubmit);
     getElement('top').addEventListener('click', showPageHeader);
     window.addEventListener('scroll', handleWindowScroll, { passive: true });
     window.addEventListener('touchstart', handleMobileTouchStart, { passive: true });
     window.addEventListener('touchend', handleMobileTouchEnd, { passive: true });
+    window.addEventListener('touchcancel', handleMobileTouchCancel, { passive: true });
     window.addEventListener('resize', syncResponsiveToolbar);
     syncTopButtonVisibility();
     syncResponsiveToolbar();
@@ -298,6 +340,45 @@
 
       throw error;
     }
+  }
+
+  function normalizePriceData(data) {
+    if (!data || !Array.isArray(data.brands)) {
+      return data;
+    }
+
+    return {
+      ...data,
+      brands: data.brands.flatMap((brand, brandIndex) => splitBrandForDropdown(brand, brandIndex)),
+    };
+  }
+
+  function splitBrandForDropdown(brand, brandIndex) {
+    if (brand.name !== '華為/其他 Android' || !Array.isArray(brand.models)) {
+      return [{ ...brand, sortOrder: brandIndex }];
+    }
+
+    const groupOrder = [];
+    const groupMap = new Map();
+
+    brand.models.forEach((model) => {
+      const groupName = String(model.modelGroup || '未分類').trim() || '未分類';
+      if (!groupMap.has(groupName)) {
+        groupMap.set(groupName, []);
+        groupOrder.push(groupName);
+      }
+      groupMap.get(groupName).push(model);
+    });
+
+    return groupOrder.map((groupName, groupIndex) => ({
+      ...brand,
+      id: `${brand.id}:split:${groupIndex}`,
+      name: groupName,
+      sortOrder: brandIndex * 100 + groupIndex,
+      sourceBrandId: brand.id,
+      sourceBrandName: brand.name,
+      models: groupMap.get(groupName) || [],
+    }));
   }
 
   function renderLoadedState() {
@@ -498,13 +579,37 @@
     updateResults();
   }
 
+  function clearQueryAndExpandFilters(event) {
+    event.preventDefault();
+    state.query = '';
+    getElement('query').value = '';
+    updateResults();
+
+    resetMobileScrollGestureTracking();
+    resetMobileUpGestureCount();
+    setMobileFiltersCompact(false);
+    state.ignoreMobileDownScrollUntil = Date.now() + 600;
+    getElement('query').focus({ preventScroll: true });
+  }
+
+  function preventSearchFormSubmit(event) {
+    event.preventDefault();
+  }
+
+  function expandMobileFilters(event) {
+    event.preventDefault();
+    resetMobileScrollGestureTracking();
+    resetMobileUpGestureCount();
+    setMobileFiltersCompact(false);
+    state.ignoreMobileDownScrollUntil = Date.now() + 700;
+  }
+
   function enterQuoteFocusMode() {
     if (state.quoteFocusMode) {
       return;
     }
 
     state.quoteFocusMode = true;
-    state.downwardScrollDistance = 0;
     resetMobileUpGestureCount();
     const introPanel = getElement('intro-panel');
     introPanel.setAttribute('aria-hidden', 'true');
@@ -515,7 +620,7 @@
     const scrollDelay = preferredScrollBehavior() === 'auto' ? 0 : 430;
     state.quoteFocusScrollTimer = window.setTimeout(() => {
       state.quoteFocusScrollTimer = null;
-      state.ignoreMobileDownScrollUntil = Date.now() + 800;
+      beginMobileProgrammaticScroll();
       document.querySelector('.workspace').scrollIntoView({
         behavior: preferredScrollBehavior(),
         block: 'start',
@@ -538,6 +643,7 @@
     introPanel.inert = false;
     document.querySelector('.app-shell').classList.remove('is-quote-focus');
     syncTopButtonVisibility();
+    beginMobileProgrammaticScroll();
     window.scrollTo({ top: 0, behavior: preferredScrollBehavior() });
   }
 
@@ -556,32 +662,25 @@
     state.lastScrollY = currentScrollY;
 
     if (!isMobileToolbarViewport() || !hasActiveQuoteFilters()) {
-      state.downwardScrollDistance = 0;
       resetMobileScrollGestureTracking();
       resetMobileUpGestureCount();
       setMobileFiltersCompact(false);
       return;
     }
 
-    trackMobileScrollGesture(currentScrollY, scrollDelta);
-
-    if (currentScrollY < 160 && !state.mobileFiltersCompact) {
-      state.downwardScrollDistance = 0;
-      resetMobileUpGestureCount();
-      setMobileFiltersCompact(false);
+    if (state.mobileTouchActive) {
+      resetMobileScrollGestureTracking();
       return;
     }
 
-    if (scrollDelta > 0) {
-      if (Date.now() < state.ignoreMobileDownScrollUntil) {
-        return;
-      }
+    if (state.mobileAwaitingScrollIdleAfterCompact) {
+      waitForMobileScrollIdleAfterCompact();
+      resetMobileScrollGestureTracking();
+      return;
+    }
 
-      state.downwardScrollDistance += scrollDelta;
-      if (state.downwardScrollDistance >= 72) {
-        setMobileFiltersCompact(true);
-        state.downwardScrollDistance = 0;
-      }
+    if (Date.now() < state.ignoreMobileScrollGestureUntil) {
+      resetMobileScrollGestureTracking();
       return;
     }
 
@@ -590,16 +689,29 @@
         return;
       }
 
-      state.downwardScrollDistance = 0;
-    }
-  }
-
-  function trackMobileScrollGesture(currentScrollY, scrollDelta) {
-    if (Date.now() < state.ignoreMobileScrollGestureUntil) {
+      setMobileFiltersCompact(true);
+      resetMobileUpGestureCount();
       resetMobileScrollGestureTracking();
       return;
     }
 
+    if (scrollDelta > 0) {
+      if (Date.now() < state.ignoreMobileDownScrollUntil) {
+        return;
+      }
+
+      if (!state.mobileFiltersCompact) {
+        setMobileFiltersCompact(true);
+        resetMobileUpGestureCount();
+        resetMobileScrollGestureTracking();
+        return;
+      }
+
+      trackMobileScrollGesture(currentScrollY, scrollDelta);
+    }
+  }
+
+  function trackMobileScrollGesture(currentScrollY, scrollDelta) {
     if (!state.mobileScrollGestureTimer) {
       state.mobileScrollGestureStartY = currentScrollY - scrollDelta;
     } else {
@@ -619,29 +731,29 @@
     }
 
     const gestureDistance = window.scrollY - state.mobileScrollGestureStartY;
-    if (gestureDistance <= -120 && Date.now() >= state.ignoreMobileUpScrollUntil) {
-      registerMobileLargeUpGesture();
-      return;
-    }
-
     if (gestureDistance >= 120 && Date.now() >= state.ignoreMobileDownScrollUntil) {
-      resetMobileUpGestureCount();
+      registerMobileLargeUpGesture();
     }
   }
 
   function handleMobileTouchStart(event) {
     if (!isMobileToolbarViewport() || !hasActiveQuoteFilters() || !event.touches.length) {
+      state.mobileTouchActive = false;
       return;
     }
 
+    state.mobileTouchActive = true;
     state.mobileTouchStartY = event.touches[0].clientY;
     resetMobileScrollGestureTracking();
   }
 
   function handleMobileTouchEnd(event) {
+    state.mobileTouchActive = false;
+
     if (
-      !state.mobileFiltersCompact ||
       state.mobileTouchStartY === null ||
+      !isMobileToolbarViewport() ||
+      !hasActiveQuoteFilters() ||
       !event.changedTouches.length
     ) {
       state.mobileTouchStartY = null;
@@ -650,20 +762,32 @@
 
     const touchDistance = event.changedTouches[0].clientY - state.mobileTouchStartY;
     state.mobileTouchStartY = null;
-    state.ignoreMobileScrollGestureUntil = Date.now() + 1600;
+    state.ignoreMobileScrollGestureUntil = Date.now() + 700;
     resetMobileScrollGestureTracking();
 
-    if (touchDistance >= 120) {
-      registerMobileLargeUpGesture();
-    } else if (touchDistance <= -120) {
+    if (touchDistance <= -120) {
+      if (state.mobileFiltersCompact) {
+        registerMobileLargeUpGesture();
+      } else {
+        setMobileFiltersCompact(true);
+        resetMobileUpGestureCount();
+      }
+    } else if (touchDistance >= 24) {
+      setMobileFiltersCompact(true);
       resetMobileUpGestureCount();
     }
+  }
+
+  function handleMobileTouchCancel() {
+    state.mobileTouchActive = false;
+    state.mobileTouchStartY = null;
+    resetMobileScrollGestureTracking();
   }
 
   function registerMobileLargeUpGesture() {
     state.mobileLargeUpGestureCount += 1;
 
-    if (state.mobileLargeUpGestureCount >= 5) {
+    if (state.mobileLargeUpGestureCount >= 2) {
       resetMobileUpGestureCount();
       setMobileFiltersCompact(false);
     }
@@ -677,6 +801,52 @@
     state.mobileScrollGestureStartY = window.scrollY;
   }
 
+  function waitForMobileScrollIdleAfterCompact() {
+    state.mobileAwaitingScrollIdleAfterCompact = true;
+    if (state.mobileCompactScrollReleaseTimer) {
+      window.clearTimeout(state.mobileCompactScrollReleaseTimer);
+    }
+
+    state.mobileCompactScrollReleaseTimer = window.setTimeout(() => {
+      state.mobileCompactScrollReleaseTimer = null;
+      state.mobileAwaitingScrollIdleAfterCompact = false;
+      resetMobileScrollGestureTracking();
+    }, 240);
+  }
+
+  function beginMobileProgrammaticScroll() {
+    const duration = 1400;
+    const ignoreUntil = Date.now() + duration;
+    state.ignoreMobileScrollGestureUntil = Math.max(
+      state.ignoreMobileScrollGestureUntil,
+      ignoreUntil,
+    );
+    state.ignoreMobileDownScrollUntil = Math.max(
+      state.ignoreMobileDownScrollUntil,
+      ignoreUntil,
+    );
+    state.ignoreMobileUpScrollUntil = Math.max(
+      state.ignoreMobileUpScrollUntil,
+      ignoreUntil,
+    );
+    resetMobileScrollGestureTracking();
+    resetMobileUpGestureCount();
+
+    if (state.mobileProgrammaticScrollTimer) {
+      window.clearTimeout(state.mobileProgrammaticScrollTimer);
+    }
+
+    state.mobileProgrammaticScrollTimer = window.setTimeout(() => {
+      state.mobileProgrammaticScrollTimer = null;
+      state.lastScrollY = window.scrollY;
+      resetMobileScrollGestureTracking();
+      resetMobileUpGestureCount();
+      if (isMobileToolbarViewport() && hasActiveQuoteFilters()) {
+        setMobileFiltersCompact(false);
+      }
+    }, duration);
+  }
+
   function resetMobileUpGestureCount() {
     state.mobileLargeUpGestureCount = 0;
   }
@@ -688,16 +858,28 @@
     }
 
     if (state.mobileFiltersCompact && !shouldCompact) {
-      state.ignoreMobileDownScrollUntil = Date.now() + 500;
+      state.mobileAwaitingScrollIdleAfterCompact = false;
+      if (state.mobileCompactScrollReleaseTimer) {
+        window.clearTimeout(state.mobileCompactScrollReleaseTimer);
+        state.mobileCompactScrollReleaseTimer = null;
+      }
+      state.ignoreMobileScrollGestureUntil = Date.now() + 700;
+      state.ignoreMobileDownScrollUntil = Date.now() + 700;
+      resetMobileScrollGestureTracking();
     }
 
     if (!state.mobileFiltersCompact && shouldCompact) {
-      state.ignoreMobileUpScrollUntil = Date.now() + 500;
+      state.ignoreMobileScrollGestureUntil = Date.now() + 350;
       resetMobileUpGestureCount();
+      resetMobileScrollGestureTracking();
+      waitForMobileScrollIdleAfterCompact();
     }
 
     state.mobileFiltersCompact = shouldCompact;
     const filterRow = document.querySelector('.filter-row');
+    const filterExpandButton = getElement('filter-expand');
+    filterExpandButton.hidden = !shouldCompact;
+    filterExpandButton.setAttribute('aria-expanded', String(!shouldCompact));
     document.querySelector('.app-shell').classList.toggle(
       'is-mobile-toolbar-compact',
       shouldCompact,
@@ -713,7 +895,6 @@
 
   function syncResponsiveToolbar() {
     state.lastScrollY = window.scrollY;
-    state.downwardScrollDistance = 0;
     resetMobileScrollGestureTracking();
     resetMobileUpGestureCount();
     if (!isMobileToolbarViewport()) {
@@ -757,6 +938,8 @@
   }
 
   function renderQuoteCard(quote) {
+    const screenType = getAppleScreenTypeLabel(quote);
+
     return `
       <article class="quote-card">
         <div class="card-topline">
@@ -768,6 +951,17 @@
 
         <h2>${escapeHtml(formatQuoteModelName(quote))}</h2>
         <p class="repair-item">${escapeHtml(quote.item)}</p>
+        ${
+          screenType
+            ? `
+              <div class="repair-badge-row" aria-label="螢幕類型">
+                <span class="repair-badge repair-badge-${screenType.kind}">
+                  ${escapeHtml(screenType.label)}
+                </span>
+              </div>
+            `
+            : ''
+        }
 
         <div class="price-line">${escapeHtml(formatPrice(quote.price, quote.currency))}</div>
 
@@ -784,6 +978,19 @@
         }
       </article>
     `;
+  }
+
+  function getAppleScreenTypeLabel(quote) {
+    if (quote.brandId !== 'apple' || quote.categoryId !== 'screen') {
+      return null;
+    }
+
+    const text = normalize([quote.item, quote.note, quote.modelName].join(' '));
+    if (text.includes('原廠')) {
+      return { kind: 'original', label: '原廠螢幕' };
+    }
+
+    return { kind: 'aftermarket', label: '副廠螢幕' };
   }
 
   function renderSkeletons() {
@@ -826,7 +1033,7 @@
   }
 
   function getBrands() {
-    return [...(state.data.brands || [])].sort(compareByName);
+    return [...(state.data.brands || [])].sort(compareBrands);
   }
 
   function getCategories() {
@@ -850,7 +1057,48 @@
           brandName: brand.name,
         })),
       )
-      .sort(compareByName);
+      .sort(compareModelOptions);
+  }
+
+  function compareModelOptions(left, right) {
+    const brandOrder = brandSortRank(left.brandId) - brandSortRank(right.brandId);
+    if (brandOrder !== 0) {
+      return brandOrder;
+    }
+
+    const familyOrder = modelFamilyRank(left) - modelFamilyRank(right);
+    return familyOrder || compareByName(left, right);
+  }
+
+  function compareBrands(left, right) {
+    const leftOrder = Number.isFinite(left.sortOrder) ? left.sortOrder : Number.POSITIVE_INFINITY;
+    const rightOrder = Number.isFinite(right.sortOrder) ? right.sortOrder : Number.POSITIVE_INFINITY;
+    if (leftOrder !== rightOrder) {
+      return leftOrder - rightOrder;
+    }
+
+    return compareByName(left, right);
+  }
+
+  function brandSortRank(brandId) {
+    const brand = (state.data.brands || []).find((entry) => entry.id === brandId);
+    return Number.isFinite(brand?.sortOrder) ? brand.sortOrder : Number.POSITIVE_INFINITY;
+  }
+
+  function modelFamilyRank(model) {
+    if (model.brandId !== 'apple') {
+      return 0;
+    }
+
+    if (model.name.startsWith('iPhone')) {
+      return 0;
+    }
+
+    if (model.name.startsWith('iPad')) {
+      return 1;
+    }
+
+    return 2;
   }
 
   function matchesQuote(quote) {
@@ -1075,7 +1323,7 @@
     }
 
     if (name === 'Apple') {
-      return 'Apple Mac（桌機／筆電）';
+      return 'Apple 全系列（iPhone／iPad／Mac）';
     }
 
     return name;

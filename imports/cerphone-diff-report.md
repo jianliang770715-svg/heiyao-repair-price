@@ -1,0 +1,191 @@
+# Cerphone 最新報價差異
+
+- Source: https://cerphone.com/quotation/
+- Fetched at: 2026-06-14T23:34:11+08:00
+- 比對基準: 站內 `data/prices.json`
+- Apple iPhone 依你的規則拆分：`APPLE / 原廠螢幕` 另外列，`螢幕破裂`、`玻璃破裂`、`液晶破裂` 視為副廠螢幕；本次 Apple 頁面目前只看到 `玻璃破裂` 與 `螢幕破裂` 這兩個副廠螢幕標示。
+- 說明: 先做簡單差異展示，供你人工確認後再決定是否更新正式站內價格
+
+## 摘要
+- 總筆數: 581
+- 上修: 0
+- 下調: 5
+- 持平: 417
+- 需人工確認: 86
+- 新增/未對上: 73
+- 異動金額範圍: -1,300 ~ 0 TWD
+
+## 價格異動
+- Samsung / Note 20 ultra N9860 / 螢幕破裂: Cerphone 5,500 | 站內 6,800 | 下調 1,300
+- Samsung / S23（S9110） / 螢幕破裂: Cerphone 4,200 | 站內 5,200 | 下調 1,000
+- Samsung / S23+（S9160） / 螢幕破裂: Cerphone 4,000 | 站內 4,600 | 下調 600
+- Samsung / S24（S9210） / 螢幕破裂: Cerphone 4,000 | 站內 4,500 | 下調 500
+- Samsung / S23U（S9180） / 螢幕破裂: Cerphone 7,500 | 站內 7,800 | 下調 300
+
+## 需人工確認
+- Apple / iPhone 11 / 前鏡頭／後鏡頭: Cerphone 1500／1200 | 站內 1500／1200
+- Apple / iPhone 11 / 容量擴充: Cerphone 3500(256)/4500(512) | 站內 3500(256)/4500(512)
+- Apple / iPhone 11 Pro / 前鏡頭／後鏡頭: Cerphone 1500／1500 | 站內 1500／1500
+- Apple / iPhone 11 Pro / 容量擴充: Cerphone 3500(256)/4500(512) | 站內 3500(256)/4500(512)
+- Apple / iPhone 11 Pro Max / 前鏡頭／後鏡頭: Cerphone 1500／1500 | 站內 1500／1500
+- Apple / iPhone 11 Pro Max / 容量擴充: Cerphone 3500(256)/4500(512) | 站內 3500(256)/4500(512)
+- Apple / iPhone 12 / 前鏡頭／後鏡頭: Cerphone 2000／1600 | 站內 2000／1600
+- Apple / iPhone 12 / 容量擴充: Cerphone 3500(256) | 站內 3500(256)
+- Apple / iPhone 12 Mini / 前鏡頭／後鏡頭: Cerphone 2000／1500 | 站內 2000／1500
+- Apple / iPhone 12 Mini / 容量擴充: Cerphone 3500(256) | 站內 3500(256)
+- Apple / iPhone 12 Pro / 前鏡頭／後鏡頭: Cerphone 2000／2500 | 站內 2000／2500
+- Apple / iPhone 12 Pro / 容量擴充: Cerphone 3500(256)/4000(512) | 站內 3500(256)/4000(512)
+- Apple / iPhone 12 Pro Max / 前鏡頭／後鏡頭: Cerphone 2000／2800 | 站內 2000／2800
+- Apple / iPhone 12 Pro Max / 容量擴充: Cerphone 3500(256)/4000(512) | 站內 3500(256)/4000(512)
+- Apple / iPhone 13 / 前鏡頭／後鏡頭: Cerphone 2000／1300 | 站內 2000／1300
+- Apple / iPhone 13 / 容量擴充: Cerphone 4000(256)/4500(512) | 站內 4000(256)/4500(512)
+- Apple / iPhone 13 Mini / 前鏡頭／後鏡頭: Cerphone 2000／1300 | 站內 2000／1300
+- Apple / iPhone 13 Mini / 容量擴充: Cerphone 4000(256)/4500(512) | 站內 4000(256)/4500(512)
+- Apple / iPhone 13 Pro / 前鏡頭／後鏡頭: Cerphone 2000／2500 | 站內 2000／2500
+- Apple / iPhone 13 Pro / 容量擴充: Cerphone 4000(256)/4500(512) | 站內 4000(256)/4500(512)
+- Apple / iPhone 13 Pro Max / 前鏡頭／後鏡頭: Cerphone 2000／2500 | 站內 2000／2500
+- Apple / iPhone 13 Pro Max / 容量擴充: Cerphone 4000(256)/4500(512) | 站內 4000(256)/4500(512)
+- Apple / iPhone 14 / 前鏡頭／後鏡頭: Cerphone 3500／1800 | 站內 3500／1800
+- Apple / iPhone 14 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)
+- Apple / iPhone 14 Plus / 前鏡頭／後鏡頭: Cerphone 3500／1800 | 站內 3500／1800
+- Apple / iPhone 14 Plus / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)
+- Apple / iPhone 14 Pro / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500
+- Apple / iPhone 14 Pro / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 14 Pro Max / 前鏡頭／後鏡頭: Cerphone 3500 / 2300 | 站內 3500 / 2300
+- Apple / iPhone 14 Pro Max / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 15 / 前鏡頭／後鏡頭: Cerphone 3500／1800 | 站內 3500／1800
+- Apple / iPhone 15 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)
+- Apple / iPhone 15 Plus / 前鏡頭／後鏡頭: Cerphone 3500／1800 | 站內 3500／1800
+- Apple / iPhone 15 Plus / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)
+- Apple / iPhone 15 Pro / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500
+- Apple / iPhone 15 Pro / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 15 Pro Max / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500
+- Apple / iPhone 15 Pro Max / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 16 / 前鏡頭／後鏡頭: Cerphone 3500／2200 | 站內 3500／2200
+- Apple / iPhone 16 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)
+- Apple / iPhone 16 Plus / 前鏡頭／後鏡頭: Cerphone 3500／2600 | 站內 3500／2600
+- Apple / iPhone 16 Plus / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)
+- Apple / iPhone 16 Pro / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500
+- Apple / iPhone 16 Pro / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 16 Pro Max / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500
+- Apple / iPhone 16 Pro Max / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 16e / 前鏡頭／後鏡頭: Cerphone 3500／2300 | 站內 3500／2300
+- Apple / iPhone 16e / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 17 / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500
+- Apple / iPhone 17 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)
+- Apple / iPhone 17 Pro / 前鏡頭／後鏡頭: Cerphone 3500／2800 | 站內 3500／2800
+- Apple / iPhone 17 Pro / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 17 Pro Max / 前鏡頭／後鏡頭: Cerphone 3500／2800 | 站內 3500／2800
+- Apple / iPhone 17 Pro Max / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)
+- Apple / iPhone 6 / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋
+- Apple / iPhone 6 / 容量擴充: Cerphone 2500(128) | 站內 2500(128)
+- Apple / iPhone 6 P / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋
+- Apple / iPhone 6 P / 容量擴充: Cerphone 2500(128) | 站內 2500(128)
+- Apple / iPhone 6 S / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋
+- Apple / iPhone 6 S / 容量擴充: Cerphone 2500(128)/3000(256) | 站內 2500(128)/3000(256)
+- Apple / iPhone 6 SP / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋
+- Apple / iPhone 6 SP / 容量擴充: Cerphone 2500(128)/3000(256) | 站內 2500(128)/3000(256)
+- Apple / iPhone 7 / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋
+- Apple / iPhone 7 / 容量擴充: Cerphone 2500(128)3000(256) | 站內 2500(128)3000(256)
+- Apple / iPhone 7 Plus / 前鏡頭/後鏡頭: Cerphone 1000/1200 | 站內 1000/1200
+- Apple / iPhone 7 Plus / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋
+- Apple / iPhone 7 Plus / 容量擴充: Cerphone 2500(128)/3000(256) | 站內 2500(128)/3000(256)
+- Apple / iPhone 8 / 前鏡頭/後鏡頭: Cerphone 1000/1200 | 站內 1000/1200
+- Apple / iPhone 8 / HOME鍵: Cerphone 2000 保有指紋 | 站內 2000 保有指紋
+- Apple / iPhone 8 / 容量擴充: Cerphone 2500(256) | 站內 2500(256)
+- Apple / iPhone 8 Plus / 前鏡頭/後鏡頭: Cerphone 1000/1200 | 站內 1000/1200
+- Apple / iPhone 8 Plus / HOME鍵: Cerphone 2000 保有指紋 | 站內 2000 保有指紋
+- Apple / iPhone 8 Plus / 容量擴充: Cerphone 2500(256) | 站內 2500(256)
+- Apple / iPhone Air / 前鏡頭／後鏡頭: Cerphone 3500／2800 | 站內 3500／2800
+- Apple / iPhone Air / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)
+- Apple / iPhone SE2 SE3 / 前鏡頭/後鏡頭: Cerphone 1000/1200 | 站內 1000/1200
+- Apple / iPhone SE2 SE3 / HOME鍵: Cerphone 2000 保有指紋 | 站內 2000 保有指紋
+- Apple / iPhone SE2 SE3 / 容量擴充: Cerphone 2500(256) | 站內 2500(256)
+- Apple / iPhone X / 前鏡頭／後鏡頭: Cerphone 1500／1200 | 站內 1500／1200
+- Apple / iPhone X / 容量擴充: Cerphone 3000(256) | 站內 3000(256)
+- Apple / iPhone XR / 前鏡頭／後鏡頭: Cerphone 1500／1200 | 站內 1500／1200
+- Apple / iPhone XR / 容量擴充: Cerphone 3000(256)/4000(512) | 站內 3000(256)/4000(512)
+- Apple / iPhone XS / 前鏡頭／後鏡頭: Cerphone 2000／1200 | 站內 2000／1200
+- Apple / iPhone XS / 容量擴充: Cerphone 3000(256)/3500(512) | 站內 3000(256)/3500(512)
+- Apple / iPhone XS Max / 前鏡頭／後鏡頭: Cerphone 2000／1200 | 站內 2000／1200
+- Apple / iPhone XS Max / 容量擴充: Cerphone 3000(256)/3500(512) | 站內 3000(256)/3500(512)
+
+## 新增或未對上
+- Samsung / Z Fold 7（SM-F966） / 螢幕破裂: Cerphone 頁面顯示 14000／22000 雙價方案 | 站內未找到對應
+- Samsung / Z Fold 6（SM-F956） / 螢幕破裂: Cerphone 頁面顯示 15200／17300 雙價方案 | 站內未找到對應
+- Samsung / Z Fold 5（SM-F946） / 螢幕破裂: Cerphone 頁面顯示 11800／17100 雙價方案 | 站內未找到對應
+- Samsung / Z Fold 4（SM-F936） / 螢幕破裂: Cerphone 頁面顯示 9800／17100 雙價方案 | 站內未找到對應
+- Samsung / Z Fold 3（SM-F926） / 螢幕破裂: Cerphone 頁面顯示 7700／17100 雙價方案 | 站內未找到對應
+- Samsung / Z Fold 2（SM-F916） / 螢幕破裂: Cerphone 7,300 | 站內未找到對應
+- Samsung / Z Flip 7（SM-F751） / 螢幕破裂: Cerphone 7,500 | 站內未找到對應
+- Samsung / Z Flip 6（SM-F741） / 螢幕破裂: Cerphone 8,000 | 站內未找到對應
+- Samsung / Z Flip 5（SM-F731） / 螢幕破裂: Cerphone 頁面顯示 7500／9600 雙價方案 | 站內未找到對應
+- Samsung / Z Flip 4（SM-F721） / 螢幕破裂: Cerphone 頁面顯示 7000／9600 雙價方案 | 站內未找到對應
+- Samsung / Z Flip 3（SM-F711） / 螢幕破裂: Cerphone 頁面顯示 5500／9600 雙價方案 | 站內未找到對應
+- Google / Pixel 10A / 螢幕破裂: Cerphone 4,700 | 站內未找到對應
+- Google / Pixel 10 / 螢幕破裂: Cerphone 3,800 | 站內未找到對應
+- Google / Pixel 10 pro / 螢幕破裂: Cerphone 3,800 | 站內未找到對應
+- Google / Pixel 10 pro XL / 螢幕破裂: Cerphone 5,400 | 站內未找到對應
+- Google / Pixel 9A / 螢幕破裂: Cerphone 3,800 | 站內未找到對應
+- Google / Pixel 9 / 螢幕破裂: Cerphone 4,000 | 站內未找到對應
+- Google / Pixel 9 pro / 螢幕破裂: Cerphone 3,200 | 站內未找到對應
+- Google / Pixel 9 pro XL / 螢幕破裂: Cerphone 5,500 | 站內未找到對應
+- Google / Pixel 8 Pro / 螢幕破裂: Cerphone 5,300 | 站內未找到對應
+- Google / Pixel 8A / 螢幕破裂: Cerphone 3,600 | 站內未找到對應
+- Google / Pixel 8 / 螢幕破裂: Cerphone 3,700 | 站內未找到對應
+- OPPO / FindN2 / 螢幕破裂: Cerphone 8,000 | 站內未找到對應
+- OPPO / FindN3 / 螢幕破裂: Cerphone 檢測後告知可選三星 11000 | 站內未找到對應
+- OPPO / FindN3 / 螢幕破裂: Cerphone 檢測後告知 | 站內未找到對應
+- OPPO / FindN3Flip / 螢幕破裂: Cerphone 7,000 | 站內未找到對應
+- OPPO / FIND X8 / 螢幕破裂: Cerphone 2,500 | 站內未找到對應
+- OPPO / FIND X8 PRO / 螢幕破裂: Cerphone 4,000 | 站內未找到對應
+- OPPO / Reno14Pro(5G) / 螢幕破裂: Cerphone 2,800 | 站內未找到對應
+- OPPO / Reno14F(5G) / 螢幕破裂: Cerphone 3,000 | 站內未找到對應
+- OPPO / Reno14(5G) / 螢幕破裂: Cerphone 2,300 | 站內未找到對應
+- OPPO / Reno 15(5G) / 螢幕破裂: Cerphone 2,000 | 站內未找到對應
+- OPPO / Reno 15F(5G) / 螢幕破裂: Cerphone 2,300 | 站內未找到對應
+- OPPO / Reno 15Pro(5G) / 螢幕破裂: Cerphone 4,200 | 站內未找到對應
+- OPPO / Reno 15Pro max(5G) / 螢幕破裂: Cerphone 4,200 | 站內未找到對應
+- OPPO / Reno12 (5G) / 螢幕破裂: Cerphone 3,200 | 站內未找到對應
+- OPPO / Reno 13 pro(5G) / 螢幕破裂: Cerphone 2,300 | 站內未找到對應
+- OPPO / Reno 13(5G) / 螢幕破裂: Cerphone 2,300 | 站內未找到對應
+- OPPO / A3 Pro / 螢幕破裂: Cerphone 2,500 | 站內未找到對應
+- OPPO / A5 PRO(5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A54 (4G)(5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A74 (5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A55 (5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A73 (5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A77 (5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A57 (5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A38 (5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A79 (5G) / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- OPPO / A9 2020 / 螢幕破裂: Cerphone 1,600 | 站內未找到對應
+- 小米 / 小米 15 / 螢幕破裂: Cerphone 3,500 | 站內未找到對應
+- 小米 / 小米 14T／14T pro / 螢幕破裂: Cerphone 2,000 | 站內未找到對應
+- 小米 / 小米 14U / 螢幕破裂: Cerphone 4,600 | 站內未找到對應
+- 小米 / 小米 14 Pro / 螢幕破裂: Cerphone 4,000 | 站內未找到對應
+- 小米 / 小米 14 / 螢幕破裂: Cerphone 3,200 | 站內未找到對應
+- 小米 / 小米 13T／13T Pro / 螢幕破裂: Cerphone 2,200 | 站內未找到對應
+- 小米 / 紅米 Note14Pro+ 5G / 螢幕破裂: Cerphone 2,200 | 站內未找到對應
+- 小米 / 紅米 Note 14 Pro 5G / 螢幕破裂: Cerphone 2,200 | 站內未找到對應
+- 小米 / 紅米 Note14 5G / 螢幕破裂: Cerphone 3,200 | 站內未找到對應
+- 小米 / 紅米 Note14 4G / 螢幕破裂: Cerphone 3,200 | 站內未找到對應
+- Dyson / V15 / SV47 / 主機維修: Cerphone 1,500 | 站內未找到對應
+- Dyson / Digital Slim / SV18 / 主機維修: Cerphone 1,500 | 站內未找到對應
+- Dyson / V12 / V12 Slim / SV20 / SV30 / SV34 / SV35 / SV44 / SV46 / SV49 / 主機維修: Cerphone 1,500 | 站內未找到對應
+- Dyson / V11 / V11Fluffy / V11Absolute / SV14 / SV15 / 主機維修: Cerphone 1,500 | 站內未找到對應
+- Dyson / V10 / SV12 / 主機維修: Cerphone 1,500 | 站內未找到對應
+- Dyson / V7 / V8 / SV10 / SV11 / 主機維修: Cerphone 1,500 | 站內未找到對應
+- Dyson / V6 / SV03 / SV04 / SV07 / SV08 / SV09 / 主機維修: Cerphone 1,500 | 站內未找到對應
+- Dyson / HD01 - HD12 / 主機維修: Cerphone 1,500 | 站內未找到對應
+- Nintendo / Switch OLED版 / 主機／配件維修: Cerphone 主機報價 | 站內未找到對應
+- Nintendo / Switch / 主機／配件維修: Cerphone 主機報價 | 站內未找到對應
+- Nintendo / Switch Lite（青春版） / 主機／配件維修: Cerphone 主機報價 | 站內未找到對應
+- Nintendo / joy-con / 主機／配件維修: Cerphone 600 | 站內未找到對應
+- Nintendo / Switch Pro 手把 / 主機／配件維修: Cerphone 雙邊 1000 | 站內未找到對應
+- Nintendo / Switch Pro 手把 / 主機／配件維修: Cerphone 1,000 | 站內未找到對應
+
+## 備註
+- `cerphone-latest.json` 已同步更新為目前快照時間。
+- Apple iPhone 的原廠螢幕與副廠螢幕已分開處理；若未來 Cerphone 再出現 `液晶破裂`，會依同一規則視為副廠螢幕。
+- 這份差異檔只列出異動、需人工確認與未對上項目，方便快速過目。

@@ -1,7 +1,7 @@
 window.REPAIR_PRICE_DATA = {
   "metadata": {
     "studioName": "黑曜手機維修",
-    "updatedAt": "2026-05-18",
+    "updatedAt": "2026-06-14",
     "currency": "TWD",
     "address": "新北市中和區信義街41巷3號一樓",
     "facebookContact": "黑曜手機維修 Facebook",
@@ -31743,9 +31743,9 @@ window.REPAIR_PRICE_DATA = {
               "item": "螢幕破裂",
               "price": {
                 "type": "fixed",
-                "amount": 6800
+                "amount": 5500
               },
-              "rawPrice": "6800",
+              "rawPrice": "5500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -34058,9 +34058,9 @@ window.REPAIR_PRICE_DATA = {
               "item": "螢幕破裂",
               "price": {
                 "type": "fixed",
-                "amount": 4600
+                "amount": 4000
               },
-              "rawPrice": "4600",
+              "rawPrice": "4000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -34314,9 +34314,9 @@ window.REPAIR_PRICE_DATA = {
               "item": "螢幕破裂",
               "price": {
                 "type": "fixed",
-                "amount": 7800
+                "amount": 7500
               },
-              "rawPrice": "7800",
+              "rawPrice": "7500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -34442,9 +34442,9 @@ window.REPAIR_PRICE_DATA = {
               "item": "螢幕破裂",
               "price": {
                 "type": "fixed",
-                "amount": 5200
+                "amount": 4200
               },
-              "rawPrice": "5200",
+              "rawPrice": "4200",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -34826,9 +34826,9 @@ window.REPAIR_PRICE_DATA = {
               "item": "螢幕破裂",
               "price": {
                 "type": "fixed",
-                "amount": 4500
+                "amount": 4000
               },
-              "rawPrice": "4500",
+              "rawPrice": "4000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
