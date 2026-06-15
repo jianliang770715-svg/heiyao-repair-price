@@ -934,7 +934,8 @@
     const rawVersion = window.REPAIR_SITE_VERSION;
     const version = String(rawVersion || '').trim();
     const normalized = version ? (version.toLowerCase().startsWith('v') ? version : `v${version}`) : 'v?';
-    target.textContent = `ver ${normalized}`;
+    const debugLabel = version.toLowerCase().includes('debug') ? '版' : '';
+    target.textContent = `ver ${normalized}${debugLabel}`;
   }
 
   function renderQuoteCard(quote) {
