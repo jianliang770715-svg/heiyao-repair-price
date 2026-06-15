@@ -8,6 +8,7 @@ window.REPAIR_PRICE_DATA = {
     "facebookUrl": "https://facebook.com/OTRepair",
     "lineContact": "加入黑曜手機維修 LINE 官方帳號",
     "lineUrl": "https://lin.ee/SMFc6si",
+    "lineOaId": "@200ysnhq",
     "warrantyDays": 90,
     "serviceScope": [
       "Apple iPhone / iPad / Mac 桌機與筆電",

@@ -988,6 +988,8 @@
           <span>${quote.warrantyDays > 0 ? `${escapeHtml(quote.warrantyDays)} 天保固` : '檢測無保固'}</span>
         </div>
 
+        ${renderLineInquiryAction(quote)}
+
         ${
           quote.note
             ? `<p class="card-note">${escapeHtml(quote.note)}</p>`
@@ -1017,6 +1019,40 @@
     }
 
     return `<span class="price-prefix">參考報價</span><span>${formattedPrice}</span>`;
+  }
+
+  function renderLineInquiryAction(quote) {
+    if (!hasActiveQuoteFilters()) {
+      return '';
+    }
+
+    const url = buildLineInquiryUrl(quote);
+    if (!url) {
+      return '';
+    }
+
+    const label = `透過 LINE 詢問 ${quote.brandName} ${formatQuoteModelName(quote)} ${quote.item}`;
+    return `
+      <a
+        class="quote-line-action"
+        href="${escapeHtml(url)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="${escapeHtml(label)}"
+      >
+        LINE 詢問此項目
+      </a>
+    `;
+  }
+
+  function buildLineInquiryUrl(quote) {
+    const lineId = String(state.data?.metadata?.lineOaId || '').trim();
+    if (!/^@[a-z0-9]+$/i.test(lineId)) {
+      return '';
+    }
+
+    const message = `您好，我想詢問 ${quote.brandName} ${formatQuoteModelName(quote)} 的「${quote.item}」參考報價與可預約時間。`;
+    return `https://line.me/R/oaMessage/${lineId}/?${encodeURIComponent(message)}`;
   }
 
   function renderSkeletons() {

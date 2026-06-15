@@ -730,6 +730,29 @@ select:focus,
   font-weight: 700;
 }
 
+.quote-line-action {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 13px;
+  color: #ffffff;
+  background: #06a947;
+  border: 1px solid #058e3c;
+  border-radius: var(--radius);
+  font-size: 0.84rem;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.quote-line-action:hover,
+.quote-line-action:focus-visible {
+  color: #ffffff;
+  background: #058e3c;
+}
+
 .card-note {
   margin-bottom: 0;
   color: var(--ink-muted);
@@ -910,6 +933,10 @@ select:focus,
 
   .line-add-friend-button {
     width: auto;
+  }
+
+  .quote-line-action {
+    width: 100%;
   }
 }
 
