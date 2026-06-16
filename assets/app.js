@@ -112,69 +112,76 @@
         </div>
 
         <section class="workspace" aria-label="報價查詢">
-          <form class="search-toolbar" role="search" data-role="search-form">
-            <label class="search-field">
-              <span class="field-label">搜尋</span>
-              <span class="input-shell">
-                <span class="search-mark" aria-hidden="true">⌕</span>
-                <input
-                  type="search"
-                  data-role="query"
-                  placeholder="例如 ip11、iphone11、A1534、電池"
-                  autocomplete="off"
-                  disabled
-                />
-                <button
-                  class="query-clear-button"
-                  type="button"
-                  data-role="query-clear"
-                  aria-label="清除搜尋並展開篩選選單"
-                  title="清除搜尋並展開篩選選單"
-                >
-                  <span aria-hidden="true">×</span>
+          <div class="sticky-search-panel">
+            <form class="search-toolbar" role="search" data-role="search-form">
+              <label class="search-field">
+                <span class="field-label">搜尋</span>
+                <span class="input-shell">
+                  <span class="search-mark" aria-hidden="true">⌕</span>
+                  <input
+                    type="search"
+                    data-role="query"
+                    placeholder="例如 ip11、iphone11、A1534、電池"
+                    autocomplete="off"
+                    disabled
+                  />
+                  <button
+                    class="query-clear-button"
+                    type="button"
+                    data-role="query-clear"
+                    aria-label="清除搜尋並展開篩選選單"
+                    title="清除搜尋並展開篩選選單"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                  <button
+                    class="filter-expand-button"
+                    type="button"
+                    data-role="filter-expand"
+                    aria-controls="filter-row"
+                    aria-expanded="true"
+                    aria-label="展開篩選選單"
+                    title="展開篩選選單"
+                    hidden
+                  >
+                    篩選
+                  </button>
+                </span>
+              </label>
+
+              <div class="filter-row" id="filter-row">
+                <label>
+                  <span class="field-label">品牌</span>
+                  <select data-role="brand" disabled>
+                    <option value="all">全部品牌</option>
+                  </select>
+                </label>
+
+                <label>
+                  <span class="field-label">型號/設備</span>
+                  <select data-role="model" disabled>
+                    <option value="all">全部型號/設備</option>
+                  </select>
+                </label>
+
+                <label>
+                  <span class="field-label">維修項目</span>
+                  <select data-role="category" disabled>
+                    <option value="all">全部項目</option>
+                  </select>
+                </label>
+
+                <button class="reset-button" type="button" data-role="reset" disabled>
+                  重設
                 </button>
-                <button
-                  class="filter-expand-button"
-                  type="button"
-                  data-role="filter-expand"
-                  aria-controls="filter-row"
-                  aria-expanded="true"
-                  aria-label="展開篩選選單"
-                  title="展開篩選選單"
-                  hidden
-                >
-                  篩選
-                </button>
-              </span>
-            </label>
+              </div>
+            </form>
 
-            <div class="filter-row" id="filter-row">
-              <label>
-                <span class="field-label">品牌</span>
-                <select data-role="brand" disabled>
-                  <option value="all">全部品牌</option>
-                </select>
-              </label>
-
-              <label>
-                <span class="field-label">型號/設備</span>
-                <select data-role="model" disabled>
-                  <option value="all">全部型號/設備</option>
-                </select>
-              </label>
-
-              <label>
-                <span class="field-label">維修項目</span>
-                <select data-role="category" disabled>
-                  <option value="all">全部項目</option>
-                </select>
-              </label>
-
-              <button class="reset-button" type="button" data-role="reset" disabled>
-                重設
-              </button>
-            </div>
-          </form>
+            <aside class="repair-notice" aria-label="送修前資料備份提醒">
+              <strong>送修前請先備份重要資料</strong>
+              <p>一般維修不會主動清除資料，但部分故障、系統重置或維修過程仍可能造成資料遺失。</p>
+            </aside>
+          </div>
 
           <div class="contact-collapse" data-role="contact-collapse">
             <div class="contact-collapse-content">
@@ -266,11 +273,6 @@
               <strong data-role="updated-at">-</strong>
             </div>
           </section>
-
-          <aside class="repair-notice" aria-label="送修前資料備份提醒">
-            <strong>送修前請先備份重要資料</strong>
-            <p>一般維修不會主動清除資料，但部分故障、系統重置或維修過程仍可能造成資料遺失。</p>
-          </aside>
 
           <section data-role="results" class="quote-grid" aria-label="報價列表">
             ${renderSkeletons()}
@@ -1060,6 +1062,11 @@
   }
 
   function buildLineInquiryUrl(quote) {
+    const desktopUrl = String(state.data?.metadata?.lineDesktopUrl || '').trim();
+    if (isDesktopViewport() && desktopUrl) {
+      return desktopUrl;
+    }
+
     const lineId = String(state.data?.metadata?.lineOaId || '').trim();
     if (!/^@[a-z0-9]+$/i.test(lineId)) {
       return '';
@@ -1067,6 +1074,10 @@
 
     const message = `您好，我想詢問 ${quote.brandName} ${formatQuoteModelName(quote)} 的「${quote.item}」參考報價與可預約時間。`;
     return `https://line.me/R/oaMessage/${lineId}/?${encodeURIComponent(message)}`;
+  }
+
+  function isDesktopViewport() {
+    return window.matchMedia('(min-width: 769px)').matches;
   }
 
   function renderSkeletons() {

@@ -354,10 +354,15 @@ p {
   box-shadow: var(--shadow);
 }
 
-.search-toolbar {
+.sticky-search-panel {
   position: sticky;
   top: 0;
   z-index: 5;
+  display: grid;
+  gap: 8px;
+}
+
+.search-toolbar {
   display: grid;
   gap: 12px;
   padding: 12px;
