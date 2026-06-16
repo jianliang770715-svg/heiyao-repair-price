@@ -135,6 +135,16 @@
                     <span aria-hidden="true">×</span>
                   </button>
                   <button
+                    class="mobile-reset-button"
+                    type="button"
+                    data-role="mobile-reset"
+                    aria-label="重設搜尋條件"
+                    title="重設搜尋條件"
+                    disabled
+                  >
+                    重設
+                  </button>
+                  <button
                     class="filter-expand-button"
                     type="button"
                     data-role="filter-expand"
@@ -316,6 +326,7 @@
     });
 
     getElement('reset').addEventListener('click', resetFilters);
+    getElement('mobile-reset').addEventListener('click', resetFilters);
     getElement('query-clear').addEventListener('click', clearQueryAndExpandFilters);
     getElement('filter-expand').addEventListener('click', expandMobileFilters);
     getElement('search-form').addEventListener('submit', preventSearchFormSubmit);
@@ -558,7 +569,11 @@
     }
 
     getElement('result-count').textContent = `${filteredQuotes.length} / ${state.quotes.length}`;
-    getElement('reset').disabled = !hasActiveFilters;
+    document.querySelectorAll('[data-role="reset"], [data-role="mobile-reset"]').forEach(
+      (button) => {
+        button.disabled = !hasActiveFilters;
+      },
+    );
 
     const results = getElement('results');
     results.className = filteredQuotes.length ? 'quote-grid' : 'state-panel';
@@ -680,7 +695,7 @@
     const scrollDelta = currentScrollY - state.lastScrollY;
     state.lastScrollY = currentScrollY;
 
-    if (!isMobileToolbarViewport() || !hasActiveQuoteFilters()) {
+    if (!isMobileToolbarViewport()) {
       resetMobileScrollGestureTracking();
       resetMobileUpGestureCount();
       setMobileFiltersCompact(false);
@@ -703,30 +718,18 @@
       return;
     }
 
-    if (scrollDelta < 0) {
-      if (Date.now() < state.ignoreMobileUpScrollUntil) {
+    if (scrollDelta !== 0) {
+      if (Date.now() < state.ignoreMobileDownScrollUntil && scrollDelta > 0) {
+        return;
+      }
+
+      if (Date.now() < state.ignoreMobileUpScrollUntil && scrollDelta < 0) {
         return;
       }
 
       setMobileFiltersCompact(true);
       resetMobileUpGestureCount();
       resetMobileScrollGestureTracking();
-      return;
-    }
-
-    if (scrollDelta > 0) {
-      if (Date.now() < state.ignoreMobileDownScrollUntil) {
-        return;
-      }
-
-      if (!state.mobileFiltersCompact) {
-        setMobileFiltersCompact(true);
-        resetMobileUpGestureCount();
-        resetMobileScrollGestureTracking();
-        return;
-      }
-
-      trackMobileScrollGesture(currentScrollY, scrollDelta);
     }
   }
 
@@ -739,24 +742,12 @@
 
     state.mobileScrollGestureTimer = window.setTimeout(() => {
       state.mobileScrollGestureTimer = null;
-      finishMobileScrollGesture();
+      resetMobileScrollGestureTracking();
     }, 180);
   }
 
-  function finishMobileScrollGesture() {
-    if (!state.mobileFiltersCompact || !isMobileToolbarViewport()) {
-      resetMobileUpGestureCount();
-      return;
-    }
-
-    const gestureDistance = window.scrollY - state.mobileScrollGestureStartY;
-    if (gestureDistance >= 120 && Date.now() >= state.ignoreMobileDownScrollUntil) {
-      registerMobileLargeUpGesture();
-    }
-  }
-
   function handleMobileTouchStart(event) {
-    if (!isMobileToolbarViewport() || !hasActiveQuoteFilters() || !event.touches.length) {
+    if (!isMobileToolbarViewport() || !event.touches.length) {
       state.mobileTouchActive = false;
       return;
     }
@@ -767,11 +758,7 @@
   }
 
   function handleMobileWheel(event) {
-    if (
-      !isMobileToolbarViewport() ||
-      !hasActiveQuoteFilters() ||
-      event.deltaY < 24
-    ) {
+    if (!isMobileToolbarViewport() || Math.abs(event.deltaY) < 24) {
       return;
     }
 
@@ -785,7 +772,6 @@
     if (
       state.mobileTouchStartY === null ||
       !isMobileToolbarViewport() ||
-      !hasActiveQuoteFilters() ||
       !event.changedTouches.length
     ) {
       state.mobileTouchStartY = null;
@@ -797,14 +783,7 @@
     state.ignoreMobileScrollGestureUntil = Date.now() + 700;
     resetMobileScrollGestureTracking();
 
-    if (touchDistance <= -120) {
-      if (state.mobileFiltersCompact) {
-        registerMobileLargeUpGesture();
-      } else {
-        setMobileFiltersCompact(true);
-        resetMobileUpGestureCount();
-      }
-    } else if (touchDistance >= 24) {
+    if (Math.abs(touchDistance) >= 24) {
       setMobileFiltersCompact(true);
       resetMobileUpGestureCount();
     }
@@ -873,7 +852,7 @@
       state.lastScrollY = window.scrollY;
       resetMobileScrollGestureTracking();
       resetMobileUpGestureCount();
-      if (isMobileToolbarViewport() && hasActiveQuoteFilters()) {
+      if (isMobileToolbarViewport()) {
         setMobileFiltersCompact(false);
       }
     }, duration);

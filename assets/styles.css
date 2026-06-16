@@ -502,6 +502,27 @@ select:focus,
   font-weight: 800;
 }
 
+.mobile-reset-button {
+  display: none;
+  flex: 0 0 auto;
+  min-height: 36px;
+  padding: 0 10px;
+  color: var(--accent-strong);
+  background: var(--accent-soft);
+  border: 1px solid #c7e9df;
+  border-radius: var(--radius);
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.mobile-reset-button:hover,
+.mobile-reset-button:focus-visible {
+  background: #cdece3;
+  border-color: var(--accent);
+}
+
 .search-mark {
   color: var(--accent-strong);
   font-size: 1.15rem;
@@ -844,6 +865,15 @@ select:focus,
 }
 
 @media (max-width: 939px) {
+  .mobile-reset-button {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .filter-row .reset-button {
+    display: none;
+  }
+
   .is-mobile-toolbar-compact .search-toolbar {
     gap: 0;
     padding-block: 8px;
