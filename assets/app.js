@@ -21,9 +21,12 @@
     ignoreMobileScrollGestureUntil: 0,
     ignoreMobileDownScrollUntil: 0,
     ignoreMobileUpScrollUntil: 0,
+    searchUpdateTimer: null,
     loading: true,
     error: '',
   };
+
+  const searchUpdateDelay = 180;
 
   const chipPhrases = [
     'm1 pro',
@@ -52,6 +55,73 @@
     ['water damage', 'waterdamage', '泡水', '進水'],
     ['system', '重灌', '系統重灌'],
   ].map((group) => group.map(compactText));
+
+  const brandAliasEntries = [
+    {
+      keys: ['apple'],
+      aliases: ['蘋果'],
+    },
+    {
+      keys: ['asus'],
+      aliases: ['華碩'],
+    },
+    {
+      keys: ['desktop-laptop', 'Desktop & Laptop'],
+      aliases: ['Windows', 'Win', '桌機', '桌上型電腦', '筆電', '筆記型電腦', '電腦', 'PC'],
+    },
+    {
+      keys: ['dyson'],
+      aliases: ['戴森'],
+    },
+    {
+      keys: ['google'],
+      aliases: ['谷歌', 'Pixel'],
+    },
+    {
+      keys: ['nintendo'],
+      aliases: ['任天堂', 'Switch'],
+    },
+    {
+      keys: ['oppo'],
+      aliases: ['歐珀'],
+    },
+    {
+      keys: ['samsung'],
+      aliases: ['三星'],
+    },
+    {
+      keys: ['sony'],
+      aliases: ['索尼'],
+    },
+    {
+      keys: ['小米', 'xiaomi'],
+      aliases: ['小米', '紅米', 'Redmi'],
+    },
+    {
+      keys: ['華為 HUAWEI', 'huawei'],
+      aliases: ['華為'],
+    },
+    {
+      keys: ['NOKIA'],
+      aliases: ['諾基亞'],
+    },
+    {
+      keys: ['MOTOROLA'],
+      aliases: ['摩托羅拉', 'Moto'],
+    },
+    {
+      keys: ['realme'],
+      aliases: ['真我'],
+    },
+    {
+      keys: ['SUGAR'],
+      aliases: ['糖果手機'],
+    },
+    {
+      keys: ['VIVO'],
+      aliases: ['vivo'],
+    },
+  ];
 
   const root = document.getElementById('root');
 
@@ -305,7 +375,7 @@
 
     getElement('query').addEventListener('input', (event) => {
       state.query = event.target.value;
-      updateResults();
+      scheduleResultsUpdate();
     });
 
     getElement('brand').addEventListener('change', (event) => {
@@ -559,8 +629,8 @@
   }
 
   function updateResults() {
-    const filteredQuotes = state.quotes.filter((quote) => matchesQuote(quote));
     const hasActiveFilters = hasActiveQuoteFilters();
+    const results = getElement('results');
 
     if (hasActiveFilters) {
       enterQuoteFocusMode();
@@ -568,20 +638,30 @@
       setMobileFiltersCompact(false);
     }
 
-    getElement('result-count').textContent = `${filteredQuotes.length} / ${state.quotes.length}`;
     document.querySelectorAll('[data-role="reset"], [data-role="mobile-reset"]').forEach(
       (button) => {
         button.disabled = !hasActiveFilters;
       },
     );
 
-    const results = getElement('results');
+    if (!hasActiveFilters) {
+      getElement('result-count').textContent = `請先搜尋 / ${state.quotes.length}`;
+      results.className = 'state-panel';
+      results.innerHTML = `
+        <h2>請開始搜尋</h2>
+        <p>輸入品牌、型號、維修項目，或使用上方下拉選單縮小範圍後，就會顯示符合的報價卡。</p>
+      `;
+      return;
+    }
+
+    const filteredQuotes = state.quotes.filter((quote) => matchesQuote(quote));
+    getElement('result-count').textContent = `${filteredQuotes.length} / ${state.quotes.length}`;
     results.className = filteredQuotes.length ? 'quote-grid' : 'state-panel';
 
     if (!filteredQuotes.length) {
       results.innerHTML = `
         <h2>沒有符合的報價</h2>
-        <p>可以換個型號、品牌或維修項目試試。</p>
+        <p>可以換個型號、品牌或維修項目試試；若手打關鍵字查不到，建議改用上方下拉選單縮小範圍。</p>
         ${hasActiveFilters ? '<button type="button" data-empty-reset>清除篩選</button>' : ''}
       `;
       const emptyReset = results.querySelector('[data-empty-reset]');
@@ -594,7 +674,25 @@
     results.innerHTML = filteredQuotes.map(renderQuoteCard).join('');
   }
 
+  function scheduleResultsUpdate() {
+    cancelScheduledResultsUpdate();
+    state.searchUpdateTimer = window.setTimeout(() => {
+      state.searchUpdateTimer = null;
+      updateResults();
+    }, searchUpdateDelay);
+  }
+
+  function cancelScheduledResultsUpdate() {
+    if (!state.searchUpdateTimer) {
+      return;
+    }
+
+    window.clearTimeout(state.searchUpdateTimer);
+    state.searchUpdateTimer = null;
+  }
+
   function resetFilters() {
+    cancelScheduledResultsUpdate();
     state.query = '';
     state.brandId = 'all';
     state.modelKey = 'all';
@@ -609,6 +707,7 @@
 
   function clearQueryAndExpandFilters(event) {
     event.preventDefault();
+    cancelScheduledResultsUpdate();
     state.query = '';
     getElement('query').value = '';
     updateResults();
@@ -622,6 +721,8 @@
 
   function preventSearchFormSubmit(event) {
     event.preventDefault();
+    cancelScheduledResultsUpdate();
+    updateResults();
   }
 
   function expandMobileFilters(event) {
@@ -1085,6 +1186,7 @@
           quoteId: `${brand.id}:${model.id}:${repair.id}`,
           brandId: brand.id,
           brandName: brand.name,
+          brandAliases: getBrandAliases(brand),
           modelId: model.id,
           modelKey: `${brand.id}:${model.id}`,
           modelName: model.name,
@@ -1200,6 +1302,7 @@
     const text = normalize(
       [
         quote.brandName,
+        ...(quote.brandAliases || []),
         quote.modelName,
         quote.modelGroup,
         quote.deviceType,
@@ -1252,6 +1355,25 @@
     return [
       ...createIphoneAliases(quote.modelName),
     ];
+  }
+
+  function getBrandAliases(brand) {
+    const sourceKeys = [brand.id, brand.name]
+      .filter(Boolean)
+      .map(compactText);
+    const aliases = new Set(Array.isArray(brand.aliases) ? brand.aliases : []);
+
+    brandAliasEntries.forEach((entry) => {
+      const matchesBrand = entry.keys
+        .map(compactText)
+        .some((key) => sourceKeys.includes(key));
+
+      if (matchesBrand) {
+        entry.aliases.forEach((alias) => aliases.add(alias));
+      }
+    });
+
+    return [...aliases];
   }
 
   function createIphoneAliases(modelName) {
