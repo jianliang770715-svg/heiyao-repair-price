@@ -4,6 +4,9 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build.mjs",
+    "prices:validate": "node scripts/validate-price-data.mjs",
+    "prices:sync": "node scripts/sync-price-data.mjs",
+    "prices:check": "node scripts/sync-price-data.mjs --check",
     "normalize:cerphone": "node scripts/normalize-cerphone-import.mjs"
   }
 }

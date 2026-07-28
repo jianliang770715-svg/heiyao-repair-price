@@ -2,3 +2,7 @@
   Content-Type: text/vcard; charset=utf-8
   Content-Disposition: inline; filename="obsidian-phone-repair.vcf"
   Cache-Control: public, max-age=300
+
+/pricing/approved/prices.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=300, must-revalidate

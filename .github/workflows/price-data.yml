@@ -1,0 +1,60 @@
+name: 報價資料檢查與發布
+
+on:
+  pull_request:
+    paths:
+      - 'pricing/approved/prices.json'
+      - 'scripts/validate-price-data.mjs'
+      - 'scripts/sync-price-data.mjs'
+      - 'scripts/build.mjs'
+  push:
+    paths:
+      - 'pricing/approved/prices.json'
+      - 'scripts/validate-price-data.mjs'
+      - 'scripts/sync-price-data.mjs'
+      - 'scripts/build.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: 驗證與建置報價資料
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+    steps:
+      - name: 讀取 GitHub 版本
+        uses: actions/checkout@v4
+
+      - name: 準備 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 驗證正式報價
+        run: node scripts/validate-price-data.mjs
+
+      - name: 同步網站資料
+        run: node scripts/sync-price-data.mjs
+
+      - name: 建置靜態網站
+        run: node scripts/build.mjs
+
+      - name: 再次確認同步狀態
+        run: node scripts/sync-price-data.mjs --check
+
+      - name: 未設定 Cloudflare 金鑰時說明
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/codex/v1.1.2-preview' && (env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == '') }}
+        run: echo "報價驗證與建置完成；Cloudflare GitHub 金鑰尚未完整設定，因此略過自動發布。"
+
+      - name: 發布正式報價到 Cloudflare Pages
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/codex/v1.1.2-preview' && env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != '' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=otrepair-price --branch=main --commit-hash=${{ github.sha }}

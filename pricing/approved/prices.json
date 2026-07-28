@@ -1,4 +1,4 @@
-window.REPAIR_PRICE_DATA = {
+{
   "metadata": {
     "studioName": "黑曜手機維修",
     "updatedAt": "2026-06-16",
@@ -18,7 +18,8 @@ window.REPAIR_PRICE_DATA = {
       "Nintendo",
       "Desktop & Laptop 桌上型電腦與筆記型電腦"
     ],
-    "notice": "選擇品牌、型號與維修項目，快速查詢參考報價。"
+    "notice": "選擇品牌、型號與維修項目，快速查詢參考報價。",
+    "priceDataVersion": "2026-06-16.1"
   },
   "repairCategories": [
     {
@@ -54229,4 +54230,3 @@ window.REPAIR_PRICE_DATA = {
     }
   ]
 }
-;

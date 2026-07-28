@@ -445,7 +445,7 @@
     }
 
     try {
-      const response = await fetch('./data/prices.json', {
+      const response = await fetch('./pricing/approved/prices.json', {
         headers: { Accept: 'application/json' },
         cache: 'no-store',
       });
