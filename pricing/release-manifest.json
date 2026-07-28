@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "batchId": "published-2026-06-16.1",
+  "status": "published",
+  "source": "existing-production-baseline",
+  "baselinePriceDataVersion": "2026-06-16.1",
+  "targetPriceDataVersion": "2026-06-16.1",
+  "priceSha256": "8401aad378c72f27b7f0a2403dcd8fdb2e370e4f2e217983577aa2cd27c51345",
+  "structureImpact": "none",
+  "changeSummary": {
+    "addedBrands": 0,
+    "addedModels": 0,
+    "addedRepairs": 0,
+    "removedItems": 0,
+    "renamedItems": 0,
+    "priceChanges": 0
+  },
+  "structureProposals": [],
+  "unresolvedItems": [],
+  "userApproval": {
+    "approved": true,
+    "approvedAt": "2026-07-29T00:21:54+08:00",
+    "note": "建立發布門禁前已在正式站運作的基準版本"
+  },
+  "evidence": {
+    "sourceSnapshot": null,
+    "diffReport": null,
+    "worklog": "pricing/price-update-ledger.md"
+  },
+  "published": {
+    "commit": "cc38bef",
+    "url": "https://otrepair-price.pages.dev/",
+    "verifiedAt": "2026-07-29T00:21:54+08:00"
+  }
+}
