@@ -1,25 +1,74 @@
-# Cerphone 最新報價差異
+# Cerphone 完整報價人工審核清單（2026-07-29）
 
-> 狀態：本檔保留為套用前的原始差異基準。使用者已於 2026-07-29 核准新的差異處理政策，正式套用結果請見 `pricing/incoming/cerphone-applied-2026-07-29.2.md`；目前候選報價版本為 `2026-07-29.2`，**價格審核已完成，可交接網站管理分頁；尚未歸檔、上傳及發布**。
+> 處理狀態：使用者已確認套用規則，結果已寫入報價版本 `2026-07-29.2`。目前為**價格審核完成、可交接；尚未由網站管理分頁歸檔、上傳及發布**。實際套用結果請見 `pricing/incoming/cerphone-applied-2026-07-29.2.md`；本檔保留作為原始完整差異記錄。
 
 - Source: https://cerphone.com/quotation/
-- Fetched at: 2026-07-20T10:07:01+08:00
-- 比對基準: 站內 `data/prices.json`
+- 完整快照取得時間: 2026-07-20T10:07:01+08:00
+- 即時有效性複查: 2026-07-29；Cerphone 9 個報價頁均未在完整快照後更新。
+- 比對基準: `pricing/approved/prices.json`，報價資料版本 `2026-07-29.1`
 - 已依 `imports/cerphone-import-rules.md` 先完成欄位轉譯與排除，再與站內資料比對。
 - Apple 原廠螢幕、原廠電池、原廠鏡頭、非標準款 iPad 的玻璃破裂、Apple Watch、AirPods、HTC，以及 Dyson 清潔服務均不列入維修報價盤點。
-- 說明: 這份差異檔只供人工確認；未自動覆寫正式站內價格。
+- 說明: 這份差異檔列出所有剩餘價格差異、新增、Cerphone 未列出但站內保留，以及需人工判讀項目；未自動覆寫未核准價格。
 
 ## 摘要
 - 總筆數: 3772
 - 可比對/可審核筆數: 3624
-- 上修: 7
+- 待審精確價格差異: 34
+- 上修: 6
 - 下調: 28
-- 持平: 3418
+- 持平: 3419
 - 需人工確認: 136
 - 新增/未對上: 35
-- 缺漏/站內未被快照對上: 68
-- 不可用且未列入建議: 148
+- Cerphone 未列出／站內保留: 68
+- Cerphone 空白／`-` 欄位，無法比價: 148
 - 異動金額範圍: -1,300 ~ 1,300 TWD
+
+## Cerphone 空白／`-` 欄位明細
+
+這些項目只代表 Cerphone 沒有提供可比較的公開金額，不代表黑曜不能維修，也不構成改價、刪除或下架建議。
+
+### Apple（56）
+- 認證電池（4）：iPhone 17 Pro Max、iPhone 17 Pro、iPhone 17、iPhone Air
+- HOME鍵（20）：iPad 11、iPad mini 7、iPad mini 6、iPad Air 7 (11吋)、iPad Air 7 (13吋)、iPad Air 6 (11吋)、iPad Air 6 (13吋)、iPad Air 5、iPad Air 4、iPad Air 3、iPad Pro 11" 第四代、iPad Pro 11" 第三代、iPad Pro 11" 第二代、iPad Pro 11"、iPad Pro 10.5"、iPad Pro 9.7"、iPad Pro 12.9" 第六代、iPad Pro 12.9" 第五代、iPad Pro 12.9" 第四代、iPad Pro 12.9" 第三代
+- 容量擴充（12）：iPad 11、iPad mini 7、iPad mini 4、iPad Air 7 (13吋)、iPad Air 3、iPad Air 2、iPad Pro 11"、iPad Pro 10.5"、iPad Pro 9.7"、iPad Pro 12.9" 第三代、iPad Pro 12.9" 第二代、iPad Pro 12.9" 第一代
+- Touch Bar（8）：A2991、A2918／A2992、A2485／A2780、A2442／A2779、A1708（無Touch Bar）、A1502、A1398、A3240
+- 電源板（2）：A2439、A2438
+- 無線網卡（5）：A2439、A2438、A2115、A1419、A1418
+- 風扇（5）：A2439、A2438、A2115、A1419、A1418
+
+### Samsung（22）
+- 背蓋（4）：J7 PRO（J730）、J7 Prime（G610）、J6+（J610）、J4+（J415）
+- 後鏡頭 前鏡頭（18）：X200/X205、X210/X216、X510/X516、X610/X616、X700、P200、P610/P615、P620/P625、T295、T385、T500/T505、T510/T515、T590/T595、T720/T725、T825/T820、T830/T835、T860、T870
+
+### ASUS（6）
+- 後鏡頭 前鏡頭（2）：ROG 9、ROG 9 PRO
+- 背蓋（4）：Zenfone 11 Ultra、Zenfone 3 Zoom（ZE553KL）、Zenfone Max M2（ZB633KL）、Zenfone Max Pro（ZB602KL）
+
+### OPPO（15）
+- 電池（3）：FindN2、FindN3、FindN3Flip
+- 充電 耳機孔 震動（3）：FindN2、FindN3、FindN3Flip
+- 聽筒 麥克風 響鈴（3）：FindN2、FindN3、FindN3Flip
+- 後鏡頭 前鏡頭（3）：FindN2、FindN3、FindN3Flip
+- 開機鍵 音量鍵（3）：FindN2、FindN3、FindN3Flip
+
+### realme（16）
+- 後鏡頭 前鏡頭（16）：8、9I/10/10T、Narzo 50、9 pro、C21、C25、C33、C35、C51、C61/C63、GT/GT大師版、GT2 Pro、GT6、GT NEO2、GT NEO3T、X3/X50
+
+### MOTOROLA（24）
+- 聽筒 麥克風 響鈴（6）：Razr40、Razr40Ultra、Razr50、Razr50Ultra、Razr60、Razr60Ultra
+- 後鏡頭 前鏡頭（6）：Razr40、Razr40Ultra、Razr50、Razr50Ultra、Razr60、Razr60Ultra
+- 開機鍵 音量鍵（6）：Razr40、Razr40Ultra、Razr50、Razr50Ultra、Razr60、Razr60Ultra
+- 機板試修 CPU另報（6）：Razr40、Razr40Ultra、Razr50、Razr50Ultra、Razr60、Razr60Ultra
+
+### Nintendo（9）
+- 磨菇頭（2）：Switch OLED版、Switch
+- 螢幕維修（2）：joy-con、Switch Pro 手把
+- 充電孔／滑軌充電排線（2）：joy-con、Switch Pro 手把
+- 卡槽故障（2）：joy-con、Switch Pro 手把
+- 電池（1）：Switch Pro 手把
+
+## 已核准並套用
+- Sony / X1IV（XQ-CT72） / 螢幕維修: 站內 6,500 → 7,100；已由使用者核准並納入報價版本 `2026-07-29.1`。
 
 ## 上修項目
 - Samsung / Note 20 ultra N9860 / 螢幕破裂: Cerphone 6,800 | 站內 5500（+1,300）
@@ -27,7 +76,6 @@
 - Samsung / S23（S9110） / 螢幕破裂: Cerphone 5,200 | 站內 4200（+1,000）
 - Samsung / S23+（S9160） / 螢幕破裂: Cerphone 4,600 | 站內 4000（+600）
 - Samsung / S23U（S9180） / 螢幕破裂: Cerphone 7,800 | 站內 7500（+300）
-- Sony / X1IV（XQ-CT72） / 螢幕維修: Cerphone 7,100 | 站內 6500（+600）
 - Sony / X10IV（XQ-CC72） / 螢幕維修: Cerphone 4,000 | 站內 3800（+200）
 
 ## 下調項目
@@ -97,7 +145,7 @@
 - OPPO / Reno 15Pro max(5G) / 開機鍵 音量鍵: Cerphone 1,000 | 站內未找到對應
 - OPPO / Reno 15Pro max(5G) / 機板試修 CPU另報: Cerphone 2,500 | 站內未找到對應
 
-## 缺漏項目
+## Cerphone 未列出（站內保留，不代表停修）
 - Google / Pixel 3 / 螢幕維修: 站內 2200 | Cerphone 快照未對上
 - Google / Pixel 3 / 電池: 站內 1000 | Cerphone 快照未對上
 - Google / Pixel 3 / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上

@@ -44,7 +44,7 @@ function shouldExclude(record) {
     return true;
   }
 
-  if (item === 'APPLE / 原廠螢幕' || item === 'APPLE / 原廠電池' || item === 'APPLE / 原廠鏡頭') {
+  if (/^(?:APPLE\s*\/?\s*)?原廠螢幕/.test(item) || /^(?:APPLE\s*\/?\s*)?原廠電池$/.test(item) || /^(?:APPLE\s*\/?\s*)?原廠鏡頭$/.test(item)) {
     return true;
   }
 

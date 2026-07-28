@@ -79,7 +79,7 @@
 
 ### cerphone-2026-07-29.2
 
-- 狀態：價格審核完成／可交接；尚未由網站管理分頁歸檔、上傳及發布
+- 狀態：已歸檔／待上傳
 - 來源快照：`imports/cerphone-latest.json`
 - 差異報告：`pricing/incoming/cerphone-full-review-2026-07-29.md`
 - 套用日誌：`pricing/incoming/cerphone-applied-2026-07-29.2.md`
@@ -90,4 +90,5 @@
 - 未對上處理：5 個新增型號已建立；Cerphone 未列出的既有項目保留，不視為停修。
 - 結構建議：本批新增型號與維修項目可使用現有資料格式，不需要修改網站架構。
 - 價格檔：`pricing/approved/prices.json`，版本 `2026-07-29.2`；資料驗證、同步與建置已通過。
-- 交接結論：報價查詢工作已完成，可交由網站管理分頁歸檔並執行 GitHub／Cloudflare 發布。
+- 網站整合驗證：網站資料同步與建置通過；本機首頁與 `data/prices.json` 皆回應 HTTP 200；搜尋索引驗證 `Pixel 10A` 7 筆、`Reno 15` 系列 28 筆、`ip11` 27 筆。
+- 歸檔結論：報價查詢工作與網站管理端發布前整合驗證已完成，可建立獨立價格提交並執行 GitHub／Cloudflare 發布。
