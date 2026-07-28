@@ -147,15 +147,32 @@
           <div class="intro-content">
             <header class="site-header">
               <div class="header-copy">
-                <h1 data-role="studio-name">黑曜手機維修</h1>
-                <p class="service-scope">手機・平板（iPad／Android）・Apple Mac（桌機／筆電）・Windows 系統（桌機／筆電）・Dyson・Nintendo 維修</p>
+                <div class="brand-title-row">
+                  <img
+                    class="studio-round-logo"
+                    src="./assets/studio-round-logo.png"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                  <div class="brand-title-copy">
+                    <h1 data-role="studio-name">黑曜手機維修</h1>
+                    <p class="service-scope">手機・平板（iPad／Android）・Apple Mac（桌機／筆電）・Windows 系統（桌機／筆電）・Dyson・Nintendo 維修</p>
+                  </div>
+                </div>
                 <p data-role="notice">
                   <span data-role="notice-main">選擇品牌、型號與維修項目，快速查詢參考報價。</span>
                   <span class="notice-desktop-break" aria-hidden="true"></span>
                   <span class="notice-warning">⚠️本網頁報價為參考，實際價格均以現場報價為主⚠️</span>
                 </p>
               </div>
-              <div class="version-badge" data-role="site-version">ver v?</div>
+              <div class="brand-meta">
+                <img
+                  class="obsidian-mark"
+                  src="./assets/obsidian-mark.png"
+                  alt="黑曜專屬圖案"
+                />
+                <div class="version-badge" data-role="site-version">ver v?</div>
+              </div>
               <div class="header-chip">
                 <span aria-hidden="true">NT$</span>
                 <span>公開透明報價</span>
@@ -269,34 +286,45 @@
                 <h2>聯絡方式</h2>
                 <div class="contact-grid">
                   <article class="contact-item">
-                    <p class="contact-label">維修聯絡電話</p>
+                    <p class="contact-label">主要聯絡電話</p>
                     <a data-role="phone-primary" href="tel:0966691696">0966-691-696</a>
                   </article>
                   <article class="contact-item">
-                    <p class="contact-label">第二聯絡電話</p>
+                    <p class="contact-label">備用聯絡電話</p>
                     <a data-role="phone-secondary" href="tel:0976900166">0976-900-166</a>
+                  </article>
+                  <article class="contact-item contact-item-wide vcard-contact-item">
+                    <div class="vcard-contact-copy">
+                      <p class="contact-label">手機通訊錄</p>
+                      <h3>儲存黑曜手機維修聯絡人</h3>
+                      <p>一次加入主要／備用電話、地址、LINE、Email 與官方網站。</p>
+                      <a
+                        class="vcard-save-button"
+                        href="./obsidian-phone-repair.vcf"
+                        aria-label="開啟並儲存黑曜手機維修聯絡人"
+                      >
+                        <span aria-hidden="true">↓</span>
+                        儲存黑曜聯絡人
+                      </a>
+                    </div>
+                    <a
+                      class="vcard-qr-link"
+                      href="./obsidian-phone-repair.vcf"
+                      aria-label="掃描或點擊儲存黑曜手機維修聯絡人"
+                    >
+                      <img
+                        src="./assets/vcard-contact-qr.svg"
+                        alt="黑曜手機維修聯絡人 QR Code"
+                      />
+                      <span>手機掃碼儲存</span>
+                    </a>
                   </article>
                   <article class="contact-item contact-item-wide line-contact-item">
                     <p class="contact-label">LINE 官方帳號</p>
                     <div class="line-contact-content">
                       <a
-                        class="social-image-link"
-                        data-role="line-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        hidden
-                      >
-                        <img
-                          class="line-add-friend-button"
-                          src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
-                          alt="加入好友"
-                          height="36"
-                          border="0"
-                        />
-                      </a>
-                      <a
                         class="line-poster-link"
-                        data-role="line-poster-link"
+                        data-role="line-link"
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label="掃描 QR Code 或點擊加入黑曜手機維修 LINE 官方帳號"
@@ -304,8 +332,8 @@
                       >
                         <img
                           class="line-friends-poster"
-                          src="./assets/line-friends-banner.jpg"
-                          alt="LINE Official Account 好友募集中，帳號 @200ysnhq"
+                          src="./assets/line-friends-banner.png"
+                          alt="黑曜手機維修 LINE 好友募集中，帳號 @ot_repair"
                         />
                       </a>
                       <a
@@ -1148,7 +1176,7 @@
     }
 
     const lineId = String(state.data?.metadata?.lineOaId || '').trim();
-    if (!/^@[a-z0-9]+$/i.test(lineId)) {
+    if (!/^@[a-z0-9._-]+$/i.test(lineId)) {
       return '';
     }
 

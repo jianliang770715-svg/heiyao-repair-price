@@ -1,0 +1,19 @@
+BEGIN:VCARD
+VERSION:3.0
+N:黑曜手機維修;;;;
+FN:黑曜手機維修
+ORG:OBSIDIAN TECh REPAIR
+X-ABShowAs:COMPANY
+item1.TEL;TYPE=CELL;TYPE=PREF:0966691696
+item1.X-ABLabel:主要電話
+item2.TEL;TYPE=CELL:0976900166
+item2.X-ABLabel:備用電話
+ADR;TYPE=WORK:;;信義街41巷3號1樓;中和區;新北市;;台灣
+item3.URL;TYPE=PREF:https://otrepair-price.pages.dev/
+item3.X-ABLabel:官方網站
+item4.URL:https://lin.ee/9nBoUJo
+item4.X-ABLabel:LINE
+item5.EMAIL;TYPE=INTERNET;TYPE=WORK;TYPE=PREF:otrepairp@gmail.com
+item5.X-ABLabel:官方信箱
+NOTE:主要 LINE ID: @ot_repair\n舊 LINE ID: @200ysnhq（仍可使用）
+END:VCARD
