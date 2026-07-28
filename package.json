@@ -7,7 +7,6 @@
     "prices:validate": "node scripts/validate-price-data.mjs",
     "prices:sync": "node scripts/sync-price-data.mjs",
     "prices:check": "node scripts/sync-price-data.mjs --check",
-    "prices:release-check": "node scripts/validate-price-release.mjs",
     "normalize:cerphone": "node scripts/normalize-cerphone-import.mjs"
   }
 }

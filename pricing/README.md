@@ -10,21 +10,18 @@
 - 不要直接修改 `data/prices.js`。
 - `data` 內的兩份檔案會在驗證、建置或發布時自動產生。
 - 報價資料只能放公開資訊，不能加入內部成本、客戶資料或私密備註。
-- `price-update-ledger.md` 是跨分頁共用工作簿。
-- `release-manifest.json` 是機器判斷能否發布的唯一許可檔。
+- `price-update-ledger.md` 是跨分頁共用工作簿，只負責溝通進度與交接，不是權限門禁。
 
 ## 更新流程
 
-1. 將新抓取或待比對資料放進 `incoming/` 或既有 `imports/`。
-2. 產生差異報告並人工審閱。
-3. 在 `price-update-ledger.md` 建立批次，記錄新增、刪除、改名與無法對應欄位的建議。
-4. 只把核准內容合併到 `approved/prices.json`。
-5. 更新 `metadata.updatedAt`。
-6. 更新 `metadata.priceDataVersion`，格式為 `YYYY-MM-DD.序號`。
-7. 更新 `release-manifest.json` 的批次、版本、雜湊、結構影響與核准紀錄。
-8. 執行 `npm run prices:sync`。
-9. 執行 `npm run prices:check`、`npm run prices:release-check` 與 `npm run build`。
-10. GitHub 只將這次報價資料與對應工作簿、許可檔納入一筆獨立提交。
+1. 報價查詢分頁將新抓取或待比對資料放進 `incoming/` 或既有 `imports/`。
+2. 報價查詢分頁產生差異報告，完成所有價格增減、品項增刪、未對上與人工確認項目。
+3. 取得使用者決定後，只把確認內容合併到 `approved/prices.json`。
+4. 更新 `metadata.updatedAt` 與 `metadata.priceDataVersion`，版本格式為 `YYYY-MM-DD.序號`。
+5. 在 `price-update-ledger.md` 記錄價格審核結果、資料量、結構建議與是否可交接。
+6. 網站管理分頁讀取工作日誌，確認是否需要調整網站架構。
+7. 網站管理分頁執行 `npm run prices:sync`、`npm run prices:check`、`npm run prices:validate` 與 `npm run build`。
+8. 驗證完成後，由網站管理分頁建立獨立 Git 提交並執行 GitHub／Cloudflare 上傳發布。
 
 網站功能版本與報價資料版本彼此獨立。只修改價格時，不需要調整 `package.json` 的網站版本，也不需要更改頁首版本徽章。
 
@@ -34,7 +31,7 @@
 - 新品牌、新產品線、無法對應的來源欄位、刪除、改名、合併或拆分，必須先寫入工作簿。
 - 需要調整導覽、搜尋、篩選或品牌文案時，屬於網站改版，不能混在單純改價提交。
 - 來源網站未再列出某項目不構成刪除理由，仍需黑曜明確核准。
-- 許可檔狀態 `approved` 固定代表「已可提交 GitHub，但尚未上傳及發布」，不能簡寫成已發布。
+- 工作簿中的結構建議是交接資訊；價格分頁可完成價格審核，網站管理分頁再依建議處理網站架構與發布。
 
 完整判定表與批次模板請閱讀 `price-update-ledger.md`。
 
