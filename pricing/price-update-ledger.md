@@ -79,7 +79,7 @@
 
 ### cerphone-2026-07-29.2
 
-- 狀態：已歸檔／待上傳
+- 狀態：已發布
 - 來源快照：`imports/cerphone-latest.json`
 - 差異報告：`pricing/incoming/cerphone-full-review-2026-07-29.md`
 - 套用日誌：`pricing/incoming/cerphone-applied-2026-07-29.2.md`
@@ -91,4 +91,9 @@
 - 結構建議：本批新增型號與維修項目可使用現有資料格式，不需要修改網站架構。
 - 價格檔：`pricing/approved/prices.json`，版本 `2026-07-29.2`；資料驗證、同步與建置已通過。
 - 網站整合驗證：網站資料同步與建置通過；本機首頁與 `data/prices.json` 皆回應 HTTP 200；搜尋索引驗證 `Pixel 10A` 7 筆、`Reno 15` 系列 28 筆、`ip11` 27 筆。
-- 歸檔結論：報價查詢工作與網站管理端發布前整合驗證已完成，可建立獨立價格提交並執行 GitHub／Cloudflare 發布。
+- Git 提交：`07b4a57`
+- GitHub Actions：`30397632421`，資料驗證、同步、建置與 Cloudflare Pages 發布成功。
+- 正式網址：`https://otrepair-price.pages.dev/`
+- 正式站驗證：讀到 3,908 筆與更新日期 `2026-07-29`；`Pixel 10A` 7 筆、`Reno 15` 35 筆、`ip11` 27 筆；Enter 不會重新整理或返回頁首；主控台 0 錯誤。
+- 手機版驗證：390 × 844 視窗無橫向溢出；滑動後篩選列正常收縮，報價卡、資料備份提醒與 LINE 詢問按鈕顯示正常。
+- 發布結論：`2026-07-29.2` 已完成 GitHub 歸檔、Cloudflare 發布與正式站驗證。
