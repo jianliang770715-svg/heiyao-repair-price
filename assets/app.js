@@ -352,15 +352,49 @@
                     </div>
                     <p data-role="line-placeholder">建置中，稍後補上</p>
                   </article>
-                  <article class="contact-item contact-item-wide">
-                    <p class="contact-label">Facebook 官方帳號</p>
-                    <a
-                      data-role="facebook-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      hidden
-                    ></a>
-                    <p data-role="facebook-placeholder">建置中，稍後補上</p>
+                  <article class="contact-item contact-item-wide social-contact-item">
+                    <p class="contact-label">官方社群</p>
+                    <div class="social-link-grid">
+                      <a
+                        class="social-link"
+                        data-role="facebook-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden
+                      >
+                        <span class="social-icon" aria-hidden="true">
+                          <img src="./assets/facebook-icon.webp" alt="" />
+                        </span>
+                        <span>Facebook</span>
+                      </a>
+                      <a
+                        class="social-link"
+                        data-role="instagram-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden
+                      >
+                        <span class="social-icon" aria-hidden="true">
+                          <img src="./assets/instagram-icon.webp" alt="" />
+                        </span>
+                        <span>Instagram</span>
+                      </a>
+                      <a
+                        class="social-link"
+                        data-role="threads-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden
+                      >
+                        <span class="social-icon" aria-hidden="true">
+                          <img src="./assets/threads-icon.png" alt="" />
+                        </span>
+                        <span>Threads</span>
+                      </a>
+                    </div>
+                    <p data-role="facebook-placeholder">Facebook 建置中</p>
+                    <p data-role="instagram-placeholder">Instagram 建置中</p>
+                    <p data-role="threads-placeholder">Threads 建置中</p>
                   </article>
                 </div>
               </section>
@@ -547,6 +581,18 @@
       metadata.facebookUrl,
       metadata.facebookContact,
       'Facebook 官方帳號',
+    );
+    setSocialLink(
+      'instagram',
+      metadata.instagramUrl,
+      metadata.instagramContact,
+      'Instagram 官方帳號',
+    );
+    setSocialLink(
+      'threads',
+      metadata.threadsUrl,
+      metadata.threadsContact,
+      'Threads 官方帳號',
     );
   }
 

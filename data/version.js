@@ -1,1 +1,1 @@
-window.REPAIR_SITE_VERSION = "1.3.0";
+window.REPAIR_SITE_VERSION = "1.3.1";
