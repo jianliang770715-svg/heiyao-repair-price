@@ -189,7 +189,6 @@
                   height="96"
                   decoding="async"
                 />
-                <div class="version-badge" data-role="site-version">ver v?</div>
               </div>
               <div class="header-chip">
                 <span aria-hidden="true">NT$</span>
@@ -512,6 +511,11 @@
           </section>
         </section>
 
+        <footer class="site-footer">
+          <span>黑曜手機維修</span>
+          <span data-role="site-version">ver v?</span>
+        </footer>
+
         <button
           class="top-button"
           type="button"
@@ -830,6 +834,15 @@
 
   function populateModels() {
     const select = getElement('model');
+    const hasSelectedBrand = state.brandId !== 'all';
+
+    if (!hasSelectedBrand) {
+      replaceOptions(select, [{ value: 'all', label: '請先選擇品牌' }]);
+      select.value = 'all';
+      select.disabled = true;
+      return;
+    }
+
     replaceOptions(select, [
       { value: 'all', label: '全部型號/設備' },
       ...getModels(state.brandId).map((model) => ({
@@ -838,6 +851,7 @@
       })),
     ]);
     select.value = state.modelKey;
+    select.disabled = false;
   }
 
   function updateResults() {
@@ -871,10 +885,27 @@
     results.className = filteredQuotes.length ? 'quote-grid' : 'state-panel';
 
     if (!filteredQuotes.length) {
+      const lineInquiryUrl = buildGeneralLineInquiryUrl();
       results.innerHTML = `
         <h2>沒有符合的報價</h2>
-        <p>可以換個型號、品牌或維修項目試試；若手打關鍵字查不到，建議改用上方下拉選單縮小範圍。</p>
-        ${hasActiveFilters ? '<button type="button" data-empty-reset>清除篩選</button>' : ''}
+        <p>可以試試「ip11」、「S23U」或「電池」，也可以改用品牌、型號與維修項目下拉選單。</p>
+        <div class="empty-state-actions">
+          ${hasActiveFilters ? '<button type="button" data-empty-reset>清除篩選</button>' : ''}
+          ${
+            lineInquiryUrl
+              ? `
+                <a
+                  class="empty-line-action"
+                  href="${escapeHtml(lineInquiryUrl)}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LINE 詢問
+                </a>
+              `
+              : ''
+          }
+        </div>
       `;
       const emptyReset = results.querySelector('[data-empty-reset]');
       if (emptyReset) {
@@ -1151,9 +1182,10 @@
   }
 
   function disableControls(disabled) {
-    ['query', 'brand', 'model', 'category'].forEach((role) => {
+    ['query', 'brand', 'category'].forEach((role) => {
       getElement(role).disabled = disabled;
     });
+    getElement('model').disabled = disabled || state.brandId === 'all';
   }
 
   function syncSiteVersion() {
@@ -1261,6 +1293,15 @@
   }
 
   function buildLineInquiryUrl(quote) {
+    const message = `您好，我想詢問 ${quote.brandName} ${formatQuoteModelName(quote)} 的「${quote.item}」參考報價與可預約時間。`;
+    return buildLineContactUrl(message);
+  }
+
+  function buildGeneralLineInquiryUrl() {
+    return buildLineContactUrl('您好，我在報價網站沒有找到符合的項目，想進一步詢問維修報價。');
+  }
+
+  function buildLineContactUrl(message) {
     const desktopUrl = String(state.data?.metadata?.lineDesktopUrl || '').trim();
     if (isDesktopViewport() && desktopUrl) {
       return desktopUrl;
@@ -1268,10 +1309,9 @@
 
     const lineId = String(state.data?.metadata?.lineOaId || '').trim();
     if (!/^@[a-z0-9._-]+$/i.test(lineId)) {
-      return '';
+      return String(state.data?.metadata?.lineUrl || '').trim();
     }
 
-    const message = `您好，我想詢問 ${quote.brandName} ${formatQuoteModelName(quote)} 的「${quote.item}」參考報價與可預約時間。`;
     return `https://line.me/R/oaMessage/${lineId}/?${encodeURIComponent(message)}`;
   }
 

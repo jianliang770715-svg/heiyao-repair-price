@@ -155,21 +155,6 @@ select:disabled {
   border-radius: 6px;
 }
 
-.version-badge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 28px;
-  padding: 4px 10px;
-  color: #3f4d49;
-  background: #f1f5f3;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-size: 0.76rem;
-  font-weight: 800;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
 .service-scope {
   margin: 0 0 6px;
   color: var(--accent-strong);
@@ -994,6 +979,51 @@ select:focus,
   font-weight: 800;
 }
 
+.empty-state-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.state-panel .empty-line-action {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  color: #ffffff;
+  background: #06a947;
+  border: 1px solid #058e3c;
+  border-radius: var(--radius);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.state-panel .empty-line-action:hover,
+.state-panel .empty-line-action:focus-visible {
+  background: #058e3c;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 14px 8px 0;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--line);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.site-footer [data-role="site-version"]::before {
+  content: "·";
+  margin-right: 8px;
+}
+
 .error-state {
   color: var(--danger);
 }
@@ -1167,11 +1197,17 @@ select:focus,
   }
 
   .brand-title-row {
-    padding-right: 112px;
+    padding-right: 52px;
   }
 
   .site-header p[data-role="notice"] {
     max-width: none;
+  }
+
+  .site-header p[data-role="notice"] .notice-warning {
+    font-size: 0.68rem;
+    line-height: 1.4;
+    white-space: nowrap;
   }
 
   .header-chip {
@@ -1219,19 +1255,6 @@ select:focus,
   .top-button {
     max-width: 92px;
     padding-inline: 11px;
-  }
-}
-
-@media (max-width: 420px) {
-  .brand-meta {
-    position: static;
-    grid-column: 1;
-    justify-self: end;
-    flex-direction: row;
-  }
-
-  .brand-title-row {
-    padding-right: 0;
   }
 }
 
