@@ -14,7 +14,9 @@ const entries = [
 ];
 const packageJson = JSON.parse(await readFile('package.json', 'utf8'));
 const version = String(packageJson.version || '').trim() || '0.0.0';
-const versionScript = `window.REPAIR_SITE_VERSION = ${JSON.stringify(version)};\n`;
+const releaseChannel = String(process.env.REPAIR_RELEASE_CHANNEL || '').trim().toLowerCase();
+const displayVersion = releaseChannel === 'debug' ? `${version}-debug` : version;
+const versionScript = `window.REPAIR_SITE_VERSION = ${JSON.stringify(displayVersion)};\n`;
 
 await syncPriceData({ silent: true });
 await writeFile('data/version.js', versionScript, 'utf8');

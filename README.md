@@ -140,3 +140,11 @@ http://127.0.0.1:4173/
 - GitHub Actions：報價來源或同步腳本變更時會自動驗證、建置；設定 Cloudflare 金鑰後可獨立發布報價更新。
 - Vercel：可當成純靜態網站部署，不需要 Framework preset。
 - Firebase Hosting：`firebase.json` 已設定 `public` 為專案根目錄。
+
+### 正式站與 Debug 測試站
+
+- 正式站：`https://otrepair-price.pages.dev/`
+- Debug 測試站：`https://debug.otrepair-price.pages.dev/`
+- `codex/debug` 分支只發布到 Debug 測試站，不會更新正式站。
+- Debug 建置會在頁首版本後自動加上 `-debug版`，方便跨裝置辨識。
+- 測試內容經確認後，才另外建立正式版本並發布到正式站。

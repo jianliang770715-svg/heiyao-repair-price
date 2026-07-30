@@ -4,6 +4,7 @@ dist
 .env
 .env.local
 .firebase
+.wrangler
 firebase-debug.log
 data/prices.json
 data/prices.js
