@@ -10,23 +10,34 @@
     quoteFocusScrollTimer: null,
     mobileFiltersCompact: false,
     lastScrollY: window.scrollY,
-    mobileScrollGestureStartY: window.scrollY,
-    mobileScrollGestureTimer: null,
-    mobileCompactScrollReleaseTimer: null,
     mobileProgrammaticScrollTimer: null,
-    mobileAwaitingScrollIdleAfterCompact: false,
-    mobileLargeUpGestureCount: 0,
     mobileTouchStartY: null,
     mobileTouchActive: false,
     ignoreMobileScrollGestureUntil: 0,
-    ignoreMobileDownScrollUntil: 0,
-    ignoreMobileUpScrollUntil: 0,
     searchUpdateTimer: null,
     loading: true,
     error: '',
   };
 
   const searchUpdateDelay = 180;
+  const conversationalStopPhrases = [
+    '維修價格',
+    '維修報價',
+    '多少錢',
+    '請問一下',
+    '請問',
+    '幫我查',
+    '幫我',
+    '維修',
+    '報價',
+    '價格',
+    '多少',
+    '更換',
+    '換',
+    '修',
+  ]
+    .map(compactText)
+    .sort((left, right) => right.length - left.length);
 
   const chipPhrases = [
     'm1 pro',
@@ -122,6 +133,7 @@
       aliases: ['vivo'],
     },
   ];
+  let fallbackPriceDataPromise = null;
 
   const root = document.getElementById('root');
 
@@ -150,9 +162,12 @@
                 <div class="brand-title-row">
                   <img
                     class="studio-round-logo"
-                    src="./assets/studio-round-logo.png"
+                    src="./assets/studio-round-logo.webp"
                     alt=""
                     aria-hidden="true"
+                    width="192"
+                    height="192"
+                    decoding="async"
                   />
                   <div class="brand-title-copy">
                     <h1 data-role="studio-name">黑曜手機維修</h1>
@@ -168,8 +183,11 @@
               <div class="brand-meta">
                 <img
                   class="obsidian-mark"
-                  src="./assets/obsidian-mark.png"
+                  src="./assets/obsidian-mark.webp"
                   alt="黑曜專屬圖案"
+                  width="96"
+                  height="96"
+                  decoding="async"
                 />
                 <div class="version-badge" data-role="site-version">ver v?</div>
               </div>
@@ -208,7 +226,7 @@
                   <input
                     type="search"
                     data-role="query"
-                    placeholder="例如 ip11、iphone11、A1534、電池"
+                    placeholder="例如 蘋果11電池、s23 ultra 螢幕、ip11"
                     autocomplete="off"
                     disabled
                   />
@@ -284,6 +302,33 @@
             <div class="contact-collapse-content">
               <section class="contact-panel" aria-label="聯絡方式">
                 <h2>聯絡方式</h2>
+                <nav class="mobile-contact-actions" aria-label="手機版快速聯絡">
+                  <a
+                    class="mobile-contact-action"
+                    data-role="line-direct-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    hidden
+                  >
+                    LINE 詢問
+                  </a>
+                  <a
+                    class="mobile-contact-action"
+                    data-role="phone-direct-link"
+                    href="tel:0966691696"
+                  >
+                    電話聯絡
+                  </a>
+                  <a
+                    class="mobile-contact-action"
+                    data-role="map-direct-link"
+                    href="https://maps.app.goo.gl/Sd1sp2foGwqFfy5x8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    導航前往
+                  </a>
+                </nav>
                 <div class="contact-grid">
                   <article class="contact-item">
                     <p class="contact-label">主要聯絡電話</p>
@@ -315,6 +360,10 @@
                       <img
                         src="./assets/vcard-contact-qr.svg"
                         alt="黑曜手機維修聯絡人 QR Code"
+                        width="132"
+                        height="132"
+                        loading="lazy"
+                        decoding="async"
                       />
                       <span>手機掃碼儲存</span>
                     </a>
@@ -332,12 +381,17 @@
                       >
                         <img
                           class="line-friends-poster"
-                          src="./assets/line-friends-banner.png"
+                          src="./assets/line-friends-banner.jpg"
                           alt="黑曜手機維修 LINE 好友募集中，帳號 @ot_repair"
+                          width="1000"
+                          height="707"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </a>
                       <a
                         class="review-poster-link"
+                        data-role="review-poster-link"
                         href="https://maps.app.goo.gl/Sd1sp2foGwqFfy5x8"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -345,15 +399,19 @@
                       >
                         <img
                           class="review-poster"
-                          src="./assets/google-review-banner.png"
+                          src="./assets/google-review-banner.jpg"
                           alt="黑曜手機維修 Google Maps 好評募集中，掃描 QR Code 留下五星好評"
+                          width="1200"
+                          height="675"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </a>
                     </div>
                     <p data-role="line-placeholder">建置中，稍後補上</p>
                   </article>
                   <article class="contact-item contact-item-wide social-contact-item">
-                    <p class="contact-label">官方社群</p>
+                    <p class="contact-label">黑曜手機維修｜官方社群</p>
                     <div class="social-link-grid">
                       <a
                         class="social-link"
@@ -363,7 +421,14 @@
                         hidden
                       >
                         <span class="social-icon" aria-hidden="true">
-                          <img src="./assets/facebook-icon.webp" alt="" />
+                          <img
+                            src="./assets/facebook-icon-small.webp"
+                            alt=""
+                            width="128"
+                            height="128"
+                            loading="lazy"
+                            decoding="async"
+                          />
                         </span>
                         <span>Facebook</span>
                       </a>
@@ -375,7 +440,14 @@
                         hidden
                       >
                         <span class="social-icon" aria-hidden="true">
-                          <img src="./assets/instagram-icon.webp" alt="" />
+                          <img
+                            src="./assets/instagram-icon-small.webp"
+                            alt=""
+                            width="128"
+                            height="128"
+                            loading="lazy"
+                            decoding="async"
+                          />
                         </span>
                         <span>Instagram</span>
                       </a>
@@ -387,7 +459,14 @@
                         hidden
                       >
                         <span class="social-icon" aria-hidden="true">
-                          <img src="./assets/threads-icon.png" alt="" />
+                          <img
+                            src="./assets/threads-icon-small.webp"
+                            alt=""
+                            width="128"
+                            height="128"
+                            loading="lazy"
+                            decoding="async"
+                          />
                         </span>
                         <span>Threads</span>
                       </a>
@@ -395,6 +474,18 @@
                     <p data-role="facebook-placeholder">Facebook 建置中</p>
                     <p data-role="instagram-placeholder">Instagram 建置中</p>
                     <p data-role="threads-placeholder">Threads 建置中</p>
+                  </article>
+                  <article class="contact-item contact-item-wide mobile-review-contact-item">
+                    <p class="contact-label">Google Maps</p>
+                    <a
+                      class="mobile-review-link"
+                      data-role="review-direct-link"
+                      href="https://maps.app.goo.gl/Sd1sp2foGwqFfy5x8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      維修完成後留下 Google 好評
+                    </a>
                   </article>
                 </div>
               </section>
@@ -474,14 +565,14 @@
   }
 
   async function loadPriceData() {
-    if (window.REPAIR_PRICE_DATA && window.location.protocol === 'file:') {
-      return window.REPAIR_PRICE_DATA;
+    if (window.location.protocol === 'file:') {
+      return loadFallbackPriceData();
     }
 
     try {
       const response = await fetch('./pricing/approved/prices.json', {
         headers: { Accept: 'application/json' },
-        cache: 'no-store',
+        cache: 'no-cache',
       });
 
       if (!response.ok) {
@@ -490,12 +581,39 @@
 
       return response.json();
     } catch (error) {
-      if (window.REPAIR_PRICE_DATA) {
-        return window.REPAIR_PRICE_DATA;
-      }
-
-      throw error;
+      return loadFallbackPriceData(error);
     }
+  }
+
+  function loadFallbackPriceData(originalError) {
+    if (window.REPAIR_PRICE_DATA) {
+      return Promise.resolve(window.REPAIR_PRICE_DATA);
+    }
+
+    if (fallbackPriceDataPromise) {
+      return fallbackPriceDataPromise;
+    }
+
+    fallbackPriceDataPromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = './data/prices.js';
+      script.async = true;
+      script.dataset.role = 'price-data-fallback';
+      script.addEventListener('load', () => {
+        if (window.REPAIR_PRICE_DATA) {
+          resolve(window.REPAIR_PRICE_DATA);
+          return;
+        }
+
+        reject(new Error('備援報價資料格式錯誤'));
+      });
+      script.addEventListener('error', () => {
+        reject(originalError || new Error('無法讀取備援報價資料'));
+      });
+      document.head.append(script);
+    });
+
+    return fallbackPriceDataPromise;
   }
 
   function normalizePriceData(data) {
@@ -609,12 +727,20 @@
 
     target.href = `tel:${digits}`;
     target.textContent = formatPhoneText(digits);
+
+    if (role === 'phone-primary') {
+      const directLink = document.querySelector('[data-role="phone-direct-link"]');
+      if (directLink) {
+        directLink.href = `tel:${digits}`;
+      }
+    }
   }
 
   function setSocialLink(platform, url, contact, fallbackLabel) {
     const link = document.querySelector(`[data-role="${platform}-link"]`);
     const placeholder = document.querySelector(`[data-role="${platform}-placeholder"]`);
     const posterLink = document.querySelector(`[data-role="${platform}-poster-link"]`);
+    const directLink = document.querySelector(`[data-role="${platform}-direct-link"]`);
     if (!link || !placeholder) {
       return;
     }
@@ -625,6 +751,9 @@
       link.hidden = true;
       if (posterLink) {
         posterLink.hidden = true;
+      }
+      if (directLink) {
+        directLink.hidden = true;
       }
       placeholder.hidden = false;
       placeholder.textContent = normalizedContact || '建置中，稍後補上';
@@ -643,6 +772,12 @@
       posterLink.href = normalizedUrl;
       posterLink.hidden = false;
     }
+    if (directLink) {
+      directLink.href = normalizedUrl;
+      directLink.hidden = false;
+      directLink.setAttribute('aria-label', linkLabel);
+      directLink.title = linkLabel;
+    }
     link.hidden = false;
     placeholder.hidden = true;
   }
@@ -653,12 +788,15 @@
       return;
     }
 
-    if (metadata.mapLink) {
-      link.href = metadata.mapLink;
-      return;
-    }
+    const mapLink = metadata.mapLink || 'https://maps.app.goo.gl/Sd1sp2foGwqFfy5x8';
+    link.href = mapLink;
 
-    link.href = 'https://maps.app.goo.gl/Sd1sp2foGwqFfy5x8';
+    ['map-direct-link', 'review-direct-link', 'review-poster-link'].forEach((role) => {
+      const target = document.querySelector(`[data-role="${role}"]`);
+      if (target) {
+        target.href = mapLink;
+      }
+    });
   }
 
   function formatPhoneText(phone) {
@@ -786,10 +924,8 @@
     getElement('query').value = '';
     updateResults();
 
-    resetMobileScrollGestureTracking();
-    resetMobileUpGestureCount();
     setMobileFiltersCompact(false);
-    state.ignoreMobileDownScrollUntil = Date.now() + 600;
+    state.ignoreMobileScrollGestureUntil = Date.now() + 600;
     getElement('query').focus({ preventScroll: true });
   }
 
@@ -801,10 +937,8 @@
 
   function expandMobileFilters(event) {
     event.preventDefault();
-    resetMobileScrollGestureTracking();
-    resetMobileUpGestureCount();
     setMobileFiltersCompact(false);
-    state.ignoreMobileDownScrollUntil = Date.now() + 700;
+    state.ignoreMobileScrollGestureUntil = Date.now() + 700;
   }
 
   function enterQuoteFocusMode() {
@@ -813,7 +947,6 @@
     }
 
     state.quoteFocusMode = true;
-    resetMobileUpGestureCount();
     const introPanel = getElement('intro-panel');
     introPanel.setAttribute('aria-hidden', 'true');
     introPanel.inert = true;
@@ -826,7 +959,7 @@
     const scrollDelay = preferredScrollBehavior() === 'auto' ? 0 : 430;
     state.quoteFocusScrollTimer = window.setTimeout(() => {
       state.quoteFocusScrollTimer = null;
-      beginMobileProgrammaticScroll();
+      beginMobileProgrammaticScroll(false);
       document.querySelector('.workspace').scrollIntoView({
         behavior: preferredScrollBehavior(),
         block: 'start',
@@ -840,8 +973,6 @@
       state.quoteFocusScrollTimer = null;
     }
 
-    resetMobileScrollGestureTracking();
-    resetMobileUpGestureCount();
     setMobileFiltersCompact(false);
     state.quoteFocusMode = false;
     const introPanel = getElement('intro-panel');
@@ -852,7 +983,7 @@
     contactCollapse.inert = false;
     document.querySelector('.app-shell').classList.remove('is-quote-focus');
     syncTopButtonVisibility();
-    beginMobileProgrammaticScroll();
+    beginMobileProgrammaticScroll(true);
     window.scrollTo({ top: 0, behavior: preferredScrollBehavior() });
   }
 
@@ -871,54 +1002,26 @@
     state.lastScrollY = currentScrollY;
 
     if (!isMobileToolbarViewport()) {
-      resetMobileScrollGestureTracking();
-      resetMobileUpGestureCount();
+      setMobileFiltersCompact(false);
+      return;
+    }
+
+    if (currentScrollY <= 8 && !state.quoteFocusMode) {
       setMobileFiltersCompact(false);
       return;
     }
 
     if (state.mobileTouchActive) {
-      resetMobileScrollGestureTracking();
-      return;
-    }
-
-    if (state.mobileAwaitingScrollIdleAfterCompact) {
-      waitForMobileScrollIdleAfterCompact();
-      resetMobileScrollGestureTracking();
       return;
     }
 
     if (Date.now() < state.ignoreMobileScrollGestureUntil) {
-      resetMobileScrollGestureTracking();
       return;
     }
 
     if (scrollDelta !== 0) {
-      if (Date.now() < state.ignoreMobileDownScrollUntil && scrollDelta > 0) {
-        return;
-      }
-
-      if (Date.now() < state.ignoreMobileUpScrollUntil && scrollDelta < 0) {
-        return;
-      }
-
       setMobileFiltersCompact(true);
-      resetMobileUpGestureCount();
-      resetMobileScrollGestureTracking();
     }
-  }
-
-  function trackMobileScrollGesture(currentScrollY, scrollDelta) {
-    if (!state.mobileScrollGestureTimer) {
-      state.mobileScrollGestureStartY = currentScrollY - scrollDelta;
-    } else {
-      window.clearTimeout(state.mobileScrollGestureTimer);
-    }
-
-    state.mobileScrollGestureTimer = window.setTimeout(() => {
-      state.mobileScrollGestureTimer = null;
-      resetMobileScrollGestureTracking();
-    }, 180);
   }
 
   function handleMobileTouchStart(event) {
@@ -929,7 +1032,6 @@
 
     state.mobileTouchActive = true;
     state.mobileTouchStartY = event.touches[0].clientY;
-    resetMobileScrollGestureTracking();
   }
 
   function handleMobileWheel(event) {
@@ -938,7 +1040,6 @@
     }
 
     setMobileFiltersCompact(true);
-    resetMobileUpGestureCount();
   }
 
   function handleMobileTouchEnd(event) {
@@ -955,68 +1056,25 @@
 
     const touchDistance = event.changedTouches[0].clientY - state.mobileTouchStartY;
     state.mobileTouchStartY = null;
-    state.ignoreMobileScrollGestureUntil = Date.now() + 700;
-    resetMobileScrollGestureTracking();
+    state.ignoreMobileScrollGestureUntil = Date.now() + 350;
 
     if (Math.abs(touchDistance) >= 24) {
       setMobileFiltersCompact(true);
-      resetMobileUpGestureCount();
     }
   }
 
   function handleMobileTouchCancel() {
     state.mobileTouchActive = false;
     state.mobileTouchStartY = null;
-    resetMobileScrollGestureTracking();
   }
 
-  function registerMobileLargeUpGesture() {
-    state.mobileLargeUpGestureCount += 1;
-
-    if (state.mobileLargeUpGestureCount >= 2) {
-      resetMobileUpGestureCount();
-      setMobileFiltersCompact(false);
-    }
-  }
-
-  function resetMobileScrollGestureTracking() {
-    if (state.mobileScrollGestureTimer) {
-      window.clearTimeout(state.mobileScrollGestureTimer);
-      state.mobileScrollGestureTimer = null;
-    }
-    state.mobileScrollGestureStartY = window.scrollY;
-  }
-
-  function waitForMobileScrollIdleAfterCompact() {
-    state.mobileAwaitingScrollIdleAfterCompact = true;
-    if (state.mobileCompactScrollReleaseTimer) {
-      window.clearTimeout(state.mobileCompactScrollReleaseTimer);
-    }
-
-    state.mobileCompactScrollReleaseTimer = window.setTimeout(() => {
-      state.mobileCompactScrollReleaseTimer = null;
-      state.mobileAwaitingScrollIdleAfterCompact = false;
-      resetMobileScrollGestureTracking();
-    }, 240);
-  }
-
-  function beginMobileProgrammaticScroll() {
-    const duration = 1400;
+  function beginMobileProgrammaticScroll(expandAtEnd) {
+    const duration = 1000;
     const ignoreUntil = Date.now() + duration;
     state.ignoreMobileScrollGestureUntil = Math.max(
       state.ignoreMobileScrollGestureUntil,
       ignoreUntil,
     );
-    state.ignoreMobileDownScrollUntil = Math.max(
-      state.ignoreMobileDownScrollUntil,
-      ignoreUntil,
-    );
-    state.ignoreMobileUpScrollUntil = Math.max(
-      state.ignoreMobileUpScrollUntil,
-      ignoreUntil,
-    );
-    resetMobileScrollGestureTracking();
-    resetMobileUpGestureCount();
 
     if (state.mobileProgrammaticScrollTimer) {
       window.clearTimeout(state.mobileProgrammaticScrollTimer);
@@ -1025,16 +1083,10 @@
     state.mobileProgrammaticScrollTimer = window.setTimeout(() => {
       state.mobileProgrammaticScrollTimer = null;
       state.lastScrollY = window.scrollY;
-      resetMobileScrollGestureTracking();
-      resetMobileUpGestureCount();
-      if (isMobileToolbarViewport()) {
+      if (expandAtEnd && isMobileToolbarViewport()) {
         setMobileFiltersCompact(false);
       }
     }, duration);
-  }
-
-  function resetMobileUpGestureCount() {
-    state.mobileLargeUpGestureCount = 0;
   }
 
   function setMobileFiltersCompact(compact) {
@@ -1044,21 +1096,11 @@
     }
 
     if (state.mobileFiltersCompact && !shouldCompact) {
-      state.mobileAwaitingScrollIdleAfterCompact = false;
-      if (state.mobileCompactScrollReleaseTimer) {
-        window.clearTimeout(state.mobileCompactScrollReleaseTimer);
-        state.mobileCompactScrollReleaseTimer = null;
-      }
       state.ignoreMobileScrollGestureUntil = Date.now() + 700;
-      state.ignoreMobileDownScrollUntil = Date.now() + 700;
-      resetMobileScrollGestureTracking();
     }
 
     if (!state.mobileFiltersCompact && shouldCompact) {
       state.ignoreMobileScrollGestureUntil = Date.now() + 350;
-      resetMobileUpGestureCount();
-      resetMobileScrollGestureTracking();
-      waitForMobileScrollIdleAfterCompact();
     }
 
     state.mobileFiltersCompact = shouldCompact;
@@ -1081,9 +1123,12 @@
 
   function syncResponsiveToolbar() {
     state.lastScrollY = window.scrollY;
-    resetMobileScrollGestureTracking();
-    resetMobileUpGestureCount();
     if (!isMobileToolbarViewport()) {
+      setMobileFiltersCompact(false);
+      return;
+    }
+
+    if (window.scrollY <= 8 && !state.quoteFocusMode) {
       setMobileFiltersCompact(false);
     }
   }
@@ -1094,7 +1139,7 @@
 
   function hasActiveQuoteFilters() {
     return Boolean(
-      state.query.trim() ||
+      tokenizeSearchQuery(state.query).length ||
         state.brandId !== 'all' ||
         state.modelKey !== 'all' ||
         state.categoryId !== 'all',
@@ -1353,14 +1398,16 @@
       return false;
     }
 
-    const tokens = normalize(state.query).split(/\s+/).filter(Boolean);
+    const tokens = tokenizeSearchQuery(state.query);
 
     if (!tokens.length) {
       return true;
     }
 
     const searchIndex = getQuoteSearchIndex(quote);
-    const requiredPhrases = getRequiredPhrases(tokens);
+    const requiredPhrases = getRequiredPhrases(
+      normalize(state.query).split(/\s+/).filter(Boolean),
+    );
 
     return (
       requiredPhrases.every((phrase) => phraseMatches(phrase, searchIndex)) &&
@@ -1373,6 +1420,12 @@
       return quote.searchIndex;
     }
 
+    const modelText = normalize(
+      [
+        quote.modelName,
+        ...createDerivedAliases(quote),
+      ].join(' '),
+    );
     const text = normalize(
       [
         quote.brandName,
@@ -1392,6 +1445,8 @@
     quote.searchIndex = {
       text,
       compact: compactText(text),
+      modelText,
+      modelCompact: compactText(modelText),
     };
 
     return quote.searchIndex;
@@ -1411,6 +1466,13 @@
       return true;
     }
 
+    if (/^\d+$/.test(compactToken)) {
+      return (
+        searchIndex.modelText.includes(token) ||
+        searchIndex.modelCompact.includes(compactToken)
+      );
+    }
+
     if (searchIndex.text.includes(token) || searchIndex.compact.includes(compactToken)) {
       return true;
     }
@@ -1428,6 +1490,7 @@
   function createDerivedAliases(quote) {
     return [
       ...createIphoneAliases(quote.modelName),
+      ...createSamsungAliases(quote.brandId, quote.modelName),
     ];
   }
 
@@ -1484,6 +1547,68 @@
     }
 
     return [...aliases];
+  }
+
+  function createSamsungAliases(brandId, modelName) {
+    if (brandId !== 'samsung') {
+      return [];
+    }
+
+    const match = compactText(modelName).match(/^(s\d{1,2})u/);
+    if (!match) {
+      return [];
+    }
+
+    return [`${match[1]} ultra`, `${match[1]}ultra`];
+  }
+
+  function tokenizeSearchQuery(value) {
+    let workingText = compactText(value);
+    if (!workingText) {
+      return [];
+    }
+
+    conversationalStopPhrases.forEach((phrase) => {
+      workingText = workingText.replaceAll(phrase, ' ');
+    });
+
+    const tokens = [];
+    workingText = extractQueryTerms(workingText, getBrandQueryTerms(), tokens);
+    workingText = extractQueryTerms(workingText, getRepairQueryTerms(), tokens);
+    workingText = normalizeModelQueryTerms(workingText);
+    tokens.push(...workingText.split(/\s+/).filter(Boolean));
+
+    return [...new Set(tokens.map(compactText).filter(Boolean))];
+  }
+
+  function extractQueryTerms(source, terms, tokens) {
+    let remaining = source;
+
+    terms.forEach((term) => {
+      if (!term || !remaining.includes(term)) {
+        return;
+      }
+
+      tokens.push(term);
+      remaining = remaining.replaceAll(term, ' ');
+    });
+
+    return remaining;
+  }
+
+  function getBrandQueryTerms() {
+    const terms = brandAliasEntries.flatMap((entry) => [...entry.keys, ...entry.aliases]);
+    return [...new Set(terms.map(compactText).filter(Boolean))]
+      .sort((left, right) => right.length - left.length);
+  }
+
+  function getRepairQueryTerms() {
+    return [...new Set(searchSynonymGroups.flat())]
+      .sort((left, right) => right.length - left.length);
+  }
+
+  function normalizeModelQueryTerms(value) {
+    return value.replace(/(s\d{1,2})ultra/g, '$1u');
   }
 
   function getRequiredPhrases(tokens) {
