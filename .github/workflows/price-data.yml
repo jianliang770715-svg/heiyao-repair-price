@@ -3,12 +3,14 @@ name: 報價資料檢查與發布
 on:
   pull_request:
     paths:
+      - '.github/workflows/price-data.yml'
       - 'pricing/approved/prices.json'
       - 'scripts/validate-price-data.mjs'
       - 'scripts/sync-price-data.mjs'
       - 'scripts/build.mjs'
   push:
     paths:
+      - '.github/workflows/price-data.yml'
       - 'pricing/approved/prices.json'
       - 'scripts/validate-price-data.mjs'
       - 'scripts/sync-price-data.mjs'
@@ -48,11 +50,15 @@ jobs:
         run: node scripts/sync-price-data.mjs --check
 
       - name: 未設定 Cloudflare 金鑰時說明
-        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/codex/v1.1.2-preview' && (env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == '') }}
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && (env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == '') }}
         run: echo "報價驗證與建置完成；Cloudflare GitHub 金鑰尚未完整設定，因此略過自動發布。"
 
+      - name: 非正式分支時說明
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref != 'refs/heads/main' }}
+        run: echo "報價驗證與建置完成；目前分支不是 main，因此未發布正式網站。"
+
       - name: 發布正式報價到 Cloudflare Pages
-        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/codex/v1.1.2-preview' && env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != '' }}
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != '' }}
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

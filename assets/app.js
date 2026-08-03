@@ -10,11 +10,7 @@
     quoteFocusMode: false,
     quoteFocusScrollTimer: null,
     mobileFiltersCompact: false,
-    lastScrollY: window.scrollY,
     mobileProgrammaticScrollTimer: null,
-    mobileTouchStartY: null,
-    mobileTouchActive: false,
-    ignoreMobileScrollGestureUntil: 0,
     searchUpdateTimer: null,
     loading: true,
     error: '',
@@ -583,10 +579,6 @@
     getElement('search-form').addEventListener('submit', preventSearchFormSubmit);
     getElement('top').addEventListener('click', showPageHeader);
     window.addEventListener('scroll', handleWindowScroll, { passive: true });
-    window.addEventListener('wheel', handleMobileWheel, { passive: true });
-    window.addEventListener('touchstart', handleMobileTouchStart, { passive: true });
-    window.addEventListener('touchend', handleMobileTouchEnd, { passive: true });
-    window.addEventListener('touchcancel', handleMobileTouchCancel, { passive: true });
     window.addEventListener('resize', syncResponsiveToolbar);
     window.addEventListener('popstate', restoreStateFromUrl);
     syncTopButtonVisibility();
@@ -1097,7 +1089,6 @@
     syncUrlState({ push: true });
 
     setMobileFiltersCompact(false);
-    state.ignoreMobileScrollGestureUntil = Date.now() + 600;
     getElement('query').focus({ preventScroll: true });
   }
 
@@ -1199,7 +1190,6 @@
   function expandMobileFilters(event) {
     event.preventDefault();
     setMobileFiltersCompact(false);
-    state.ignoreMobileScrollGestureUntil = Date.now() + 700;
   }
 
   function enterQuoteFocusMode() {
@@ -1258,84 +1248,27 @@
   }
 
   function syncMobileToolbar() {
-    const currentScrollY = window.scrollY;
-    const scrollDelta = currentScrollY - state.lastScrollY;
-    state.lastScrollY = currentScrollY;
-
     if (!isMobileToolbarViewport()) {
       setMobileFiltersCompact(false);
       return;
     }
 
-    if (currentScrollY <= 8 && !state.quoteFocusMode) {
+    if (state.mobileProgrammaticScrollTimer) {
+      return;
+    }
+
+    if (window.scrollY <= 8 && !state.quoteFocusMode) {
       setMobileFiltersCompact(false);
       return;
     }
 
-    if (state.mobileTouchActive) {
-      return;
-    }
-
-    if (Date.now() < state.ignoreMobileScrollGestureUntil) {
-      return;
-    }
-
-    if (scrollDelta !== 0) {
+    if (window.scrollY > 8) {
       setMobileFiltersCompact(true);
     }
-  }
-
-  function handleMobileTouchStart(event) {
-    if (!isMobileToolbarViewport() || !event.touches.length) {
-      state.mobileTouchActive = false;
-      return;
-    }
-
-    state.mobileTouchActive = true;
-    state.mobileTouchStartY = event.touches[0].clientY;
-  }
-
-  function handleMobileWheel(event) {
-    if (!isMobileToolbarViewport() || Math.abs(event.deltaY) < 24) {
-      return;
-    }
-
-    setMobileFiltersCompact(true);
-  }
-
-  function handleMobileTouchEnd(event) {
-    state.mobileTouchActive = false;
-
-    if (
-      state.mobileTouchStartY === null ||
-      !isMobileToolbarViewport() ||
-      !event.changedTouches.length
-    ) {
-      state.mobileTouchStartY = null;
-      return;
-    }
-
-    const touchDistance = event.changedTouches[0].clientY - state.mobileTouchStartY;
-    state.mobileTouchStartY = null;
-    state.ignoreMobileScrollGestureUntil = Date.now() + 350;
-
-    if (Math.abs(touchDistance) >= 24) {
-      setMobileFiltersCompact(true);
-    }
-  }
-
-  function handleMobileTouchCancel() {
-    state.mobileTouchActive = false;
-    state.mobileTouchStartY = null;
   }
 
   function beginMobileProgrammaticScroll(expandAtEnd) {
     const duration = 1000;
-    const ignoreUntil = Date.now() + duration;
-    state.ignoreMobileScrollGestureUntil = Math.max(
-      state.ignoreMobileScrollGestureUntil,
-      ignoreUntil,
-    );
 
     if (state.mobileProgrammaticScrollTimer) {
       window.clearTimeout(state.mobileProgrammaticScrollTimer);
@@ -1343,7 +1276,6 @@
 
     state.mobileProgrammaticScrollTimer = window.setTimeout(() => {
       state.mobileProgrammaticScrollTimer = null;
-      state.lastScrollY = window.scrollY;
       if (expandAtEnd && isMobileToolbarViewport()) {
         setMobileFiltersCompact(false);
       }
@@ -1354,14 +1286,6 @@
     const shouldCompact = Boolean(compact) && isMobileToolbarViewport();
     if (state.mobileFiltersCompact === shouldCompact) {
       return;
-    }
-
-    if (state.mobileFiltersCompact && !shouldCompact) {
-      state.ignoreMobileScrollGestureUntil = Date.now() + 700;
-    }
-
-    if (!state.mobileFiltersCompact && shouldCompact) {
-      state.ignoreMobileScrollGestureUntil = Date.now() + 350;
     }
 
     state.mobileFiltersCompact = shouldCompact;
@@ -1383,7 +1307,6 @@
   }
 
   function syncResponsiveToolbar() {
-    state.lastScrollY = window.scrollY;
     if (!isMobileToolbarViewport()) {
       setMobileFiltersCompact(false);
       return;
