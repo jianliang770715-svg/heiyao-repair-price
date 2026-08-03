@@ -10,3 +10,10 @@
 4. 重新發布 Cloudflare Pages。
 
 重大價格盤點可另外建立 Git 標籤，例如 `prices-2026-07-28.1`。
+
+## 已完成交接紀錄
+
+- `cerphone-applied-2026-07-29.2.md`：2026-07-29.2 已套用報價摘要。
+- `cerphone-full-review-2026-07-29.md`：2026-07-29 全量人工盤點紀錄。
+
+仍在處理或待確認的資料應留在 `pricing/incoming/`，不要提前移入此處。

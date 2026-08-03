@@ -6,6 +6,7 @@
     brandId: 'all',
     modelKey: 'all',
     categoryId: 'all',
+    sortMode: 'relevance',
     quoteFocusMode: false,
     quoteFocusScrollTimer: null,
     mobileFiltersCompact: false,
@@ -53,28 +54,28 @@
   ];
 
   const searchSynonymGroups = [
-    ['battery', 'batt', '電池'],
-    ['screen', 'lcd', '螢幕', '玻璃', '面板'],
-    ['charging', 'charge', 'charge port', '尾插', '充電孔', '充電口', '充電模組'],
-    ['camera', '鏡頭', '相機'],
-    ['back glass', 'backglass', '背蓋', '後玻璃', '玻璃背板'],
+    ['battery', 'batt', '電池', '电池'],
+    ['screen', 'lcd', '螢幕', '屏幕', '玻璃', '面板'],
+    ['charging', 'charge', 'charge port', '尾插', '充電孔', '充電口', '充電模組', '充电孔', '充电口', '充电模组'],
+    ['camera', '鏡頭', '相機', '镜头', '相机'],
+    ['back glass', 'backglass', '背蓋', '後玻璃', '玻璃背板', '背盖', '后玻璃'],
     ['face id', 'faceid', '臉部辨識', '臉部識別'],
-    ['board', 'mainboard', 'motherboard', '主機板', '機板'],
-    ['keyboard', '鍵盤'],
+    ['board', 'mainboard', 'motherboard', '主機板', '機板', '主板'],
+    ['keyboard', '鍵盤', '键盘'],
     ['touch bar', 'touchbar'],
-    ['cleaning', '清潔', '保養'],
-    ['water damage', 'waterdamage', '泡水', '進水'],
-    ['system', '重灌', '系統重灌'],
+    ['cleaning', '清潔', '保養', '清洁', '保养'],
+    ['water damage', 'waterdamage', '泡水', '進水', '进水'],
+    ['system', '重灌', '系統重灌', '重装', '系统重装'],
   ].map((group) => group.map(compactText));
 
   const brandAliasEntries = [
     {
       keys: ['apple'],
-      aliases: ['蘋果'],
+      aliases: ['蘋果', '苹果'],
     },
     {
       keys: ['asus'],
-      aliases: ['華碩'],
+      aliases: ['華碩', '华硕'],
     },
     {
       keys: ['desktop-laptop', 'Desktop & Laptop'],
@@ -94,7 +95,7 @@
     },
     {
       keys: ['oppo'],
-      aliases: ['歐珀'],
+      aliases: ['歐珀', '欧珀'],
     },
     {
       keys: ['samsung'],
@@ -106,19 +107,19 @@
     },
     {
       keys: ['小米', 'xiaomi'],
-      aliases: ['小米', '紅米', 'Redmi'],
+      aliases: ['小米', '紅米', '红米', 'Redmi'],
     },
     {
       keys: ['華為 HUAWEI', 'huawei'],
-      aliases: ['華為'],
+      aliases: ['華為', '华为'],
     },
     {
       keys: ['NOKIA'],
-      aliases: ['諾基亞'],
+      aliases: ['諾基亞', '诺基亚'],
     },
     {
       keys: ['MOTOROLA'],
-      aliases: ['摩托羅拉', 'Moto'],
+      aliases: ['摩托羅拉', '摩托罗拉', 'Moto'],
     },
     {
       keys: ['realme'],
@@ -126,7 +127,7 @@
     },
     {
       keys: ['SUGAR'],
-      aliases: ['糖果手機'],
+      aliases: ['糖果手機', '糖果手机'],
     },
     {
       keys: ['VIVO'],
@@ -142,7 +143,10 @@
   loadPriceData()
     .then((data) => {
       state.data = normalizePriceData(data);
-      state.quotes = flattenQuotes(state.data);
+      state.quotes = flattenQuotes(state.data).map((quote, sourceIndex) => ({
+        ...quote,
+        sourceIndex,
+      }));
       state.loading = false;
       renderLoadedState();
     })
@@ -504,7 +508,18 @@
               <span class="summary-label">更新日期</span>
               <strong data-role="updated-at">-</strong>
             </div>
+            <div>
+              <label class="summary-label" for="quote-sort">排序</label>
+              <select class="summary-sort-select" id="quote-sort" data-role="sort" disabled>
+                <option value="relevance">推薦順序</option>
+                <option value="brand-model">品牌／型號</option>
+                <option value="price-asc">價格低至高</option>
+                <option value="price-desc">價格高至低</option>
+              </select>
+            </div>
           </section>
+
+          <aside class="category-context-note" data-role="context-note" hidden></aside>
 
           <section data-role="results" class="quote-grid" aria-label="報價列表">
             ${renderSkeletons()}
@@ -540,16 +555,25 @@
       state.modelKey = 'all';
       populateModels();
       updateResults();
+      syncUrlState({ push: true });
     });
 
     getElement('model').addEventListener('change', (event) => {
       state.modelKey = event.target.value;
       updateResults();
+      syncUrlState({ push: true });
     });
 
     getElement('category').addEventListener('change', (event) => {
       state.categoryId = event.target.value;
       updateResults();
+      syncUrlState({ push: true });
+    });
+
+    getElement('sort').addEventListener('change', (event) => {
+      state.sortMode = normalizeSortMode(event.target.value);
+      updateResults();
+      syncUrlState({ push: true });
     });
 
     getElement('reset').addEventListener('click', resetFilters);
@@ -564,6 +588,7 @@
     window.addEventListener('touchend', handleMobileTouchEnd, { passive: true });
     window.addEventListener('touchcancel', handleMobileTouchCancel, { passive: true });
     window.addEventListener('resize', syncResponsiveToolbar);
+    window.addEventListener('popstate', restoreStateFromUrl);
     syncTopButtonVisibility();
     syncResponsiveToolbar();
   }
@@ -684,9 +709,12 @@
     getElement('currency').textContent = metadata.currency || 'TWD';
     getElement('updated-at').textContent = metadata.updatedAt || '-';
 
+    applyUrlStateFromLocation();
     populateBrands();
     populateCategories();
     populateModels();
+    getElement('query').value = state.query;
+    getElement('sort').value = state.sortMode;
     disableControls(false);
     updateResults();
   }
@@ -857,6 +885,7 @@
   function updateResults() {
     const hasActiveFilters = hasActiveQuoteFilters();
     const results = getElement('results');
+    syncCategoryContextNote();
 
     if (hasActiveFilters) {
       enterQuoteFocusMode();
@@ -869,6 +898,7 @@
         button.disabled = !hasActiveFilters;
       },
     );
+    getElement('sort').disabled = state.loading || !hasActiveFilters;
 
     if (!hasActiveFilters) {
       getElement('result-count').textContent = `請先搜尋 / ${state.quotes.length}`;
@@ -881,6 +911,7 @@
     }
 
     const filteredQuotes = state.quotes.filter((quote) => matchesQuote(quote));
+    const sortedQuotes = sortQuotes(filteredQuotes);
     getElement('result-count').textContent = `${filteredQuotes.length} / ${state.quotes.length}`;
     results.className = filteredQuotes.length ? 'quote-grid' : 'state-panel';
 
@@ -914,7 +945,112 @@
       return;
     }
 
-    results.innerHTML = filteredQuotes.map(renderQuoteCard).join('');
+    results.innerHTML = sortedQuotes.map(renderQuoteCard).join('');
+  }
+
+  function syncCategoryContextNote() {
+    const note = getElement('context-note');
+    const isComputerCategory = state.brandId === 'desktop-laptop';
+    note.hidden = !isComputerCategory;
+    note.textContent = isComputerCategory
+      ? 'Windows 桌機／筆電維修需依設備規格與故障狀況現場檢測，本類別目前不提供固定金額。'
+      : '';
+  }
+
+  function sortQuotes(quotes) {
+    const sorted = [...quotes];
+
+    if (state.sortMode === 'brand-model') {
+      return sorted.sort(compareQuotesByBrandAndModel);
+    }
+
+    if (state.sortMode === 'price-asc' || state.sortMode === 'price-desc') {
+      return sorted.sort(compareQuotesByPrice);
+    }
+
+    const tokens = tokenizeSearchQuery(state.query);
+    if (!tokens.length) {
+      return sorted.sort((left, right) => left.sourceIndex - right.sourceIndex);
+    }
+
+    return sorted.sort((left, right) => {
+      const scoreDifference = quoteRelevanceScore(right, tokens) - quoteRelevanceScore(left, tokens);
+      return scoreDifference || left.sourceIndex - right.sourceIndex;
+    });
+  }
+
+  function compareQuotesByBrandAndModel(left, right) {
+    const brandDifference = brandSortRank(left.brandId) - brandSortRank(right.brandId);
+    if (brandDifference !== 0) {
+      return brandDifference;
+    }
+
+    const modelDifference = compareText(left.modelName, right.modelName);
+    return modelDifference || compareText(left.item, right.item) || left.sourceIndex - right.sourceIndex;
+  }
+
+  function compareQuotesByPrice(left, right) {
+    const leftPrice = getSortablePrice(left.price);
+    const rightPrice = getSortablePrice(right.price);
+    const leftHasPrice = Number.isFinite(leftPrice);
+    const rightHasPrice = Number.isFinite(rightPrice);
+
+    if (leftHasPrice !== rightHasPrice) {
+      return leftHasPrice ? -1 : 1;
+    }
+
+    if (!leftHasPrice) {
+      return left.sourceIndex - right.sourceIndex;
+    }
+
+    const direction = state.sortMode === 'price-desc' ? -1 : 1;
+    return direction * (leftPrice - rightPrice) || left.sourceIndex - right.sourceIndex;
+  }
+
+  function getSortablePrice(price) {
+    if (price?.type === 'fixed') {
+      return Number(price.amount);
+    }
+
+    if (price?.type === 'range') {
+      return Number(price.min);
+    }
+
+    return Number.NaN;
+  }
+
+  function quoteRelevanceScore(quote, tokens) {
+    const model = compactText(quote.modelName);
+    const item = compactText(quote.item);
+    const brand = compactText([quote.brandName, ...(quote.brandAliases || [])].join(' '));
+    const index = getQuoteSearchIndex(quote);
+
+    return tokens.reduce((score, token) => {
+      const compactToken = compactText(token);
+      if (!compactToken) {
+        return score;
+      }
+      if (model === compactToken) {
+        return score + 20;
+      }
+      if (model.includes(compactToken)) {
+        return score + 12;
+      }
+      if (item.includes(compactToken)) {
+        return score + 8;
+      }
+      if (brand.includes(compactToken)) {
+        return score + 5;
+      }
+      return index.compact.includes(compactToken) ? score + 1 : score;
+    }, 0);
+  }
+
+  function compareText(left, right) {
+    return String(left || '').localeCompare(String(right || ''), 'zh-Hant', {
+      numeric: true,
+      sensitivity: 'base',
+    });
   }
 
   function scheduleResultsUpdate() {
@@ -922,6 +1058,7 @@
     state.searchUpdateTimer = window.setTimeout(() => {
       state.searchUpdateTimer = null;
       updateResults();
+      syncUrlState();
     }, searchUpdateDelay);
   }
 
@@ -940,12 +1077,15 @@
     state.brandId = 'all';
     state.modelKey = 'all';
     state.categoryId = 'all';
+    state.sortMode = 'relevance';
 
     getElement('query').value = '';
     getElement('brand').value = 'all';
     getElement('category').value = 'all';
+    getElement('sort').value = 'relevance';
     populateModels();
     updateResults();
+    syncUrlState({ push: true });
   }
 
   function clearQueryAndExpandFilters(event) {
@@ -954,6 +1094,7 @@
     state.query = '';
     getElement('query').value = '';
     updateResults();
+    syncUrlState({ push: true });
 
     setMobileFiltersCompact(false);
     state.ignoreMobileScrollGestureUntil = Date.now() + 600;
@@ -963,6 +1104,95 @@
   function preventSearchFormSubmit(event) {
     event.preventDefault();
     cancelScheduledResultsUpdate();
+    updateResults();
+    syncUrlState();
+  }
+
+  function applyUrlStateFromLocation() {
+    const params = new URL(window.location.href).searchParams;
+    const requestedBrand = params.get('brand') || 'all';
+    const validBrandIds = new Set((state.data?.brands || []).map((brand) => brand.id));
+
+    state.query = params.get('q') || '';
+    state.brandId = requestedBrand === 'all' || validBrandIds.has(requestedBrand)
+      ? requestedBrand
+      : 'all';
+
+    const requestedCategory = params.get('category') || 'all';
+    const validCategoryIds = new Set(
+      (state.data?.repairCategories || []).map((category) => category.id),
+    );
+    state.categoryId =
+      requestedCategory === 'all' || validCategoryIds.has(requestedCategory)
+        ? requestedCategory
+        : 'all';
+
+    const requestedModel = params.get('model') || 'all';
+    const validModelKeys = new Set(getModels(state.brandId).map((model) => model.value));
+    state.modelKey =
+      requestedModel === 'all' || validModelKeys.has(requestedModel)
+        ? requestedModel
+        : 'all';
+    state.sortMode = normalizeSortMode(params.get('sort'));
+  }
+
+  function syncUrlState(options = {}) {
+    if (!state.data || !window.history?.replaceState) {
+      return;
+    }
+
+    const url = new URL(window.location.href);
+    const currentHasState = hasManagedUrlState(url.searchParams);
+    setUrlParameter(url, 'q', state.query.trim());
+    setUrlParameter(url, 'brand', state.brandId !== 'all' ? state.brandId : '');
+    setUrlParameter(url, 'model', state.modelKey !== 'all' ? state.modelKey : '');
+    setUrlParameter(url, 'category', state.categoryId !== 'all' ? state.categoryId : '');
+    setUrlParameter(url, 'sort', state.sortMode !== 'relevance' ? state.sortMode : '');
+
+    if (url.href === window.location.href) {
+      return;
+    }
+
+    const nextHasState = hasManagedUrlState(url.searchParams);
+    const shouldPush = Boolean(options.push) || (!currentHasState && nextHasState);
+    window.history[shouldPush ? 'pushState' : 'replaceState']({}, '', url.href);
+  }
+
+  function setUrlParameter(url, key, value) {
+    if (value) {
+      url.searchParams.set(key, value);
+      return;
+    }
+
+    url.searchParams.delete(key);
+  }
+
+  function hasManagedUrlState(params) {
+    return ['q', 'brand', 'model', 'category', 'sort'].some((key) => params.has(key));
+  }
+
+  function normalizeSortMode(value) {
+    const allowed = new Set(['relevance', 'brand-model', 'price-asc', 'price-desc']);
+    return allowed.has(value) ? value : 'relevance';
+  }
+
+  function restoreStateFromUrl() {
+    if (!state.data || state.loading) {
+      return;
+    }
+
+    cancelScheduledResultsUpdate();
+    applyUrlStateFromLocation();
+    populateBrands();
+    populateCategories();
+    populateModels();
+    getElement('query').value = state.query;
+    getElement('sort').value = state.sortMode;
+
+    if (!hasActiveQuoteFilters() && state.quoteFocusMode) {
+      showPageHeader();
+    }
+
     updateResults();
   }
 
@@ -1182,7 +1412,7 @@
   }
 
   function disableControls(disabled) {
-    ['query', 'brand', 'category'].forEach((role) => {
+    ['query', 'brand', 'category', 'sort'].forEach((role) => {
       getElement(role).disabled = disabled;
     });
     getElement('model').disabled = disabled || state.brandId === 'all';
@@ -1207,14 +1437,14 @@
     return `
       <article class="quote-card">
         <div class="card-topline">
-          <span>${escapeHtml(quote.brandName)}</span>
+          <span>${highlightSearchText(quote.brandName)}</span>
           <span class="availability availability-${escapeHtml(quote.availability)}">
             ${escapeHtml(availabilityLabel(quote.availability))}
           </span>
         </div>
 
-        <h2>${escapeHtml(formatQuoteModelName(quote))}</h2>
-        <p class="repair-item">${escapeHtml(quote.item)}</p>
+        <h2>${highlightSearchText(formatQuoteModelName(quote))}</h2>
+        <p class="repair-item">${highlightSearchText(quote.item)}</p>
         ${
           screenType
             ? `
@@ -1244,6 +1474,69 @@
         }
       </article>
     `;
+  }
+
+  function highlightSearchText(value) {
+    const source = String(value || '');
+    const terms = getHighlightTerms().filter((term) =>
+      normalize(source).includes(normalize(term)),
+    );
+
+    if (!terms.length) {
+      return escapeHtml(source);
+    }
+
+    const pattern = new RegExp(
+      `(${terms.sort((left, right) => right.length - left.length).map(escapeRegExp).join('|')})`,
+      'giu',
+    );
+
+    return source
+      .split(pattern)
+      .map((part, index) =>
+        index % 2 === 1
+          ? `<mark class="search-highlight">${escapeHtml(part)}</mark>`
+          : escapeHtml(part),
+      )
+      .join('');
+  }
+
+  function getHighlightTerms() {
+    const terms = new Set();
+
+    tokenizeSearchQuery(state.query).forEach((token) => {
+      const compactToken = compactText(token);
+      if (!compactToken) {
+        return;
+      }
+
+      terms.add(token);
+      getSynonymMatches(compactToken).forEach((synonym) => terms.add(synonym));
+
+      brandAliasEntries.forEach((entry) => {
+        const brandTerms = [...entry.keys, ...entry.aliases];
+        if (brandTerms.map(compactText).includes(compactToken)) {
+          brandTerms.forEach((brandTerm) => terms.add(brandTerm));
+        }
+      });
+
+      const samsungMatch = compactToken.match(/^(s\d{1,2})u$/);
+      if (samsungMatch) {
+        terms.add(samsungMatch[1]);
+        terms.add('ultra');
+      }
+
+      const iphoneMatch = compactToken.match(/^ip(?:hone)?(\d+)/);
+      if (iphoneMatch) {
+        terms.add(iphoneMatch[1]);
+      }
+    });
+
+    return [...terms].filter((term) => String(term).length > 0);
+  }
+
+  function escapeRegExp(value) {
+    return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
   function getAppleScreenTypeLabel(quote) {
@@ -1507,10 +1800,8 @@
     }
 
     if (/^\d+$/.test(compactToken)) {
-      return (
-        searchIndex.modelText.includes(token) ||
-        searchIndex.modelCompact.includes(compactToken)
-      );
+      const numericModelPattern = new RegExp(`(^|\\D)${escapeRegExp(compactToken)}(\\D|$)`);
+      return numericModelPattern.test(searchIndex.modelText);
     }
 
     if (searchIndex.text.includes(token) || searchIndex.compact.includes(compactToken)) {
@@ -1608,6 +1899,8 @@
       return [];
     }
 
+    const impliedIphoneModel = getImpliedIphoneModel(workingText);
+
     conversationalStopPhrases.forEach((phrase) => {
       workingText = workingText.replaceAll(phrase, ' ');
     });
@@ -1617,8 +1910,20 @@
     workingText = extractQueryTerms(workingText, getRepairQueryTerms(), tokens);
     workingText = normalizeModelQueryTerms(workingText);
     tokens.push(...workingText.split(/\s+/).filter(Boolean));
+    if (impliedIphoneModel) {
+      tokens.push(impliedIphoneModel);
+    }
 
     return [...new Set(tokens.map(compactText).filter(Boolean))];
+  }
+
+  function getImpliedIphoneModel(compactQuery) {
+    if (/ipad|mac/.test(compactQuery)) {
+      return '';
+    }
+
+    const match = compactQuery.match(/(?:蘋果|苹果)(\d{1,2})/);
+    return match ? `iphone${match[1]}` : '';
   }
 
   function extractQueryTerms(source, terms, tokens) {

@@ -733,7 +733,7 @@ select:focus,
 
 .summary-bar {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   overflow: hidden;
   border-radius: var(--radius);
@@ -757,6 +757,33 @@ select:focus,
   display: block;
   overflow-wrap: anywhere;
   font-size: 0.95rem;
+}
+
+.summary-sort-select {
+  width: 100%;
+  min-height: 34px;
+  padding: 4px 28px 4px 8px;
+  color: var(--accent-strong);
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.category-context-note {
+  padding: 12px 14px;
+  color: #66410f;
+  background: var(--warning-soft);
+  border-left: 4px solid var(--warning);
+  border-radius: var(--radius);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.category-context-note[hidden] {
+  display: none;
 }
 
 .repair-notice {
@@ -840,6 +867,13 @@ select:focus,
   margin-bottom: 0;
   color: var(--ink-muted);
   font-weight: 700;
+}
+
+.search-highlight {
+  padding: 0 2px;
+  color: inherit;
+  background: #ffe7a3;
+  border-radius: 2px;
 }
 
 .repair-badge-row {
@@ -1171,6 +1205,10 @@ select:focus,
 
   .contact-item-wide {
     grid-column: 1 / -1;
+  }
+
+  .summary-bar {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .quote-grid {
