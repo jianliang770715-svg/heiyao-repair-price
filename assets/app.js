@@ -223,10 +223,12 @@
                 <span class="input-shell">
                   <span class="search-mark" aria-hidden="true">⌕</span>
                   <input
+                    id="repair-search"
                     type="search"
                     data-role="query"
                     placeholder="例如 蘋果11電池、s23 ultra 螢幕、ip11"
                     autocomplete="off"
+                    aria-describedby="repair-search-help"
                     disabled
                   />
                   <button
@@ -261,6 +263,9 @@
                     篩選
                   </button>
                 </span>
+                <span class="visually-hidden" id="repair-search-help">
+                  可輸入品牌、型號、維修項目或常用縮寫；也可改用下方選單篩選。
+                </span>
               </label>
 
               <div class="filter-row" id="filter-row">
@@ -273,9 +278,12 @@
 
                 <label>
                   <span class="field-label">型號/設備</span>
-                  <select data-role="model" disabled>
+                  <select data-role="model" aria-describedby="model-filter-help" disabled>
                     <option value="all">全部型號/設備</option>
                   </select>
+                  <span class="visually-hidden" id="model-filter-help">
+                    型號與設備選項會依目前選擇的品牌更新。
+                  </span>
                 </label>
 
                 <label>
@@ -381,6 +389,8 @@
                         <img
                           class="line-friends-poster"
                           src="./assets/line-friends-banner.jpg"
+                          srcset="./assets/line-friends-banner-600.jpg 600w, ./assets/line-friends-banner.jpg 1000w"
+                          sizes="(min-width: 940px) 470px, 45vw"
                           alt="黑曜手機維修 LINE 好友募集中，帳號 @ot_repair"
                           width="1000"
                           height="707"
@@ -399,6 +409,8 @@
                         <img
                           class="review-poster"
                           src="./assets/google-review-banner.jpg"
+                          srcset="./assets/google-review-banner-720.jpg 720w, ./assets/google-review-banner.jpg 1200w"
+                          sizes="(min-width: 940px) 560px, 55vw"
                           alt="黑曜手機維修 Google Maps 好評募集中，掃描 QR Code 留下五星好評"
                           width="1200"
                           height="675"
