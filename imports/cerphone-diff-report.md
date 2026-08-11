@@ -1,306 +1,36 @@
 # Cerphone 最新報價差異
 
-> 狀態：本檔保留為套用前的原始差異基準。使用者已於 2026-07-29 核准新的差異處理政策，正式套用結果請見 `pricing/incoming/cerphone-applied-2026-07-29.2.md`；目前候選報價版本為 `2026-07-29.2`，**價格審核已完成，可交接網站管理分頁；尚未歸檔、上傳及發布**。
-
+- 狀態：本週新增項目已依政策套用，正式候選報價更新為 `2026-08-10.1`。
 - Source: https://cerphone.com/quotation/
-- Fetched at: 2026-07-20T10:07:01+08:00
-- 比對基準: 站內 `data/prices.json`
-- 已依 `imports/cerphone-import-rules.md` 先完成欄位轉譯與排除，再與站內資料比對。
-- Apple 原廠螢幕、原廠電池、原廠鏡頭、非標準款 iPad 的玻璃破裂、Apple Watch、AirPods、HTC，以及 Dyson 清潔服務均不列入維修報價盤點。
-- 說明: 這份差異檔只供人工確認；未自動覆寫正式站內價格。
+- Fetched at: 2026-08-10T02:03:55.114Z（台北 2026-08-10 10:03）
+- 比對基準：2026-08-03 正規化 Cerphone 快照
+- 正規化規則：`imports/cerphone-import-rules.md`
 
 ## 摘要
-- 總筆數: 3772
-- 可比對/可審核筆數: 3624
-- 上修: 7
-- 下調: 28
-- 持平: 3418
-- 需人工確認: 136
-- 新增/未對上: 35
-- 缺漏/站內未被快照對上: 68
-- 不可用且未列入建議: 148
-- 異動金額範圍: -1,300 ~ 1,300 TWD
 
-## 上修項目
-- Samsung / Note 20 ultra N9860 / 螢幕破裂: Cerphone 6,800 | 站內 5500（+1,300）
-- Samsung / S24（S9210） / 螢幕破裂: Cerphone 4,500 | 站內 4000（+500）
-- Samsung / S23（S9110） / 螢幕破裂: Cerphone 5,200 | 站內 4200（+1,000）
-- Samsung / S23+（S9160） / 螢幕破裂: Cerphone 4,600 | 站內 4000（+600）
-- Samsung / S23U（S9180） / 螢幕破裂: Cerphone 7,800 | 站內 7500（+300）
-- Sony / X1IV（XQ-CT72） / 螢幕維修: Cerphone 7,100 | 站內 6500（+600）
-- Sony / X10IV（XQ-CC72） / 螢幕維修: Cerphone 4,000 | 站內 3800（+200）
+- 原始來源：4,088 筆
+- 正規化後：3,800 筆
+- 新增：28 筆，集中於 4 個 Apple iPad Pro 型號
+- 移除：0
+- 既有價格或可用狀態變更：0
+- 重複鍵值：0
+- 需人工確認：0
+- Cerphone 未列出的既有站內項目：維持站內資料，不刪除、不下架、不改為洽詢。
 
-## 下調項目
-- Google / Pixel 4 / 螢幕維修: Cerphone 2,200 | 站內 2300（-100）
-- Google / Pixel 4 XL / 螢幕維修: Cerphone 2,500 | 站內 2800（-300）
-- Google / Pixel 5A / 螢幕維修: Cerphone 3,500 | 站內 4800（-1,300）
-- Google / Pixel 6 / 螢幕維修: Cerphone 3,300 | 站內 3500（-200）
-- Google / Pixel 6A / 螢幕維修: Cerphone 3,700 | 站內 4000（-300）
-- Google / Pixel 9 pro / 螢幕維修: Cerphone 3,200 | 站內 3800（-600）
-- Google / Pixel 10 pro XL / 螢幕維修: Cerphone 5,400 | 站內 5800（-400）
-- Sony / X1（J9110） / 螢幕維修: Cerphone 2,000 | 站內 2300（-300）
-- Sony / X5III（XQ-BQ72） / 螢幕維修: Cerphone 5,100 | 站內 5300（-200）
-- Sony / X5IV（XQ-CQ72） / 螢幕維修: Cerphone 5,700 | 站內 6500（-800）
-- Sony / X10II（XQ-AU52） / 螢幕維修: Cerphone 3,000 | 站內 3200（-200）
-- OPPO / RENO 2 / 螢幕維修: Cerphone 2,100 | 站內 2300（-200）
-- OPPO / RENO 2Z / 螢幕維修: Cerphone 3,200 | 站內 3500（-300）
-- OPPO / RENO Z / 螢幕維修: Cerphone 1,800 | 站內 2000（-200）
-- OPPO / RENO 10倍 / 螢幕維修: Cerphone 3,200 | 站內 3600（-400）
-- OPPO / RENO 4 / 螢幕維修: Cerphone 2,200 | 站內 2600（-400）
-- OPPO / RENO 5 Pro / 螢幕維修: Cerphone 3,000 | 站內 3300（-300）
-- OPPO / RENO 6Z / 螢幕維修: Cerphone 2,500 | 站內 2800（-300）
-- OPPO / RENO 6 Pro / 螢幕維修: Cerphone 3,000 | 站內 3300（-300）
-- OPPO / RENO 7 SE／RENO 7 5G / 螢幕維修: Cerphone 3,000 | 站內 3200（-200）
-- OPPO / RENO 8 / 螢幕維修: Cerphone 3,000 | 站內 3300（-300）
-- OPPO / Reno11 (5G)/ Reno11pro / 螢幕維修: Cerphone 2,500 | 站內 2700（-200）
-- OPPO / Reno11F (5G) / 螢幕維修: Cerphone 2,300 | 站內 2500（-200）
-- OPPO / Reno 13 pro(5G) / 螢幕維修: Cerphone 2,300 | 站內 2500（-200）
-- OPPO / Reno 13(5G) / 螢幕維修: Cerphone 2,300 | 站內 2500（-200）
-- OPPO / Reno14(5G) / 螢幕維修: Cerphone 2,300 | 站內 2500（-200）
-- OPPO / Reno14F(5G) / 螢幕維修: Cerphone 3,000 | 站內 3200（-200）
-- OPPO / Reno14Pro(5G) / 螢幕維修: Cerphone 2,800 | 站內 3200（-400）
+## 已套用新增
 
-## 新增項目
-- Google / Pixel 10A / 螢幕維修: Cerphone 4,700 | 站內未找到對應
-- Google / Pixel 10A / 電池: Cerphone 1,500 | 站內未找到對應
-- Google / Pixel 10A / 充電 耳機孔 震動: Cerphone 1,500 | 站內未找到對應
-- Google / Pixel 10A / 聽筒 麥克風 響鈴: Cerphone 1,500 | 站內未找到對應
-- Google / Pixel 10A / 後鏡頭 前鏡頭: Cerphone 2,000 | 站內未找到對應
-- Google / Pixel 10A / 開機鍵 音量鍵: Cerphone 1,200 | 站內未找到對應
-- Google / Pixel 10A / 機板試修 CPU另報: Cerphone 3,000 | 站內未找到對應
-- OPPO / Reno 15(5G) / 螢幕維修: Cerphone 2,000 | 站內未找到對應
-- OPPO / Reno 15(5G) / 電池: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15(5G) / 充電 耳機孔 震動: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15(5G) / 聽筒 麥克風 響鈴: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15(5G) / 後鏡頭 前鏡頭: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15(5G) / 開機鍵 音量鍵: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15(5G) / 機板試修 CPU另報: Cerphone 2,500 | 站內未找到對應
-- OPPO / Reno 15F(5G) / 螢幕維修: Cerphone 2,300 | 站內未找到對應
-- OPPO / Reno 15F(5G) / 電池: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15F(5G) / 充電 耳機孔 震動: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15F(5G) / 聽筒 麥克風 響鈴: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15F(5G) / 後鏡頭 前鏡頭: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15F(5G) / 開機鍵 音量鍵: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15F(5G) / 機板試修 CPU另報: Cerphone 2,500 | 站內未找到對應
-- OPPO / Reno 15Pro(5G) / 螢幕維修: Cerphone 4,200 | 站內未找到對應
-- OPPO / Reno 15Pro(5G) / 電池: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro(5G) / 充電 耳機孔 震動: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro(5G) / 聽筒 麥克風 響鈴: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro(5G) / 後鏡頭 前鏡頭: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro(5G) / 開機鍵 音量鍵: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro(5G) / 機板試修 CPU另報: Cerphone 2,500 | 站內未找到對應
-- OPPO / Reno 15Pro max(5G) / 螢幕維修: Cerphone 4,200 | 站內未找到對應
-- OPPO / Reno 15Pro max(5G) / 電池: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro max(5G) / 充電 耳機孔 震動: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro max(5G) / 聽筒 麥克風 響鈴: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro max(5G) / 後鏡頭 前鏡頭: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro max(5G) / 開機鍵 音量鍵: Cerphone 1,000 | 站內未找到對應
-- OPPO / Reno 15Pro max(5G) / 機板試修 CPU另報: Cerphone 2,500 | 站內未找到對應
+- `iPad Pro 13" 第六代`：7 項
+- `iPad Pro 11" 第六代`：7 項
+- `iPad Pro 13" 第五代`：7 項
+- `iPad Pro 11" 第五代`：7 項
+- 每個型號均新增：螢幕維修、電池、前鏡頭／後鏡頭、充電／響鈴、開機鍵／音量鍵、HOME鍵、機板試修／CPU另報。
+- 來源空白／`-`：螢幕維修與開機鍵／音量鍵，共 8 筆，已標示為「現場報價」。
+- 固定價格：電池、前鏡頭／後鏡頭、充電／響鈴各 NT$3,000，HOME鍵 NT$6,000，共 16 筆。
+- 複合文字價格：機板試修／CPU另報 `6000(512)/8000(1TB)`，共 4 筆，保留完整顯示值。
 
-## 缺漏項目
-- Google / Pixel 3 / 螢幕維修: 站內 2200 | Cerphone 快照未對上
-- Google / Pixel 3 / 電池: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3 / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3 / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3 / 後鏡頭 / 前鏡頭: 站內 1200 | Cerphone 快照未對上
-- Google / Pixel 3 / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3 / 機板試修 / CPU另報: 站內 2500 | Cerphone 快照未對上
-- Google / Pixel 3 XL / 螢幕維修: 站內 2500 | Cerphone 快照未對上
-- Google / Pixel 3 XL / 電池: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3 XL / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3 XL / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3 XL / 後鏡頭 / 前鏡頭: 站內 1200 | Cerphone 快照未對上
-- Google / Pixel 3 XL / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3 XL / 機板試修 / CPU另報: 站內 2500 | Cerphone 快照未對上
-- Google / Pixel 3A / 螢幕維修: 站內 2200 | Cerphone 快照未對上
-- Google / Pixel 3A / 電池: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3A / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3A / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3A / 後鏡頭 / 前鏡頭: 站內 1200 | Cerphone 快照未對上
-- Google / Pixel 3A / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3A / 機板試修 / CPU另報: 站內 2500 | Cerphone 快照未對上
-- Google / Pixel 3A XL / 螢幕維修: 站內 2500 | Cerphone 快照未對上
-- Google / Pixel 3A XL / 電池: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3A XL / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3A XL / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3A XL / 後鏡頭 / 前鏡頭: 站內 1200 | Cerphone 快照未對上
-- Google / Pixel 3A XL / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Google / Pixel 3A XL / 機板試修 / CPU另報: 站內 2500 | Cerphone 快照未對上
-- Sony / XA2U（H4233） / 螢幕維修: 站內 2000 | Cerphone 快照未對上
-- Sony / XA2U（H4233） / 電池: 站內 1000 | Cerphone 快照未對上
-- Sony / XA2U（H4233） / 背蓋: 站內 800 | Cerphone 快照未對上
-- Sony / XA2U（H4233） / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Sony / XA2U（H4233） / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Sony / XA2U（H4233） / 後鏡頭 / 前鏡頭: 站內 1000 | Cerphone 快照未對上
-- Sony / XA2U（H4233） / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Sony / XA2U（H4233） / 機板試修 / CPU另報: 站內 2000 | Cerphone 快照未對上
-- Sony / XZ1（G8341） / 螢幕維修: 站內 1600 | Cerphone 快照未對上
-- Sony / XZ1（G8341） / 電池: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ1（G8341） / 背蓋: 站內 1500 | Cerphone 快照未對上
-- Sony / XZ1（G8341） / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ1（G8341） / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ1（G8341） / 後鏡頭 / 前鏡頭: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ1（G8341） / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ1（G8341） / 機板試修 / CPU另報: 站內 1500 | Cerphone 快照未對上
-- Sony / XZ2P（H8166） / 螢幕維修: 站內 2500 | Cerphone 快照未對上
-- Sony / XZ2P（H8166） / 電池: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2P（H8166） / 背蓋: 站內 1500 | Cerphone 快照未對上
-- Sony / XZ2P（H8166） / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2P（H8166） / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2P（H8166） / 後鏡頭 / 前鏡頭: 站內 1200 | Cerphone 快照未對上
-- Sony / XZ2P（H8166） / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2P（H8166） / 機板試修 / CPU另報: 站內 2000 | Cerphone 快照未對上
-- Sony / XZ2（H8296） / 螢幕維修: 站內 1600 | Cerphone 快照未對上
-- Sony / XZ2（H8296） / 電池: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2（H8296） / 背蓋: 站內 1500 | Cerphone 快照未對上
-- Sony / XZ2（H8296） / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2（H8296） / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2（H8296） / 後鏡頭 / 前鏡頭: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2（H8296） / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Sony / XZ2（H8296） / 機板試修 / CPU另報: 站內 2000 | Cerphone 快照未對上
-- Sony / XZS（G8232） / 螢幕維修: 站內 1600 | Cerphone 快照未對上
-- Sony / XZS（G8232） / 電池: 站內 1000 | Cerphone 快照未對上
-- Sony / XZS（G8232） / 背蓋: 站內 1500 | Cerphone 快照未對上
-- Sony / XZS（G8232） / 充電 / 耳機孔 / 震動: 站內 1000 | Cerphone 快照未對上
-- Sony / XZS（G8232） / 聽筒 / 麥克風 / 響鈴: 站內 1000 | Cerphone 快照未對上
-- Sony / XZS（G8232） / 後鏡頭 / 前鏡頭: 站內 1000 | Cerphone 快照未對上
-- Sony / XZS（G8232） / 開機鍵 / 音量鍵: 站內 1000 | Cerphone 快照未對上
-- Sony / XZS（G8232） / 機板試修 / CPU另報: 站內 1500 | Cerphone 快照未對上
+## 處理結論
 
-## 需要人工確認的項目
-- Apple / iPhone 17 Pro Max / 前鏡頭／後鏡頭: Cerphone 3500／2800 | 站內 3500／2800；複合/文字價格，顯示值相同
-- Apple / iPhone 17 Pro Max / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 17 Pro / 前鏡頭／後鏡頭: Cerphone 3500／2800 | 站內 3500／2800；複合/文字價格，顯示值相同
-- Apple / iPhone 17 Pro / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 17 / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 17 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone Air / 前鏡頭／後鏡頭: Cerphone 3500／2800 | 站內 3500／2800；複合/文字價格，顯示值相同
-- Apple / iPhone Air / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 16 Pro Max / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 16 Pro Max / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 16 Pro / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 16 Pro / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 16 Plus / 前鏡頭／後鏡頭: Cerphone 3500／2600 | 站內 3500／2600；複合/文字價格，顯示值相同
-- Apple / iPhone 16 Plus / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 16 / 前鏡頭／後鏡頭: Cerphone 3500／2200 | 站內 3500／2200；複合/文字價格，顯示值相同
-- Apple / iPhone 16 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 16e / 前鏡頭／後鏡頭: Cerphone 3500／2300 | 站內 3500／2300；複合/文字價格，顯示值相同
-- Apple / iPhone 16e / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 15 Pro Max / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 15 Pro Max / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 15 Pro / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 15 Pro / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 15 Plus / 前鏡頭／後鏡頭: Cerphone 3500／1800 | 站內 3500／1800；複合/文字價格，顯示值相同
-- Apple / iPhone 15 Plus / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 15 / 前鏡頭／後鏡頭: Cerphone 3500／1800 | 站內 3500／1800；複合/文字價格，顯示值相同
-- Apple / iPhone 15 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 14 Pro Max / 前鏡頭／後鏡頭: Cerphone 3500 / 2300 | 站內 3500 / 2300；複合/文字價格，顯示值相同
-- Apple / iPhone 14 Pro Max / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 14 Pro / 前鏡頭／後鏡頭: Cerphone 3500／2500 | 站內 3500／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 14 Pro / 容量擴充: Cerphone 4000(256)/5000(512)/8000(1T) | 站內 4000(256)/5000(512)/8000(1T)；複合/文字價格，顯示值相同
-- Apple / iPhone 14 Plus / 前鏡頭／後鏡頭: Cerphone 3500／1800 | 站內 3500／1800；複合/文字價格，顯示值相同
-- Apple / iPhone 14 Plus / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 14 / 前鏡頭／後鏡頭: Cerphone 3500／1800 | 站內 3500／1800；複合/文字價格，顯示值相同
-- Apple / iPhone 14 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 13 Pro Max / 前鏡頭／後鏡頭: Cerphone 2000／2500 | 站內 2000／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 13 Pro Max / 容量擴充: Cerphone 4000(256)/4500(512) | 站內 4000(256)/4500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 13 Pro / 前鏡頭／後鏡頭: Cerphone 2000／2500 | 站內 2000／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 13 Pro / 容量擴充: Cerphone 4000(256)/4500(512) | 站內 4000(256)/4500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 13 / 前鏡頭／後鏡頭: Cerphone 2000／1300 | 站內 2000／1300；複合/文字價格，顯示值相同
-- Apple / iPhone 13 / 容量擴充: Cerphone 4000(256)/4500(512) | 站內 4000(256)/4500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 13 Mini / 前鏡頭／後鏡頭: Cerphone 2000／1300 | 站內 2000／1300；複合/文字價格，顯示值相同
-- Apple / iPhone 13 Mini / 容量擴充: Cerphone 4000(256)/4500(512) | 站內 4000(256)/4500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 12 Pro Max / 前鏡頭／後鏡頭: Cerphone 2000／2800 | 站內 2000／2800；複合/文字價格，顯示值相同
-- Apple / iPhone 12 Pro Max / 容量擴充: Cerphone 3500(256)/4000(512) | 站內 3500(256)/4000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 12 Pro / 前鏡頭／後鏡頭: Cerphone 2000／2500 | 站內 2000／2500；複合/文字價格，顯示值相同
-- Apple / iPhone 12 Pro / 容量擴充: Cerphone 3500(256)/4000(512) | 站內 3500(256)/4000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 12 / 前鏡頭／後鏡頭: Cerphone 2000／1600 | 站內 2000／1600；複合/文字價格，顯示值相同
-- Apple / iPhone 12 / 容量擴充: Cerphone 3500(256) | 站內 3500(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 12 Mini / 前鏡頭／後鏡頭: Cerphone 2000／1500 | 站內 2000／1500；複合/文字價格，顯示值相同
-- Apple / iPhone 12 Mini / 容量擴充: Cerphone 3500(256) | 站內 3500(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 11 Pro Max / 前鏡頭／後鏡頭: Cerphone 1500／1500 | 站內 1500／1500；複合/文字價格，顯示值相同
-- Apple / iPhone 11 Pro Max / 容量擴充: Cerphone 3500(256)/4500(512) | 站內 3500(256)/4500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 11 Pro / 前鏡頭／後鏡頭: Cerphone 1500／1500 | 站內 1500／1500；複合/文字價格，顯示值相同
-- Apple / iPhone 11 Pro / 容量擴充: Cerphone 3500(256)/4500(512) | 站內 3500(256)/4500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone 11 / 前鏡頭／後鏡頭: Cerphone 1500／1200 | 站內 1500／1200；複合/文字價格，顯示值相同
-- Apple / iPhone 11 / 容量擴充: Cerphone 3500(256)/4500(512) | 站內 3500(256)/4500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone XS Max / 前鏡頭／後鏡頭: Cerphone 2000／1200 | 站內 2000／1200；複合/文字價格，顯示值相同
-- Apple / iPhone XS Max / 容量擴充: Cerphone 3000(256)/3500(512) | 站內 3000(256)/3500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone XS / 前鏡頭／後鏡頭: Cerphone 2000／1200 | 站內 2000／1200；複合/文字價格，顯示值相同
-- Apple / iPhone XS / 容量擴充: Cerphone 3000(256)/3500(512) | 站內 3000(256)/3500(512)；複合/文字價格，顯示值相同
-- Apple / iPhone XR / 前鏡頭／後鏡頭: Cerphone 1500／1200 | 站內 1500／1200；複合/文字價格，顯示值相同
-- Apple / iPhone XR / 容量擴充: Cerphone 3000(256)/4000(512) | 站內 3000(256)/4000(512)；複合/文字價格，顯示值相同
-- Apple / iPhone X / 前鏡頭／後鏡頭: Cerphone 1500／1200 | 站內 1500／1200；複合/文字價格，顯示值相同
-- Apple / iPhone X / 容量擴充: Cerphone 3000(256) | 站內 3000(256)；複合/文字價格，顯示值相同
-- Apple / iPhone SE2 SE3 / 前鏡頭/後鏡頭: Cerphone 1000/1200 | 站內 1000/1200；複合/文字價格，顯示值相同
-- Apple / iPhone SE2 SE3 / HOME鍵: Cerphone 2000 保有指紋 | 站內 2000 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone SE2 SE3 / 容量擴充: Cerphone 2500(256) | 站內 2500(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 8 Plus / 前鏡頭/後鏡頭: Cerphone 1000/1200 | 站內 1000/1200；複合/文字價格，顯示值相同
-- Apple / iPhone 8 Plus / HOME鍵: Cerphone 2000 保有指紋 | 站內 2000 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone 8 Plus / 容量擴充: Cerphone 2500(256) | 站內 2500(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 8 / 前鏡頭/後鏡頭: Cerphone 1000/1200 | 站內 1000/1200；複合/文字價格，顯示值相同
-- Apple / iPhone 8 / HOME鍵: Cerphone 2000 保有指紋 | 站內 2000 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone 8 / 容量擴充: Cerphone 2500(256) | 站內 2500(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 7 Plus / 前鏡頭/後鏡頭: Cerphone 1000/1200 | 站內 1000/1200；複合/文字價格，顯示值相同
-- Apple / iPhone 7 Plus / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone 7 Plus / 容量擴充: Cerphone 2500(128)/3000(256) | 站內 2500(128)/3000(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 7 / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone 7 / 容量擴充: Cerphone 2500(128)3000(256) | 站內 2500(128)3000(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 6 SP / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone 6 SP / 容量擴充: Cerphone 2500(128)/3000(256) | 站內 2500(128)/3000(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 6 S / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone 6 S / 容量擴充: Cerphone 2500(128)/3000(256) | 站內 2500(128)/3000(256)；複合/文字價格，顯示值相同
-- Apple / iPhone 6 P / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone 6 P / 容量擴充: Cerphone 2500(128) | 站內 2500(128)；複合/文字價格，顯示值相同
-- Apple / iPhone 6 / HOME鍵: Cerphone 1500 保有指紋 | 站內 1500 保有指紋；複合/文字價格，顯示值相同
-- Apple / iPhone 6 / 容量擴充: Cerphone 2500(128) | 站內 2500(128)；複合/文字價格，顯示值相同
-- Apple / iPad 10 / 容量擴充: Cerphone 3000(256)/3500(512) | 站內 3000(256)/3500(512)；複合/文字價格，顯示值相同
-- Apple / iPad 9 / 容量擴充: Cerphone 3000(256) | 站內 3000(256)；複合/文字價格，顯示值相同
-- Apple / iPad 8 / 容量擴充: Cerphone 3000(256) | 站內 3000(256)；複合/文字價格，顯示值相同
-- Apple / iPad 7 / 容量擴充: Cerphone 3000(256) | 站內 3000(256)；複合/文字價格，顯示值相同
-- Apple / iPad 6 / 容量擴充: Cerphone 3000(256) | 站內 3000(256)；複合/文字價格，顯示值相同
-- Apple / iPad mini 6 / 容量擴充: Cerphone 3500(256)/4000(512) | 站內 3500(256)/4000(512)；複合/文字價格，顯示值相同
-- Apple / iPad mini 5 / 容量擴充: Cerphone 3000(256)/3500(512) | 站內 3000(256)/3500(512)；複合/文字價格，顯示值相同
-- Apple / iPad Air 7 (11吋) / 容量擴充: Cerphone 3500(256)/4000(512)/7000(1TB) | 站內 3500(256)/4000(512)/7000(1TB)；複合/文字價格，顯示值相同
-- Apple / iPad Air 6 (11吋) / 容量擴充: Cerphone 3500(256)/4000(512)/7000(1TB) | 站內 3500(256)/4000(512)/7000(1TB)；複合/文字價格，顯示值相同
-- Apple / iPad Air 6 (13吋) / 容量擴充: Cerphone 4000(256)/5000(512)/ | 站內 4000(256)/5000(512)；複合/文字價格，需人工判讀
-- Apple / iPad Air 5 / 容量擴充: Cerphone 3500(256)/4000(512) | 站內 3500(256)/4000(512)；複合/文字價格，顯示值相同
-- Apple / iPad Air 4 / 容量擴充: Cerphone 3500(256) | 站內 3500(256)；複合/文字價格，顯示值相同
-- Apple / iPad Pro 11" 第四代 / 容量擴充: Cerphone 3000(256)/4000(512)/6000(1TB) | 站內 3000(256)/4000(512)/6000(1TB)；複合/文字價格，顯示值相同
-- Apple / iPad Pro 11" 第三代 / 容量擴充: Cerphone 3000(256)/4000(512)/6000(1TB) | 站內 3000(256)/4000(512)/6000(1TB)；複合/文字價格，顯示值相同
-- Apple / iPad Pro 11" 第二代 / 容量擴充: Cerphone 3000(256)/4000(512)/6000(1TB) | 站內 3000(256)/4000(512)/6000(1TB)；複合/文字價格，顯示值相同
-- Apple / iPad Pro 12.9" 第六代 / 容量擴充: Cerphone 4000(256)/5000(512) | 站內 4000(256)/5000(512)；複合/文字價格，顯示值相同
-- Apple / iPad Pro 12.9" 第五代 / 容量擴充: Cerphone 3500(256)/4000(512) | 站內 3500(256)/4000(512)；複合/文字價格，顯示值相同
-- Apple / iPad Pro 12.9" 第四代 / 容量擴充: Cerphone 3500(256)/4000(512) | 站內 3500(256)/4000(512)；複合/文字價格，顯示值相同
-- Samsung / Z Fold 7 (SM-F966) / 內螢幕破裂／總成帶框: Cerphone 14000／22000 | 站內 14000／22000；複合/文字價格，顯示值相同
-- Samsung / Z Fold 6（SM-F956） / 內螢幕破裂／總成帶框: Cerphone 15200／17300 | 站內 15200／17300；複合/文字價格，顯示值相同
-- Samsung / Z Fold 5（SM-F946） / 內螢幕破裂／總成帶框: Cerphone 11800／17100 | 站內 11800／17100；複合/文字價格，顯示值相同
-- Samsung / Z Fold 4（SM-F936） / 內螢幕破裂／總成帶框: Cerphone 9800／17100 | 站內 9800／17100；複合/文字價格，顯示值相同
-- Samsung / Z Fold 3（SM-F926） / 內螢幕破裂／總成帶框: Cerphone 7700／17100 | 站內 7700／17100；複合/文字價格，顯示值相同
-- Samsung / Z Flip 5（SM-F731） / 內螢幕破裂／總成帶框: Cerphone 7500／9600 | 站內 7500／9600；複合/文字價格，顯示值相同
-- Samsung / Z Flip 4（SM-F721） / 內螢幕破裂／總成帶框: Cerphone 7000／9600 | 站內 7000／9600；複合/文字價格，顯示值相同
-- Samsung / Z Flip 3（SM-F711） / 內螢幕破裂／總成帶框: Cerphone 5500／9600 | 站內 5500／9600；複合/文字價格，顯示值相同
-- Samsung / Note 20 ultra N9860 / 背蓋: Cerphone 1200 副廠 | 站內 1200 副廠；複合/文字價格，顯示值相同
-- Samsung / Note 20 ultra N9860 / 後鏡頭／前鏡頭: Cerphone 1800／1200 | 站內 1800／1200；複合/文字價格，顯示值相同
-- Samsung / Note 20 N9810 / 背蓋: Cerphone 1200 副廠 | 站內 1200 副廠；複合/文字價格，顯示值相同
-- Samsung / Note 20 N9810 / 後鏡頭／前鏡頭: Cerphone 2000／1200 | 站內 2000／1200；複合/文字價格，顯示值相同
-- Samsung / Note 10 Lite N770 / 背蓋: Cerphone 1200 副廠 | 站內 1200 副廠；複合/文字價格，顯示值相同
-- Samsung / Note 10+ N9750 / 背蓋: Cerphone 1200 副廠 | 站內 1200 副廠；複合/文字價格，顯示值相同
-- Samsung / Note 10 N9700 / 背蓋: Cerphone 1200 副廠 | 站內 1200 副廠；複合/文字價格，顯示值相同
-- Samsung / Note 9 N960 / 背蓋: Cerphone 1200 副廠 | 站內 1200 副廠；複合/文字價格，顯示值相同
-- Samsung / Note 8 N950 / 背蓋: Cerphone 1200 副廠 | 站內 1200 副廠；複合/文字價格，顯示值相同
-- Samsung / S23U（S9180） / 後鏡頭／前鏡頭: Cerphone 2200/1500 | 站內 2200/1500；複合/文字價格，顯示值相同
-- Samsung / S22U（S9080） / 後鏡頭／前鏡頭: Cerphone 1800／1200 | 站內 1800／1200；複合/文字價格，顯示值相同
-- Samsung / S21 Ultra（G998） / 後鏡頭／前鏡頭: Cerphone 1800／1200 | 站內 1800／1200；複合/文字價格，顯示值相同
-- Samsung / S20 Ultra（G988） / 後鏡頭／前鏡頭: Cerphone 1600／1200 | 站內 1600／1200；複合/文字價格，顯示值相同
-- Samsung / S20+ （G9860） / 後鏡頭／前鏡頭: Cerphone 1500／1200 | 站內 1500／1200；複合/文字價格，顯示值相同
-- OPPO / FindN3 / 螢幕維修: Cerphone 京東方8000/三星11000(檢測後告知) | 站內 京東方8000/三星11000(檢測後告知)；複合/文字價格，顯示值相同
-- MOTOROLA / Razr40 / 螢幕維修: Cerphone 內5000/外2500 | 站內 內5000/外2500；複合/文字價格，顯示值相同
-- MOTOROLA / Razr40Ultra / 螢幕維修: Cerphone 內5500/外3500 | 站內 內5500/外3500；複合/文字價格，顯示值相同
-- MOTOROLA / Razr50 / 螢幕維修: Cerphone 內5200/外3500 | 站內 內5200/外3500；複合/文字價格，顯示值相同
-- MOTOROLA / Razr50Ultra / 螢幕維修: Cerphone 內5200/外3500 | 站內 內5200/外3500；複合/文字價格，顯示值相同
-- MOTOROLA / Razr60 / 螢幕維修: Cerphone 內5200/外3500 | 站內 內5200/外3500；複合/文字價格，顯示值相同
-- MOTOROLA / Razr60Ultra / 螢幕維修: Cerphone 內7500/外3500 | 站內 內7500/外3500；複合/文字價格，顯示值相同
-- Nintendo / Switch OLED版 / 充電孔／滑軌充電排線: Cerphone 1200／800 | 站內 1200／800；複合/文字價格，顯示值相同
-- Nintendo / Switch / 充電孔／滑軌充電排線: Cerphone 1200／800 | 站內 1200／800；複合/文字價格，顯示值相同
-- Nintendo / Switch Pro 手把 / 磨菇頭: Cerphone 單邊600 雙邊1000 | 站內 單邊600 雙邊1000；複合/文字價格，顯示值相同
+- 本週沒有既有項目上修或下調，也沒有來源移除。
+- 4 個新增型號與 28 個維修項目均可使用既有 Apple、平板與維修分類，屬 `data-only`，不需要網站結構調整。
+- `pricing/approved/prices.json`、`data/prices.json` 與 `data/prices.js` 已同步為 `2026-08-10.1`。
+- 價格審核完成／可交接；尚未由網站管理分頁歸檔、上傳及發布。
