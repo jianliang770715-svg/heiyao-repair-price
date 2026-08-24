@@ -1,9 +1,10 @@
 {
   "name": "heiyao-repair-price",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "private": true,
   "scripts": {
     "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
     "prices:validate": "node scripts/validate-price-data.mjs",
     "prices:sync": "node scripts/sync-price-data.mjs",
     "prices:check": "node scripts/sync-price-data.mjs --check",

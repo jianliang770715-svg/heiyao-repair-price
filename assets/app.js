@@ -1,4 +1,5 @@
 (function () {
+  const siteUtils = window.REPAIR_SITE_UTILS || {};
   const state = {
     data: null,
     quotes: [],
@@ -12,11 +13,19 @@
     mobileFiltersCompact: false,
     mobileProgrammaticScrollTimer: null,
     searchUpdateTimer: null,
+    resultLimit: 0,
+    resultTotal: 0,
+    resultSignature: '',
+    typoModelIndex: new Map(),
+    activeSearchTokens: [],
+    typoCorrection: null,
     loading: true,
     error: '',
   };
 
   const searchUpdateDelay = 180;
+  const mobileResultBatchSize = 24;
+  const desktopResultBatchSize = 48;
   const conversationalStopPhrases = [
     '維修價格',
     '維修報價',
@@ -57,6 +66,7 @@
     ['back glass', 'backglass', '背蓋', '後玻璃', '玻璃背板', '背盖', '后玻璃'],
     ['face id', 'faceid', '臉部辨識', '臉部識別'],
     ['board', 'mainboard', 'motherboard', '主機板', '機板', '主板'],
+    ['storage', 'capacity', '容量', '容量擴充', '擴容', '扩容'],
     ['keyboard', '鍵盤', '键盘'],
     ['touch bar', 'touchbar'],
     ['cleaning', '清潔', '保養', '清洁', '保养'],
@@ -143,6 +153,7 @@
         ...quote,
         sourceIndex,
       }));
+      state.typoModelIndex = buildTypoModelIndex(state.quotes);
       state.loading = false;
       renderLoadedState();
     })
@@ -155,6 +166,10 @@
   function renderShell() {
     root.innerHTML = `
       <main class="app-shell">
+        <nav class="skip-links" aria-label="快速跳至主要內容">
+          <a href="#repair-search">跳至報價搜尋</a>
+          <a href="#quote-results">跳至報價結果</a>
+        </nav>
         <div class="intro-panel" data-role="intro-panel">
           <div class="intro-content">
             <header class="site-header">
@@ -170,7 +185,7 @@
                     decoding="async"
                   />
                   <div class="brand-title-copy">
-                    <h1 data-role="studio-name">黑曜手機維修</h1>
+                    <h1 data-role="studio-name" tabindex="-1">黑曜手機維修</h1>
                     <p class="service-scope">手機・平板（iPad／Android）・Apple Mac（桌機／筆電）・Windows 系統（桌機／筆電）・Dyson・Nintendo 維修</p>
                   </div>
                 </div>
@@ -336,6 +351,23 @@
                     導航前往
                   </a>
                 </nav>
+                <section class="service-info" aria-labelledby="service-info-title">
+                  <h3 id="service-info-title">到店與維修時間</h3>
+                  <div class="service-info-grid">
+                    <div>
+                      <span>營業時間</span>
+                      <strong>到店前請先用 LINE 或電話確認</strong>
+                    </div>
+                    <div>
+                      <span>是否需要預約</span>
+                      <strong>建議先預約，以便確認零件與可安排時間</strong>
+                    </div>
+                    <div>
+                      <span>一般維修時間</span>
+                      <strong>依機型、故障與零件供應而異，檢測後告知</strong>
+                    </div>
+                  </div>
+                </section>
                 <div class="contact-grid">
                   <article class="contact-item">
                     <p class="contact-label">主要聯絡電話</p>
@@ -503,8 +535,8 @@
             </div>
           </div>
 
-          <section class="summary-bar" aria-live="polite">
-            <div>
+          <section class="summary-bar">
+            <div role="status" aria-live="polite" aria-atomic="true">
               <span class="summary-label">符合結果</span>
               <strong data-role="result-count">讀取中</strong>
             </div>
@@ -527,9 +559,23 @@
             </div>
           </section>
 
-          <aside class="category-context-note" data-role="context-note" hidden></aside>
+          <aside
+            class="category-context-note"
+            data-role="context-note"
+            role="status"
+            aria-live="polite"
+            aria-atomic="true"
+            hidden
+          ></aside>
 
-          <section data-role="results" class="quote-grid" aria-label="報價列表">
+          <section
+            id="quote-results"
+            data-role="results"
+            class="quote-grid"
+            aria-label="報價列表"
+            aria-busy="true"
+            tabindex="-1"
+          >
             ${renderSkeletons()}
           </section>
         </section>
@@ -588,6 +634,7 @@
     getElement('mobile-reset').addEventListener('click', resetFilters);
     getElement('query-clear').addEventListener('click', clearQueryAndExpandFilters);
     getElement('filter-expand').addEventListener('click', expandMobileFilters);
+    getElement('results').addEventListener('click', handleResultsClick);
     getElement('search-form').addEventListener('submit', preventSearchFormSubmit);
     getElement('top').addEventListener('click', showPageHeader);
     window.addEventListener('scroll', handleWindowScroll, { passive: true });
@@ -691,8 +738,11 @@
   function renderLoadedState() {
     if (state.error) {
       disableControls(true);
-      getElement('results').className = 'state-panel error-state';
-      getElement('results').innerHTML = `
+      const results = getElement('results');
+      results.className = 'state-panel error-state';
+      results.setAttribute('aria-busy', 'false');
+      results.setAttribute('role', 'alert');
+      results.innerHTML = `
         <h2>無法讀取報價資料</h2>
         <p>${escapeHtml(state.error)}</p>
       `;
@@ -720,6 +770,7 @@
     getElement('query').value = state.query;
     getElement('sort').value = state.sortMode;
     disableControls(false);
+    getElement('results').setAttribute('aria-busy', 'false');
     updateResults();
   }
 
@@ -889,6 +940,7 @@
   function updateResults() {
     const hasActiveFilters = hasActiveQuoteFilters();
     const results = getElement('results');
+    results.removeAttribute('role');
     syncCategoryContextNote();
 
     if (hasActiveFilters) {
@@ -905,6 +957,11 @@
     getElement('sort').disabled = state.loading || !hasActiveFilters;
 
     if (!hasActiveFilters) {
+      state.resultLimit = 0;
+      state.resultTotal = 0;
+      state.resultSignature = '';
+      state.activeSearchTokens = [];
+      state.typoCorrection = null;
       getElement('result-count').textContent = `請先搜尋 / ${state.quotes.length}`;
       results.className = 'state-panel';
       results.innerHTML = `
@@ -914,12 +971,39 @@
       return;
     }
 
-    const filteredQuotes = state.quotes.filter((quote) => matchesQuote(quote));
-    const sortedQuotes = sortQuotes(filteredQuotes);
-    getElement('result-count').textContent = `${filteredQuotes.length} / ${state.quotes.length}`;
+    const originalTokens = tokenizeSearchQuery(state.query);
+    let activeTokens = originalTokens;
+    let filteredQuotes = state.quotes.filter((quote) => matchesQuote(quote, activeTokens));
+    let typoCorrection = null;
+
+    if (!filteredQuotes.length && originalTokens.length) {
+      typoCorrection = resolveTypoCorrection(originalTokens);
+      if (typoCorrection) {
+        activeTokens = typoCorrection.tokens;
+        filteredQuotes = state.quotes.filter((quote) => matchesQuote(quote, activeTokens));
+      }
+    }
+
+    state.activeSearchTokens = activeTokens;
+    state.typoCorrection = filteredQuotes.length ? typoCorrection : null;
+    state.resultTotal = filteredQuotes.length;
+    const sortedQuotes = sortQuotes(filteredQuotes, activeTokens);
+    const resultSignature = getResultSignature();
+    if (state.resultSignature !== resultSignature) {
+      state.resultSignature = resultSignature;
+      state.resultLimit = getResultBatchSize();
+    }
+
+    const visibleQuotes = typeof siteUtils.sliceResults === 'function'
+      ? siteUtils.sliceResults(sortedQuotes, state.resultLimit)
+      : sortedQuotes.slice(0, state.resultLimit);
+    getElement('result-count').textContent = filteredQuotes.length
+      ? `${visibleQuotes.length} / ${filteredQuotes.length}（全站 ${state.quotes.length}）`
+      : `0 / ${state.quotes.length}`;
     results.className = filteredQuotes.length ? 'quote-grid' : 'state-panel';
 
     if (!filteredQuotes.length) {
+      results.setAttribute('role', 'alert');
       const lineInquiryUrl = buildGeneralLineInquiryUrl();
       results.innerHTML = `
         <h2>沒有符合的報價</h2>
@@ -949,7 +1033,71 @@
       return;
     }
 
-    results.innerHTML = sortedQuotes.map(renderQuoteCard).join('');
+    results.innerHTML = `
+      ${renderTypoCorrectionNote(state.typoCorrection)}
+      ${visibleQuotes.map(renderQuoteCard).join('')}
+      ${renderLoadMoreControl(visibleQuotes.length, filteredQuotes.length)}
+    `;
+  }
+
+  function getResultSignature() {
+    return JSON.stringify([
+      state.query.trim(),
+      state.brandId,
+      state.modelKey,
+      state.categoryId,
+      state.sortMode,
+    ]);
+  }
+
+  function getResultBatchSize() {
+    return window.matchMedia('(max-width: 679px)').matches
+      ? mobileResultBatchSize
+      : desktopResultBatchSize;
+  }
+
+  function renderLoadMoreControl(visibleCount, totalCount) {
+    if (visibleCount >= totalCount) {
+      return '';
+    }
+
+    const remaining = totalCount - visibleCount;
+    return `
+      <div class="result-load-more">
+        <p>目前顯示 ${visibleCount} 筆，尚有 ${remaining} 筆結果</p>
+        <button type="button" data-load-more>載入更多報價</button>
+      </div>
+    `;
+  }
+
+  function handleResultsClick(event) {
+    const button = event.target.closest('[data-load-more]');
+    if (!button) {
+      return;
+    }
+
+    state.resultLimit = typeof siteUtils.nextResultLimit === 'function'
+      ? siteUtils.nextResultLimit(
+        state.resultLimit,
+        state.resultTotal,
+        getResultBatchSize(),
+      )
+      : state.resultLimit + getResultBatchSize();
+    updateResults();
+    const nextButton = getElement('results').querySelector('[data-load-more]');
+    (nextButton || getElement('results')).focus({ preventScroll: true });
+  }
+
+  function renderTypoCorrectionNote(correction) {
+    if (!correction) {
+      return '';
+    }
+
+    return `
+      <aside class="search-correction-note" role="status" aria-live="polite">
+        找不到完全相同的字詞，以下以「${escapeHtml(correction.display)}」近似搜尋。
+      </aside>
+    `;
   }
 
   function syncCategoryContextNote() {
@@ -961,7 +1109,7 @@
       : '';
   }
 
-  function sortQuotes(quotes) {
+  function sortQuotes(quotes, searchTokens = tokenizeSearchQuery(state.query)) {
     const sorted = [...quotes];
 
     if (state.sortMode === 'brand-model') {
@@ -972,7 +1120,7 @@
       return sorted.sort(compareQuotesByPrice);
     }
 
-    const tokens = tokenizeSearchQuery(state.query);
+    const tokens = searchTokens;
     if (!tokens.length) {
       return sorted.sort((left, right) => left.sourceIndex - right.sourceIndex);
     }
@@ -1090,6 +1238,7 @@
     populateModels();
     updateResults();
     syncUrlState({ push: true });
+    getElement('query').focus({ preventScroll: true });
   }
 
   function clearQueryAndExpandFilters(event) {
@@ -1202,6 +1351,7 @@
   function expandMobileFilters(event) {
     event.preventDefault();
     setMobileFiltersCompact(false);
+    getElement('brand').focus({ preventScroll: true });
   }
 
   function enterQuoteFocusMode() {
@@ -1248,6 +1398,10 @@
     syncTopButtonVisibility();
     beginMobileProgrammaticScroll(true);
     window.scrollTo({ top: 0, behavior: preferredScrollBehavior() });
+    const focusDelay = preferredScrollBehavior() === 'auto' ? 0 : 450;
+    window.setTimeout(() => {
+      document.querySelector('[data-role="studio-name"]')?.focus({ preventScroll: true });
+    }, focusDelay);
   }
 
   function handleWindowScroll() {
@@ -1312,6 +1466,9 @@
     filterRow.inert = shouldCompact;
 
     if (shouldCompact) {
+      if (filterRow.contains(document.activeElement)) {
+        filterExpandButton.focus({ preventScroll: true });
+      }
       filterRow.setAttribute('aria-hidden', 'true');
     } else {
       filterRow.removeAttribute('aria-hidden');
@@ -1383,7 +1540,7 @@
         ${
           screenType
             ? `
-              <div class="repair-badge-row" aria-label="螢幕類型">
+              <div class="repair-badge-row" role="group" aria-label="螢幕類型">
                 <span class="repair-badge repair-badge-${screenType.kind}">
                   ${escapeHtml(screenType.label)}
                 </span>
@@ -1394,7 +1551,7 @@
 
         <div class="price-line">${renderQuotePrice(quote)}</div>
 
-        <div class="detail-list" aria-label="維修細節">
+        <div class="detail-list" role="group" aria-label="維修細節">
           <span>${escapeHtml(quote.categoryName)}</span>
           <span>${escapeHtml(quote.duration)}</span>
           <span>${quote.warrantyDays > 0 ? `${escapeHtml(quote.warrantyDays)} 天保固` : '檢測無保固'}</span>
@@ -1439,7 +1596,11 @@
   function getHighlightTerms() {
     const terms = new Set();
 
-    tokenizeSearchQuery(state.query).forEach((token) => {
+    const highlightTokens = state.activeSearchTokens.length
+      ? state.activeSearchTokens
+      : tokenizeSearchQuery(state.query);
+
+    highlightTokens.forEach((token) => {
       const compactToken = compactText(token);
       if (!compactToken) {
         return;
@@ -1488,6 +1649,32 @@
   }
 
   function renderQuotePrice(quote) {
+    const structured = typeof siteUtils.parseStructuredPrice === 'function'
+      ? siteUtils.parseStructuredPrice(quote.item, quote.price)
+      : null;
+
+    if (structured) {
+      const formatter = createPriceFormatter(quote.currency);
+      const accessibleText = structured.options
+        .map((option) => `${option.label} ${formatter.format(option.amount)}`)
+        .join('，');
+      return `
+        <span class="price-prefix">參考報價</span>
+        <span
+          class="price-option-list"
+          role="list"
+          aria-label="${escapeHtml(`${structured.label}：${accessibleText}`)}"
+        >
+          ${structured.options.map((option) => `
+            <span class="price-option" role="listitem">
+              <span class="price-option-label">${escapeHtml(option.label)}</span>
+              <strong>${escapeHtml(formatter.format(option.amount))}</strong>
+            </span>
+          `).join('')}
+        </span>
+      `;
+    }
+
     const formattedPrice = escapeHtml(formatPrice(quote.price, quote.currency));
     if (quote.price?.type !== 'fixed') {
       return formattedPrice;
@@ -1549,7 +1736,7 @@
 
   function renderSkeletons() {
     return Array.from({ length: 4 }, () => `
-      <article class="quote-card skeleton">
+      <article class="quote-card skeleton" aria-hidden="true">
         <div></div>
         <div></div>
         <div></div>
@@ -1656,7 +1843,7 @@
     return 2;
   }
 
-  function matchesQuote(quote) {
+  function matchesQuote(quote, tokens = tokenizeSearchQuery(state.query)) {
     const brandMatches = state.brandId === 'all' || quote.brandId === state.brandId;
     const modelMatches = state.modelKey === 'all' || quote.modelKey === state.modelKey;
     const categoryMatches =
@@ -1665,8 +1852,6 @@
     if (!brandMatches || !modelMatches || !categoryMatches) {
       return false;
     }
-
-    const tokens = tokenizeSearchQuery(state.query);
 
     if (!tokens.length) {
       return true;
@@ -1758,6 +1943,49 @@
       ...createIphoneAliases(quote.modelName),
       ...createSamsungAliases(quote.brandId, quote.modelName),
     ];
+  }
+
+  function buildTypoModelIndex(quotes) {
+    const index = new Map();
+
+    quotes.forEach((quote) => {
+      [quote.modelName, ...(quote.aliases || []), ...createDerivedAliases(quote)]
+        .map(compactText)
+        .filter(Boolean)
+        .forEach((term) => {
+          if (!index.has(term)) {
+            index.set(term, formatQuoteModelName(quote));
+          }
+        });
+    });
+
+    return index;
+  }
+
+  function resolveTypoCorrection(tokens) {
+    if (typeof siteUtils.findUniqueModelCorrection !== 'function') {
+      return null;
+    }
+
+    const candidates = [...state.typoModelIndex.keys()];
+    const corrections = tokens.flatMap((token, index) => {
+      const corrected = siteUtils.findUniqueModelCorrection(token, candidates);
+      return corrected ? [{ index, original: token, corrected }] : [];
+    });
+
+    if (corrections.length !== 1) {
+      return null;
+    }
+
+    const [correction] = corrections;
+    const correctedTokens = [...tokens];
+    correctedTokens[correction.index] = correction.corrected;
+
+    return {
+      ...correction,
+      display: state.typoModelIndex.get(correction.corrected) || correction.corrected,
+      tokens: correctedTokens,
+    };
   }
 
   function getBrandAliases(brand) {

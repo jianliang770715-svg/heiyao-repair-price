@@ -30,6 +30,20 @@ body {
   min-width: 320px;
 }
 
+.no-js-message {
+  width: min(680px, calc(100% - 28px));
+  margin: 28px auto;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.no-js-message p {
+  line-height: 1.65;
+}
+
 button,
 input,
 select {
@@ -51,8 +65,9 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid rgba(16, 123, 99, 0.34);
+  outline: 3px solid #005fcc;
   outline-offset: 3px;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
 .visually-hidden {
@@ -65,6 +80,31 @@ select:focus-visible {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
+}
+
+.skip-links {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 30;
+  display: flex;
+  gap: 8px;
+}
+
+.skip-links a {
+  position: absolute;
+  width: max-content;
+  padding: 10px 12px;
+  color: #ffffff;
+  background: #1d2528;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transform: translateY(-160%);
+}
+
+.skip-links a:focus {
+  position: relative;
+  transform: translateY(0);
 }
 
 .app-shell {
@@ -525,6 +565,44 @@ p {
   margin-bottom: 0;
 }
 
+.service-info {
+  margin-bottom: 12px;
+  padding: 12px 0 2px;
+  border-top: 1px solid var(--line);
+}
+
+.service-info h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.service-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.service-info-grid > div {
+  min-width: 0;
+}
+
+.service-info-grid span,
+.service-info-grid strong {
+  display: block;
+}
+
+.service-info-grid span {
+  margin-bottom: 4px;
+  color: var(--ink-muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.service-info-grid strong {
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
 .search-toolbar,
 .summary-bar,
 .quote-card,
@@ -583,7 +661,7 @@ p {
 }
 
 .top-button:focus-visible {
-  outline: 3px solid rgba(16, 123, 99, 0.3);
+  outline: 3px solid #005fcc;
   outline-offset: 3px;
 }
 
@@ -940,6 +1018,39 @@ select:focus,
   font-weight: 800;
 }
 
+.price-option-list {
+  display: grid;
+  width: 100%;
+  gap: 3px;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.price-option {
+  display: flex;
+  min-width: 0;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.price-option:last-child {
+  border-bottom: 0;
+}
+
+.price-option-label {
+  color: var(--ink-muted);
+  font-weight: 800;
+}
+
+.price-option strong {
+  flex: 0 0 auto;
+  color: var(--accent-strong);
+  font-size: 1.1rem;
+}
+
 .quote-card h2,
 .repair-item,
 .price-line,
@@ -1057,6 +1168,51 @@ select:focus,
 .state-panel .empty-line-action:hover,
 .state-panel .empty-line-action:focus-visible {
   background: #058e3c;
+}
+
+.search-correction-note,
+.result-load-more {
+  grid-column: 1 / -1;
+}
+
+.search-correction-note {
+  padding: 12px 14px;
+  color: #71410f;
+  background: var(--warning-soft);
+  border-left: 4px solid var(--warning);
+  border-radius: var(--radius);
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.result-load-more {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 16px 0 4px;
+}
+
+.result-load-more p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.result-load-more button {
+  min-height: 46px;
+  padding: 0 18px;
+  color: #ffffff;
+  background: var(--accent-strong);
+  border: 1px solid var(--accent-strong);
+  border-radius: var(--radius);
+  font-weight: 900;
+}
+
+.result-load-more button:hover,
+.result-load-more button:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 .site-footer {
@@ -1278,6 +1434,11 @@ select:focus,
 
   .mobile-contact-actions {
     display: grid;
+  }
+
+  .service-info-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
 
   .line-contact-item {
