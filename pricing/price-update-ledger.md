@@ -138,7 +138,7 @@
 
 ### cerphone-2026-08-24.3
 
-- 狀態：使用者已確認／已歸檔／待正式發布
+- 狀態：使用者已確認／已歸檔／已提交 GitHub／正式發布完成／線上驗證通過
 - 更新類型：`data-only`；未修改網站架構、搜尋邏輯、vCard、URL 行為或網站版本。
 - 來源交接：`pricing/incoming/cerphone-2026-08-23-extra.1/preexisting-mismatches.json`
 - 使用者決定：直接處理前批保留的兩筆價格差異；Debug 站資料維持原狀。
@@ -146,4 +146,7 @@
 - 判定依據：沿用既有級距下調政策；Cerphone 來源價格分別為 `6,800` 與 `3,500`。
 - 價格檔版本：`2026-08-24.3`；網站版本維持 `v1.6.0`。
 - 歸檔摘要：`pricing/archive/cerphone-applied-2026-08-24.3.md`。
-- 下一步：執行價格驗證、同步檢查、建置與正式站發布；完成後回填 Git 提交、Actions 與線上驗證結果。
+- 驗證結果：價格驗證、同步檢查、建置與 `git diff --check` 通過；11 品牌、503 型號、3,945 維修項目，SHA-256 `0d256aa386b8b2de8809be564cfaa8262bafce46651271aa9572abc26354c19f`。
+- GitHub：正式 `main` 提交 `e321ad3`；GitHub Actions `32742701011` 成功。
+- 正式站：`https://otrepair-price.pages.dev/` 已讀到 `2026-08-24.3`；iPhone 17 螢幕維修 `7,100`、Pixel 5A 螢幕維修 `3,800`；iPad mini 7 維持 `7,500`。
+- Debug 站：依使用者要求未更新。
