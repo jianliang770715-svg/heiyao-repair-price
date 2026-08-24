@@ -11665,9 +11665,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 7100
+                "amount": 7500
               },
-              "rawPrice": "7100",
+              "rawPrice": "7500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14852,9 +14852,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 7500
+                "amount": 7100
               },
-              "rawPrice": "7500",
+              "rawPrice": "7100",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
