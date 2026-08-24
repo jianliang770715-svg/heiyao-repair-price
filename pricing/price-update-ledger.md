@@ -135,3 +135,15 @@
 - GitHub：main 提交 `308329f`；GitHub Actions：`32732578159`，結果成功。
 - 正式站驗證：`https://otrepair-price.pages.dev/` HTTP 200；價格版本 `2026-08-24.2`、11 品牌、503 型號、3,945 維修項目；iPhone 17e 9 項、iPad Pro 13" 第六代 7 項、A2485／A2780 組裝螢幕總成 15,500。
 - 結論：8/17 價格漏發已補正發布；保留後續核准價格與完整追溯紀錄。
+
+### cerphone-2026-08-24.3
+
+- 狀態：使用者已確認／已歸檔／待正式發布
+- 更新類型：`data-only`；未修改網站架構、搜尋邏輯、vCard、URL 行為或網站版本。
+- 來源交接：`pricing/incoming/cerphone-2026-08-23-extra.1/preexisting-mismatches.json`
+- 使用者決定：直接處理前批保留的兩筆價格差異；Debug 站資料維持原狀。
+- 套用價格：Apple／iPhone 17／螢幕維修 `7,500 → 7,100`；Google／Pixel 5A／螢幕維修 `4,300 → 3,800`。
+- 判定依據：沿用既有級距下調政策；Cerphone 來源價格分別為 `6,800` 與 `3,500`。
+- 價格檔版本：`2026-08-24.3`；網站版本維持 `v1.6.0`。
+- 歸檔摘要：`pricing/archive/cerphone-applied-2026-08-24.3.md`。
+- 下一步：執行價格驗證、同步檢查、建置與正式站發布；完成後回填 Git 提交、Actions 與線上驗證結果。

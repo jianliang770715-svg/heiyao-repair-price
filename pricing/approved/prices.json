@@ -23,7 +23,7 @@
       "Desktop & Laptop 桌上型電腦與筆記型電腦"
     ],
     "notice": "選擇品牌、型號與維修項目，快速查詢參考報價。",
-    "priceDataVersion": "2026-08-24.2"
+    "priceDataVersion": "2026-08-24.3"
   },
   "repairCategories": [
     {
@@ -11665,9 +11665,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 7500
+                "amount": 7100
               },
-              "rawPrice": "7500",
+              "rawPrice": "7100",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -19391,9 +19391,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 4300
+                "amount": 3800
               },
-              "rawPrice": "4300",
+              "rawPrice": "3800",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
