@@ -23,7 +23,7 @@
       "Desktop & Laptop 桌上型電腦與筆記型電腦"
     ],
     "notice": "選擇品牌、型號與維修項目，快速查詢參考報價。",
-    "priceDataVersion": "2026-08-24.1"
+    "priceDataVersion": "2026-08-24.2"
   },
   "repairCategories": [
     {
@@ -3554,6 +3554,406 @@
       "name": "Apple",
       "deviceFamily": "Apple",
       "models": [
+        {
+          "id": "ipad-pro-13-第六代",
+          "name": "iPad Pro 13\" 第六代",
+          "deviceType": "平板",
+          "aliases": [],
+          "repairs": [
+            {
+              "id": "螢幕維修-1",
+              "categoryId": "screen",
+              "item": "螢幕維修",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "電池-2",
+              "categoryId": "battery",
+              "item": "電池",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "前鏡頭-後鏡頭-3",
+              "categoryId": "camera",
+              "item": "前鏡頭 / 後鏡頭",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "充電-響鈴-4",
+              "categoryId": "charging",
+              "item": "充電 / 響鈴",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "開機鍵-音量鍵-5",
+              "categoryId": "buttons",
+              "item": "開機鍵 / 音量鍵",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "home鍵-6",
+              "categoryId": "buttons",
+              "item": "HOME鍵",
+              "price": {
+                "type": "fixed",
+                "amount": 6000
+              },
+              "rawPrice": "6000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "機板試修-cpu另報-7",
+              "categoryId": "board",
+              "item": "機板試修 / CPU另報",
+              "price": {
+                "type": "inquiry",
+                "label": "6000(512)/8000(1TB)"
+              },
+              "rawPrice": "6000(512)/8000(1TB)",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            }
+          ],
+          "modelGroup": "iPad Pro"
+        },
+        {
+          "id": "ipad-pro-11-第六代",
+          "name": "iPad Pro 11\" 第六代",
+          "deviceType": "平板",
+          "aliases": [],
+          "repairs": [
+            {
+              "id": "螢幕維修-1",
+              "categoryId": "screen",
+              "item": "螢幕維修",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "電池-2",
+              "categoryId": "battery",
+              "item": "電池",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "前鏡頭-後鏡頭-3",
+              "categoryId": "camera",
+              "item": "前鏡頭 / 後鏡頭",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "充電-響鈴-4",
+              "categoryId": "charging",
+              "item": "充電 / 響鈴",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "開機鍵-音量鍵-5",
+              "categoryId": "buttons",
+              "item": "開機鍵 / 音量鍵",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "home鍵-6",
+              "categoryId": "buttons",
+              "item": "HOME鍵",
+              "price": {
+                "type": "fixed",
+                "amount": 6000
+              },
+              "rawPrice": "6000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "機板試修-cpu另報-7",
+              "categoryId": "board",
+              "item": "機板試修 / CPU另報",
+              "price": {
+                "type": "inquiry",
+                "label": "6000(512)/8000(1TB)"
+              },
+              "rawPrice": "6000(512)/8000(1TB)",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            }
+          ],
+          "modelGroup": "iPad Pro"
+        },
+        {
+          "id": "ipad-pro-13-第五代",
+          "name": "iPad Pro 13\" 第五代",
+          "deviceType": "平板",
+          "aliases": [],
+          "repairs": [
+            {
+              "id": "螢幕維修-1",
+              "categoryId": "screen",
+              "item": "螢幕維修",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "電池-2",
+              "categoryId": "battery",
+              "item": "電池",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "前鏡頭-後鏡頭-3",
+              "categoryId": "camera",
+              "item": "前鏡頭 / 後鏡頭",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "充電-響鈴-4",
+              "categoryId": "charging",
+              "item": "充電 / 響鈴",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "開機鍵-音量鍵-5",
+              "categoryId": "buttons",
+              "item": "開機鍵 / 音量鍵",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "home鍵-6",
+              "categoryId": "buttons",
+              "item": "HOME鍵",
+              "price": {
+                "type": "fixed",
+                "amount": 6000
+              },
+              "rawPrice": "6000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "機板試修-cpu另報-7",
+              "categoryId": "board",
+              "item": "機板試修 / CPU另報",
+              "price": {
+                "type": "inquiry",
+                "label": "6000(512)/8000(1TB)"
+              },
+              "rawPrice": "6000(512)/8000(1TB)",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            }
+          ],
+          "modelGroup": "iPad Pro"
+        },
+        {
+          "id": "ipad-pro-11-第五代",
+          "name": "iPad Pro 11\" 第五代",
+          "deviceType": "平板",
+          "aliases": [],
+          "repairs": [
+            {
+              "id": "螢幕維修-1",
+              "categoryId": "screen",
+              "item": "螢幕維修",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "電池-2",
+              "categoryId": "battery",
+              "item": "電池",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "前鏡頭-後鏡頭-3",
+              "categoryId": "camera",
+              "item": "前鏡頭 / 後鏡頭",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "充電-響鈴-4",
+              "categoryId": "charging",
+              "item": "充電 / 響鈴",
+              "price": {
+                "type": "fixed",
+                "amount": 3000
+              },
+              "rawPrice": "3000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "開機鍵-音量鍵-5",
+              "categoryId": "buttons",
+              "item": "開機鍵 / 音量鍵",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "home鍵-6",
+              "categoryId": "buttons",
+              "item": "HOME鍵",
+              "price": {
+                "type": "fixed",
+                "amount": 6000
+              },
+              "rawPrice": "6000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "機板試修-cpu另報-7",
+              "categoryId": "board",
+              "item": "機板試修 / CPU另報",
+              "price": {
+                "type": "inquiry",
+                "label": "6000(512)/8000(1TB)"
+              },
+              "rawPrice": "6000(512)/8000(1TB)",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            }
+          ],
+          "modelGroup": "iPad Pro"
+        },
         {
           "id": "a1369",
           "name": "A1369",
@@ -12289,9 +12689,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 2900
+                "amount": 3300
               },
-              "rawPrice": "2900",
+              "rawPrice": "3300",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -12545,9 +12945,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 4000
+                "amount": 4500
               },
-              "rawPrice": "4000",
+              "rawPrice": "4500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -12673,9 +13073,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 4400
+                "amount": 4800
               },
-              "rawPrice": "4400",
+              "rawPrice": "4800",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13185,9 +13585,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 5800
+                "amount": 6800
               },
-              "rawPrice": "5800",
+              "rawPrice": "6800",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13313,9 +13713,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 5100
+                "amount": 4800
               },
-              "rawPrice": "5100",
+              "rawPrice": "4800",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13697,9 +14097,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 7200
+                "amount": 7500
               },
-              "rawPrice": "7200",
+              "rawPrice": "7500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -13825,9 +14225,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 4500
+                "amount": 5000
               },
-              "rawPrice": "4500",
+              "rawPrice": "5000",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14337,9 +14737,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 3700
+                "amount": 3600
               },
-              "rawPrice": "3700",
+              "rawPrice": "3600",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14452,9 +14852,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 8000
+                "amount": 7500
               },
-              "rawPrice": "8000",
+              "rawPrice": "7500",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14580,9 +14980,9 @@
               "item": "螢幕維修",
               "price": {
                 "type": "fixed",
-                "amount": 8700
+                "amount": 8600
               },
-              "rawPrice": "8700",
+              "rawPrice": "8600",
               "duration": "請洽詢",
               "warrantyDays": 90,
               "availability": "inquiry"
@@ -14810,6 +15210,134 @@
               "id": "認證電池-9",
               "categoryId": "battery",
               "item": "認證電池",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            }
+          ],
+          "modelGroup": "iPhone Face ID"
+        },
+        {
+          "id": "iphone-17e",
+          "name": "iPhone 17e",
+          "deviceType": "手機",
+          "aliases": [
+            "iPhone Face ID"
+          ],
+          "repairs": [
+            {
+              "id": "認證電池-3",
+              "categoryId": "battery",
+              "item": "認證電池",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "螢幕破裂-5",
+              "categoryId": "screen",
+              "item": "螢幕維修",
+              "price": {
+                "type": "fixed",
+                "amount": 4000
+              },
+              "rawPrice": "4000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "前鏡頭-後鏡頭-7",
+              "categoryId": "camera",
+              "item": "前鏡頭／後鏡頭",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "face-id-8",
+              "categoryId": "camera",
+              "item": "FACE ID",
+              "price": {
+                "type": "fixed",
+                "amount": 3500
+              },
+              "rawPrice": "3500",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "聽筒-震動-響鈴-9",
+              "categoryId": "audio",
+              "item": "聽筒 / 震動 / 響鈴",
+              "price": {
+                "type": "fixed",
+                "amount": 1500
+              },
+              "rawPrice": "1500",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "充電-麥克風-10",
+              "categoryId": "charging",
+              "item": "充電 / 麥克風",
+              "price": {
+                "type": "fixed",
+                "amount": 2000
+              },
+              "rawPrice": "2000",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "開機鍵-音量鍵-11",
+              "categoryId": "buttons",
+              "item": "開機鍵 / 音量鍵",
+              "price": {
+                "type": "fixed",
+                "amount": 1500
+              },
+              "rawPrice": "1500",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "容量擴充-12",
+              "categoryId": "storage",
+              "item": "容量擴充",
+              "price": {
+                "type": "inquiry",
+                "label": "現場報價"
+              },
+              "rawPrice": "現場報價",
+              "duration": "請洽詢",
+              "warrantyDays": 90,
+              "availability": "inquiry"
+            },
+            {
+              "id": "機板試修-cpu另報-13",
+              "categoryId": "board",
+              "item": "機板試修 / CPU另報",
               "price": {
                 "type": "inquiry",
                 "label": "現場報價"
