@@ -1641,6 +1641,10 @@
     }
 
     const text = normalize([quote.item, quote.note, quote.modelName].join(' '));
+    if (text.includes('玻璃破裂')) {
+      return { kind: 'glass', label: '外觸控玻璃' };
+    }
+
     if (text.includes('原廠')) {
       return { kind: 'original', label: '原廠螢幕' };
     }

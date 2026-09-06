@@ -16,6 +16,26 @@ function isNonEmptyString(value) {
   return typeof value === 'string' && value.trim().length > 0;
 }
 
+function validateReplacementCharacters(value, path, errors) {
+  if (typeof value === 'string') {
+    if (value.includes('\uFFFD')) {
+      errors.push(`${path} 不得含有 Unicode replacement character（�）`);
+    }
+    return;
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => validateReplacementCharacters(item, `${path}[${index}]`, errors));
+    return;
+  }
+
+  if (isObject(value)) {
+    Object.entries(value).forEach(([key, child]) => {
+      validateReplacementCharacters(child, `${path}.${key}`, errors);
+    });
+  }
+}
+
 function requireUniqueId(value, seen, path, errors) {
   if (!isNonEmptyString(value)) {
     errors.push(`${path}.id 必須是非空白字串`);
@@ -80,6 +100,8 @@ export function validatePriceData(data, { sourcePath = DEFAULT_PRICE_SOURCE } = 
   if (!isObject(data)) {
     throw new Error(`${sourcePath} 的最上層必須是 JSON 物件`);
   }
+
+  validateReplacementCharacters(data, 'data', errors);
 
   if (!isObject(data.metadata)) {
     errors.push('metadata 必須是物件');

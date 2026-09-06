@@ -1,0 +1,87 @@
+name: 網站正式版檢查與發布
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/site-production.yml'
+      - 'index.html'
+      - 'assets/**'
+      - '_headers'
+      - '_redirects'
+      - 'obsidian-phone-repair.vcf'
+      - 'package.json'
+      - 'scripts/build.mjs'
+      - 'scripts/validate-price-data.mjs'
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/site-production.yml'
+      - 'index.html'
+      - 'assets/**'
+      - '_headers'
+      - '_redirects'
+      - 'obsidian-phone-repair.vcf'
+      - 'package.json'
+      - 'scripts/build.mjs'
+      - 'scripts/validate-price-data.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: heiyao-production-deploy
+  cancel-in-progress: true
+
+jobs:
+  validate-and-deploy:
+    name: 驗證並發布正式網站
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+    steps:
+      - name: 讀取 GitHub 版本
+        uses: actions/checkout@v4
+
+      - name: 準備 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 檢查網站腳本語法
+        run: node --check assets/app.js
+
+      - name: 驗證正式報價
+        run: node scripts/validate-price-data.mjs
+
+      - name: 同步網站資料
+        run: node scripts/sync-price-data.mjs
+
+      - name: 建置正式網站
+        run: node scripts/build.mjs
+
+      - name: 確認資料同步與正式版標示
+        run: |
+          node scripts/sync-price-data.mjs --check
+          node -e "const fs=require('node:fs');const value=fs.readFileSync('dist/data/version.js','utf8');if(value.includes('-debug'))throw new Error('正式建置不應包含 Debug 標示');"
+
+      - name: 缺少 Cloudflare 金鑰時說明
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && (env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == '') }}
+        run: echo "正式網站驗證與建置完成；Cloudflare GitHub 金鑰尚未完整設定，因此略過發布。"
+
+      - name: 僅驗證未發布時說明
+        if: ${{ github.event_name == 'pull_request' || github.ref != 'refs/heads/main' }}
+        run: echo "網站驗證與建置完成；只有 main 分支的 push 或手動執行可以發布正式網站。"
+
+      - name: 發布正式網站到 Cloudflare Pages
+        if: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main' && env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != '' }}
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=otrepair-price --branch=main --commit-hash=${{ github.sha }}
